@@ -4,7 +4,7 @@ from torch.utils.data import DataLoader
 from torchvision import utils
 
 import data_config
-from datasets.CD_dataset import CDDataset
+from datasets.CD_dataset import CDDataset, xBDataset, xBDatasetMulti
 
 
 def get_loader(data_name, img_size=256, batch_size=8, split='test',
@@ -12,9 +12,18 @@ def get_loader(data_name, img_size=256, batch_size=8, split='test',
     dataConfig = data_config.DataConfig().get_data_config(data_name)
     root_dir = dataConfig.root_dir
     label_transform = dataConfig.label_transform
+    print(dataConfig)
 
     if dataset == 'CDDataset':
         data_set = CDDataset(root_dir=root_dir, split=split,
+                                 img_size=img_size, is_train=is_train,
+                                 label_transform=label_transform)
+    elif dataset == 'xBDataset':
+        data_set = xBDataset(root_dir=root_dir, split=split,
+                                 img_size=img_size, is_train=is_train,
+                                 label_transform=label_transform)
+    elif dataset == 'xBDatasetMulti':
+        data_set = xBDatasetMulti(root_dir=root_dir, split=split,
                                  img_size=img_size, is_train=is_train,
                                  label_transform=label_transform)
     else:
@@ -44,6 +53,20 @@ def get_loaders(args):
                                  img_size=args.img_size,is_train=True,
                                  label_transform=label_transform)
         val_set = CDDataset(root_dir=root_dir, split=split_val,
+                                 img_size=args.img_size,is_train=False,
+                                 label_transform=label_transform)
+    elif args.dataset == 'xBDataset':
+        training_set = xBDataset(root_dir=root_dir, split=split,
+                                 img_size=args.img_size,is_train=True,
+                                 label_transform=label_transform)
+        val_set = xBDataset(root_dir=root_dir, split=split_val,
+                                 img_size=args.img_size,is_train=False,
+                                 label_transform=label_transform)
+    elif args.dataset == 'xBDatasetMulti':
+        training_set = xBDatasetMulti(root_dir=root_dir, split=split,
+                                 img_size=args.img_size,is_train=True,
+                                 label_transform=label_transform)
+        val_set = xBDatasetMulti(root_dir=root_dir, split=split_val,
                                  img_size=args.img_size,is_train=False,
                                  label_transform=label_transform)
     else:

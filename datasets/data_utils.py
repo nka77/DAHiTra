@@ -15,8 +15,11 @@ def to_tensor_and_norm(imgs, labels):
     labels = [torch.from_numpy(np.array(img, np.uint8)).unsqueeze(dim=0)
               for img in labels]
 
+    print(imgs.mean(), imgs.std())
+
     imgs = [TF.normalize(img, mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5])
             for img in imgs]
+
     return imgs, labels
 
 
@@ -43,7 +46,8 @@ class CDDataAugmentation:
         self.with_random_crop = with_random_crop
         self.with_scale_random_crop = with_scale_random_crop
         self.with_random_blur = with_random_blur
-    def transform(self, imgs, labels, to_tensor=True):
+    
+    def transform(self, imgs, labels, to_tensor=True, is_train=True):
         """
         :param imgs: [ndarray,]
         :param labels: [ndarray,]
@@ -54,18 +58,28 @@ class CDDataAugmentation:
         if self.img_size is None:
             self.img_size = None
 
-        if not self.img_size_dynamic:
-            if imgs[0].size != (self.img_size, self.img_size):
-                imgs = [TF.resize(img, [self.img_size, self.img_size], interpolation=3)
-                        for img in imgs]
+        if is_train==True:
+            x0 = random.randint(0, imgs[0].size[1] - self.img_size)
+            y0 = random.randint(0, imgs[0].size[0] - self.img_size)
         else:
-            self.img_size = imgs[0].size[0]
+            x0, y0 = (256,256)
 
-        labels = [TF.to_pil_image(img) for img in labels]
-        if len(labels) != 0:
-            if labels[0].size != (self.img_size, self.img_size):
-                labels = [TF.resize(img, [self.img_size, self.img_size], interpolation=0)
-                        for img in labels]
+        imgs = [Image.fromarray(np.array(img)[y0:y0+self.img_size, x0:x0+self.img_size, :]) for img in imgs]
+        labels = [Image.fromarray(np.array(img)[y0:y0+self.img_size, x0:x0+self.img_size]) for img in labels]
+
+        # if not self.img_size_dynamic:
+        #     if imgs[0].size != (self.img_size, self.img_size):
+        #         imgs = [TF.resize(img, [self.img_size, self.img_size], interpolation=3)
+        #                 for img in imgs]
+        # else:
+        #     self.img_size = imgs[0].size[0]
+
+        # labels = [TF.to_pil_image(img) for img in labels]
+        # if len(labels) != 0:
+        #     if labels[0].size != (self.img_size, self.img_size):
+        #         labels = [TF.resize(img, [self.img_size, self.img_size], interpolation=0)
+        #                 for img in labels]
+
 
         random_base = 0.5
         if self.with_random_hflip and random.random() > 0.5:
@@ -112,10 +126,40 @@ class CDDataAugmentation:
             labels = [pil_crop(img, box, cropsize=self.img_size, default_value=255)
                     for img in labels]
 
-        if self.with_random_blur and random.random() > 0:
-            radius = random.random()
-            imgs = [img.filter(ImageFilter.GaussianBlur(radius=radius))
-                    for img in imgs]
+        img = imgs[0]
+        if random.random() > 0.98:
+            if random.random() > 0.985:
+                img = clahe(img)
+            elif random.random() > 0.985:
+                img = gauss_noise(img)
+            elif random.random() > 0.985:
+                img = cv2.blur(img, (3, 3))
+        elif random.random() > 0.98:
+            if random.random() > 0.985:
+                img = saturation(img, 0.9 + random.random() * 0.2)
+            elif random.random() > 0.985:
+                img = brightness(img, 0.9 + random.random() * 0.2)
+            elif random.random() > 0.985:
+                img = contrast(img, 0.9 + random.random() * 0.2)
+        imgs[0] = img
+        
+        img = imgs[1]
+        if random.random() > 0.98:
+            if random.random() > 0.985:
+                img = clahe(img)
+            elif random.random() > 0.985:
+                img = gauss_noise(img)
+            elif random.random() > 0.985:
+                img = cv2.blur(img, (3, 3))
+        elif random.random() > 0.98:
+            if random.random() > 0.985:
+                img = saturation(img, 0.9 + random.random() * 0.2)
+            elif random.random() > 0.985:
+                img = brightness(img, 0.9 + random.random() * 0.2)
+            elif random.random() > 0.985:
+                img = contrast(img, 0.9 + random.random() * 0.2)
+        imgs[1] = img
+
 
         if to_tensor:
             # to tensor

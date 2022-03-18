@@ -14,7 +14,8 @@ sample files in ./samples
 save prediction files in the ./samples/predict
 
 """
-
+import warnings
+warnings.filterwarnings("ignore")
 
 def get_args():
     # ------------
@@ -67,6 +68,18 @@ if __name__ == '__main__':
 
     for i, batch in enumerate(data_loader):
         name = batch['name']
+        print(batch['A'].shape, batch['B'].shape)
+        '''batch_A = batch['A']
+        
+        im256 = 256
+        batch_A = batch_A.unfold(2,im256,im256).unfold(3,im256,im256).squeeze()
+        batch_A_tmp = torch.zeros([16,3,im256,im256])
+        print(batch_A_tmp.shape, batch_A.shape)
+        for i in range(4):
+            for j in range(4):
+                 batch_A_tmp[i*j,:,:,:] = batch_A[:,i,j,:,:]
+        print(batch_A_tmp.shape, batch_A.shape)'''
+                
         print('process: %s' % name)
         score_map = model._forward_pass(batch)
         model._save_predictions()

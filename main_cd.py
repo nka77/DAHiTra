@@ -4,6 +4,9 @@ from models.trainer import *
 
 print(torch.cuda.is_available())
 
+import warnings
+warnings.filterwarnings("ignore")
+
 """
 the main function for training the CD networks
 """
@@ -20,7 +23,7 @@ def test(args):
     dataloader = utils.get_loader(args.data_name, img_size=args.img_size,
                                   batch_size=args.batch_size, is_train=False,
                                   split='test')
-    model = CDEvaluator(args=args, dataloader=dataloader)
+    model = CDEvaluator(args=args, dataloader=dataloaders)
 
     model.eval_models()
 
@@ -37,17 +40,17 @@ if __name__ == '__main__':
     # data
     parser.add_argument('--num_workers', default=4, type=int)
     parser.add_argument('--dataset', default='CDDataset', type=str)
-    parser.add_argument('--data_name', default='LEVIR', type=str)
+    parser.add_argument('--data_name', default='xBD', type=str)
 
     parser.add_argument('--batch_size', default=8, type=int)
     parser.add_argument('--split', default="train", type=str)
     parser.add_argument('--split_val', default="val", type=str)
 
-    parser.add_argument('--img_size', default=256, type=int)
+    parser.add_argument('--img_size', default=512, type=int)
 
     # model
     parser.add_argument('--n_class', default=2, type=int)
-    parser.add_argument('--net_G', default='base_transformer_pos_s4_dd8', type=str,
+    parser.add_argument('--net_G', default='base_transformer_pos_s4_dd8_t8_e2d4', type=str,
                         help='base_resnet18 | base_transformer_pos_s4 | '
                              'base_transformer_pos_s4_dd8 | '
                              'base_transformer_pos_s4_dd8_dedim8|')
@@ -55,7 +58,7 @@ if __name__ == '__main__':
 
     # optimizer
     parser.add_argument('--optimizer', default='sgd', type=str)
-    parser.add_argument('--lr', default=0.01, type=float)
+    parser.add_argument('--lr', default=0.0005, type=float)
     parser.add_argument('--max_epochs', default=100, type=int)
     parser.add_argument('--lr_policy', default='linear', type=str,
                         help='linear | step')

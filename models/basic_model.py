@@ -71,5 +71,7 @@ class CDEvaluator():
             file_name = os.path.join(
                 self.pred_dir, name[i].replace('.jpg', '.png'))
             pred = pred[0].cpu().numpy()
+            if "." not in file_name:
+                file_name += ".png"
             save_image(pred, file_name)
 

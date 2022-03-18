@@ -16,6 +16,7 @@ from misc.logger_tool import Logger, Timer
 
 from utils import de_norm
 
+from models.adamw import AdamW
 
 class CDTrainer():
 
@@ -35,14 +36,17 @@ class CDTrainer():
         self.lr = args.lr
 
         # define optimizers
-        self.optimizer_G = optim.SGD(self.net_G.parameters(), lr=self.lr,
-                                     momentum=0.9,
-                                     weight_decay=5e-4)
+        self.optimizer_G = optim.AdamW(self.net_G.parameters(), lr=self.lr,
+                                     weight_decay=1e-6)
+
+        # self.optimizer_G = optim.SGD(self.net_G.parameters(), lr=self.lr,
+        #                              momentum=0.9,
+        #                              weight_decay=5e-4)
 
         # define lr schedulers
         self.exp_lr_scheduler_G = get_scheduler(self.optimizer_G, args)
 
-        self.running_metric = ConfuseMatrixMeter(n_class=2)
+        self.running_metric = ConfuseMatrixMeter(n_class=self.n_class)
 
         # define logger file
         logger_path = os.path.join(args.checkpoint_dir, 'log.txt')
@@ -76,8 +80,12 @@ class CDTrainer():
         # define the loss functions
         if args.loss == 'ce':
             self._pxl_loss = cross_entropy
-        elif args.loss == 'bce':
-            self._pxl_loss = losses.binary_ce
+        elif args.loss == 'focal':
+            self._pxl_loss = losses.focal_loss
+        elif args.loss == 'ce_multi':
+            self._pxl_loss = losses.multi_cross_entropy
+        elif args.loss == 'ce_dice':
+            self._pxl_loss = losses.ce_dice
         else:
             raise NotImplemented(args.loss)
 
@@ -135,6 +143,7 @@ class CDTrainer():
 
     def _visualize_pred(self):
         pred = torch.argmax(self.G_pred, dim=1, keepdim=True)
+        # pred = torch.argmax(self.G_pred[0], dim=1, keepdim=True)
         pred_vis = pred * 255
         return pred_vis
 
@@ -157,7 +166,6 @@ class CDTrainer():
         """
         target = self.batch['L'].to(self.device).detach()
         G_pred = self.G_pred.detach()
-
         G_pred = torch.argmax(G_pred, dim=1)
 
         current_score = self.running_metric.update_cm(pr=G_pred.cpu().numpy(), gt=target.cpu().numpy())
@@ -172,7 +180,7 @@ class CDTrainer():
             m = len(self.dataloaders['val'])
 
         imps, est = self._timer_update()
-        if np.mod(self.batch_id, 100) == 1:
+        if np.mod(self.batch_id, 2000) == 1:
             message = 'Is_training: %s. [%d,%d][%d,%d], imps: %.2f, est: %.2fh, G_loss: %.5f, running_mf1: %.5f\n' %\
                       (self.is_training, self.epoch_id, self.max_num_epochs-1, self.batch_id, m,
                      imps*self.batch_size, est,
@@ -180,7 +188,7 @@ class CDTrainer():
             self.logger.write(message)
 
 
-        if np.mod(self.batch_id, 500) == 1:
+        if np.mod(self.epoch_id, 10) == 1:
             vis_input = utils.make_numpy_grid(de_norm(self.batch['A']))
             vis_input2 = utils.make_numpy_grid(de_norm(self.batch['B']))
 
@@ -192,7 +200,7 @@ class CDTrainer():
             file_name = os.path.join(
                 self.vis_dir, 'istrain_'+str(self.is_training)+'_'+
                               str(self.epoch_id)+'_'+str(self.batch_id)+'.jpg')
-            plt.imsave(file_name, vis)
+            # plt.imsave(file_name, vis)
 
     def _collect_epoch_states(self):
         scores = self.running_metric.get_scores()
@@ -208,7 +216,7 @@ class CDTrainer():
     def _update_checkpoints(self):
 
         # save current model
-        self._save_checkpoint(ckpt_name='last_ckpt.pt')
+        # self._save_checkpoint(ckpt_name='last_ckpt.pt')
         self.logger.write('Lastest model updated. Epoch_acc=%.4f, Historical_best_acc=%.4f (at epoch %d)\n'
               % (self.epoch_acc, self.best_val_acc, self.best_epoch_id))
         self.logger.write('\n')
@@ -241,10 +249,13 @@ class CDTrainer():
         img_in2 = batch['B'].to(self.device)
         self.G_pred = self.net_G(img_in1, img_in2)
 
-
     def _backward_G(self):
         gt = self.batch['L'].to(self.device).long()
-        self.G_loss = self._pxl_loss(self.G_pred, gt)
+        self._pxl_loss1 = losses.focal_loss
+        self._pxl_loss2 = losses.multi_cross_entropy
+        self.G_loss = self._pxl_loss1(self.G_pred, gt) + 0.5 * self._pxl_loss2(self.G_pred, gt)
+        # self.G_loss = self._pxl_loss(self.G_pred, gt)
+        # print(self.G_loss.item())
         self.G_loss.backward()
 
 
@@ -268,6 +279,7 @@ class CDTrainer():
                 self.optimizer_G.zero_grad()
                 self._backward_G()
                 self.optimizer_G.step()
+                torch.nn.utils.clip_grad_norm_(self.net_G.parameters(), 0.999)
                 self._collect_running_batch_states()
                 self._timer_update()
 

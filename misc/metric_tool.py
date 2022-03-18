@@ -149,12 +149,14 @@ def get_confuse_matrix(num_classes, label_gts, label_preds):
         :return: <np.ndarray> values for confusion matrix
         """
         mask = (label_gt >= 0) & (label_gt < num_classes)
+        # print(mask.shape, label_gts.shape, label_preds.shape, num_classes)
         hist = np.bincount(num_classes * label_gt[mask].astype(int) + label_pred[mask],
                            minlength=num_classes**2).reshape(num_classes, num_classes)
         return hist
     confusion_matrix = np.zeros((num_classes, num_classes))
     for lt, lp in zip(label_gts, label_preds):
         confusion_matrix += __fast_hist(lt.flatten(), lp.flatten())
+    print(confusion_matrix)
     return confusion_matrix
 
 
