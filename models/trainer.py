@@ -36,12 +36,12 @@ class CDTrainer():
         self.lr = args.lr
 
         # define optimizers
-        self.optimizer_G = optim.AdamW(self.net_G.parameters(), lr=self.lr,
-                                     weight_decay=1e-6)
+        # self.optimizer_G = optim.AdamW(self.net_G.parameters(), lr=self.lr,
+        #                              weight_decay=1e-6)
 
-        # self.optimizer_G = optim.SGD(self.net_G.parameters(), lr=self.lr,
-        #                              momentum=0.9,
-        #                              weight_decay=5e-4)
+        self.optimizer_G = optim.SGD(self.net_G.parameters(), lr=self.lr,
+                                     momentum=0.9,
+                                     weight_decay=5e-4)
 
         # define lr schedulers
         self.exp_lr_scheduler_G = get_scheduler(self.optimizer_G, args)
@@ -81,7 +81,7 @@ class CDTrainer():
         if args.loss == 'ce':
             self._pxl_loss = cross_entropy
         elif args.loss == 'focal':
-            self._pxl_loss = losses.focal_loss
+            self._pxl_loss = losses.focal_loss2D
         elif args.loss == 'ce_multi':
             self._pxl_loss = losses.multi_cross_entropy
         elif args.loss == 'ce_dice':
@@ -142,8 +142,8 @@ class CDTrainer():
         return imps, est
 
     def _visualize_pred(self):
-        pred = torch.argmax(self.G_pred, dim=1, keepdim=True)
-        # pred = torch.argmax(self.G_pred[0], dim=1, keepdim=True)
+        # pred = torch.argmax(self.G_pred, dim=1, keepdim=True)
+        pred = torch.argmax(self.G_final_pred, dim=1, keepdim=True)
         pred_vis = pred * 255
         return pred_vis
 
@@ -165,7 +165,8 @@ class CDTrainer():
         update metric
         """
         target = self.batch['L'].to(self.device).detach()
-        G_pred = self.G_pred.detach()
+        # G_pred = self.G_pred.detach()
+        G_pred = self.G_final_pred.detach()
         G_pred = torch.argmax(G_pred, dim=1)
 
         current_score = self.running_metric.update_cm(pr=G_pred.cpu().numpy(), gt=target.cpu().numpy())
@@ -188,7 +189,7 @@ class CDTrainer():
             self.logger.write(message)
 
 
-        if np.mod(self.epoch_id, 10) == 1:
+        if np.mod(self.epoch_id, 20) == 1:
             vis_input = utils.make_numpy_grid(de_norm(self.batch['A']))
             vis_input2 = utils.make_numpy_grid(de_norm(self.batch['B']))
 
@@ -243,19 +244,39 @@ class CDTrainer():
         self.running_metric.clear()
 
 
+    # def _forward_pass(self, batch):
+    #     self.batch = batch
+    #     img_in1 = batch['A'].to(self.device)
+    #     img_in2 = batch['B'].to(self.device)
+    #     self.G_pred = self.net_G(img_in1, img_in2)
+
+    # def _backward_G(self):
+    #     gt = self.batch['L'].to(self.device).long()
+    #     # self._pxl_loss1 = losses.focal_loss
+    #     # self._pxl_loss2 = losses.multi_cross_entropy
+    #     # # self.G_loss = self._pxl_loss1(self.G_pred, gt) + 0.5 * self._pxl_loss2(self.G_pred, gt)
+    #     self.G_loss = self._pxl_loss(self.G_pred, gt)
+    #     self.G_loss.backward()
+
     def _forward_pass(self, batch):
         self.batch = batch
         img_in1 = batch['A'].to(self.device)
         img_in2 = batch['B'].to(self.device)
         self.G_pred = self.net_G(img_in1, img_in2)
-
+        self.G_final_pred = self.G_pred[-1]
+            
     def _backward_G(self):
-        gt = self.batch['L'].to(self.device).long()
-        self._pxl_loss1 = losses.focal_loss
-        self._pxl_loss2 = losses.multi_cross_entropy
-        self.G_loss = self._pxl_loss1(self.G_pred, gt) + 0.5 * self._pxl_loss2(self.G_pred, gt)
-        # self.G_loss = self._pxl_loss(self.G_pred, gt)
-        # print(self.G_loss.item())
+        gt = self.batch['L'].to(self.device).float()
+        i         = 0
+        temp_loss = 0.0
+        self.weights = [0.5, 0.5, 0.5, 0.8, 1.0]
+        for pred in self.G_pred:
+            if pred.size(2) != gt.size(2):
+                temp_loss = temp_loss + self.weights[i]*self._pxl_loss(pred, F.interpolate(gt, size=pred.size(2), mode="nearest"))
+            else:
+                temp_loss = temp_loss + self.weights[i]*self._pxl_loss(pred, gt)
+            i+=1
+        self.G_loss = temp_loss
         self.G_loss.backward()
 
 

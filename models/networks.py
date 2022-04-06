@@ -14,7 +14,7 @@ import numpy as np
 import models
 from models.help_funcs import Transformer, TransformerDecoder, TwoLayerConv2d
 from torch.nn.modules.padding import ReplicationPad2d
-
+from models.ChangeFormer import ChangeFormerV1, ChangeFormerV6
 ###############################################################################
 # Helper Functions
 ###############################################################################
@@ -36,7 +36,7 @@ def get_scheduler(optimizer, args):
         def lambda_rule(epoch):
             lr_l = 1.0 - epoch / float(args.max_epochs + 1)
             return lr_l
-        scheduler = lr_scheduler.LambdaLR(optimxizer, lr_lambda=lambda_rule)
+        scheduler = lr_scheduler.LambdaLR(optimizer, lr_lambda=lambda_rule)
     elif args.lr_policy == 'step':
         step_size = args.max_epochs//3
         # args.lr_decay_iters
@@ -156,6 +156,10 @@ def define_G(args, init_type='normal', init_gain=0.02, gpu_ids=[]):
        net = SiamUnet_conc(input_nbr=3, label_nbr=2)
     elif args.net_G == 'siamUnet':
        net = Res34_Unet_Double()
+    elif args.net_G == 'changeFormer':
+       net = ChangeFormerV1()
+    elif args.net_G == 'changeFormerV6':
+       net = ChangeFormerV6()
     else:
         raise NotImplementedError('Generator model name [%s] is not recognized' % args.net_G)
     return init_net(net, init_type, init_gain, gpu_ids)
@@ -583,7 +587,7 @@ class UNet_Change_Transformer(nn.Module):
         self.conv9_2 = ConvRelu(decoder_filters[-4] + encoder_filters[-5]*2 , decoder_filters[-4])
         self.conv10 = ConvRelu(decoder_filters[-4], decoder_filters[-5])
         
-        self.res = nn.Conv2d(decoder_filters[-5], 5, 1, stride=1, padding=0)
+        self.res = nn.Conv2d(decoder_filters[-5], 2, 1, stride=1, padding=0)
 
         self._initialize_weights()
 
@@ -740,6 +744,7 @@ class UNet_Change_Transformer(nn.Module):
         dec9 = self.conv9_2(torch.cat([dec9, enc1_1, enc1_2], 1))
 
         dec10 = self.conv10(F.interpolate(dec9, scale_factor=2))
+        
         out = self.res(dec10)
 
         # enc5_c = enc5_c.view([B_, C_, H_*W_])

@@ -2,25 +2,25 @@
 
 gpus=0
 checkpoint_root=checkpoints 
-data_name=xBDataset  # dataset name 
-dataset=xBDatasetMulti
-loss=focal
-n_class=5
+# data_name=xBDataset  # dataset name 
+# dataset=xBDatasetMulti
+# loss=focal
+# n_class=5
 # lr=0.0002
 # lr_policy=multistep
 
-# data_name=LEVIR  # dataset name 
-# dataset=CDDataset
-# loss=focal
-# n_class=2
-lr=0.001
-lr_policy=multistep
+data_name=LEVIR  # dataset name 
+dataset=CDDataset
+loss=ce
+n_class=2
+lr=0.0001
+lr_policy=linear
 
 img_size=256
-batch_size=8
+batch_size=4
 
 max_epochs=100  #training epochs
-net_G=unet_coupled_trans_256
+net_G=changeFormerV6
 #unet_coupled_trans_256
 #base_transformer_pos_s4_dd8
 #base_transformer_pos_s4_dd8_o5
@@ -31,7 +31,6 @@ split_val=val  # validation txt
 project_name=CD_${net_G}_${data_name}_b${batch_size}_lr${lr}_${split}_${split_val}_${max_epochs}_${lr_policy}_${loss}_Full
 
 python main_cd.py --img_size ${img_size} --checkpoint_root ${checkpoint_root} --lr_policy ${lr_policy} --split ${split} --split_val ${split_val} --net_G ${net_G} --gpu_ids ${gpus} --max_epochs ${max_epochs} --project_name ${project_name} --batch_size ${batch_size} --data_name ${data_name}  --lr ${lr} --dataset ${dataset} --loss ${loss} --n_class ${n_class}
-
 
 # VAL Fixed and channel attention using diff 
 # bit

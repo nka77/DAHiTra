@@ -25,6 +25,16 @@ def cross_entropy(input, target, weight=None, reduction='mean',ignore_index=255)
 def focal_loss(pred, true):
     B, C, H, W = pred.shape
     true = true.squeeze()
+
+    pred = pred.argmax(axis=1)
+    loss = focal_loss2D(pred, true)
+
+    return loss
+
+
+def focal_loss_xBD(pred, true):
+    B, C, H, W = pred.shape
+    true = true.squeeze()
     msk0 = torch.zeros([B,H,W]).cuda()
     msk1 = torch.zeros([B,H,W]).cuda()
     msk2 = torch.zeros([B,H,W]).cuda()
@@ -54,9 +64,7 @@ def focal_loss(pred, true):
 def focal_loss2D(outputs, targets, gamma=2, ignore_index=255):
     outputs = torch.sigmoid(outputs).contiguous()
     targets = targets.contiguous()
-    non_ignored = targets.view(-1) != ignore_index
-    targets = targets.view(-1)[non_ignored].float()
-    outputs = outputs.contiguous().view(-1)[non_ignored]
+
     eps = 1e-8
     outputs = torch.clamp(outputs, 1e-8, 1. - 1e-8)
     targets = torch.clamp(targets, 1e-8, 1. - 1e-8)
