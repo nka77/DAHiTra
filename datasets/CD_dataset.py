@@ -78,7 +78,7 @@ class ImageDataset(data.Dataset):
                 with_random_hflip=True,
                 with_random_vflip=True,
                 with_scale_random_crop=True,
-                with_random_blur=True,
+                with_random_blur=True
             )
         else:
             self.augm = CDDataAugmentation(
@@ -128,6 +128,7 @@ class CDDataset(ImageDataset):
         # label[label <= 1] = 0
         # label[label > 1] = 1
         [img, img_B], [label] = self.augm.transform([img, img_B], [label], to_tensor=self.to_tensor)
+        # [img, img_B], [label] = self.augm.transform([img, img_B], [label], to_tensor=self.to_tensor, split=self.split)
         return {'name': name, 'A': img, 'B': img_B, 'L': label}
 
 

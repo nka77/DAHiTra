@@ -46,7 +46,7 @@ class CDDataAugmentation:
         self.with_random_crop = with_random_crop
         self.with_scale_random_crop = with_scale_random_crop
         self.with_random_blur = with_random_blur
-    def transform(self, imgs, labels, to_tensor=True):
+    def transform(self, imgs, labels, to_tensor=True, split=''):
         """
         :param imgs: [ndarray,]
         :param labels: [ndarray,]
@@ -57,18 +57,28 @@ class CDDataAugmentation:
         if self.img_size is None:
             self.img_size = None
 
-        if not self.img_size_dynamic:
-            if imgs[0].size != (self.img_size, self.img_size):
-                imgs = [TF.resize(img, [self.img_size, self.img_size], interpolation=3)
-                        for img in imgs]
+        if split=='train':
+            x0 = random.randint(0, imgs[0].size[1] - self.img_size)
+            y0 = random.randint(0, imgs[0].size[0] - self.img_size)
         else:
-            self.img_size = imgs[0].size[0]
+            x0, y0 = (256,256)
 
-        labels = [TF.to_pil_image(img) for img in labels]
-        if len(labels) != 0:
-            if labels[0].size != (self.img_size, self.img_size):
-                labels = [TF.resize(img, [self.img_size, self.img_size], interpolation=0)
-                        for img in labels]
+        imgs = [Image.fromarray(np.array(img)[y0:y0+self.img_size, x0:x0+self.img_size, :]) for img in imgs]
+        labels = [Image.fromarray(np.array(img)[y0:y0+self.img_size, x0:x0+self.img_size]) for img in labels]
+
+
+        # if not self.img_size_dynamic:
+        #     if imgs[0].size != (self.img_size, self.img_size):
+        #         imgs = [TF.resize(img, [self.img_size, self.img_size], interpolation=3)
+        #                 for img in imgs]
+        # else:
+        #     self.img_size = imgs[0].size[0]
+
+        # labels = [TF.to_pil_image(img) for img in labels]
+        # if len(labels) != 0:
+        #     if labels[0].size != (self.img_size, self.img_size):
+        #         labels = [TF.resize(img, [self.img_size, self.img_size], interpolation=0)
+        #                 for img in labels]
 
         random_base = 0.5
         if self.with_random_hflip and random.random() > 0.5:
@@ -86,34 +96,34 @@ class CDDataAugmentation:
             imgs = [TF.rotate(img, angle) for img in imgs]
             labels = [TF.rotate(img, angle) for img in labels]
 
-        if self.with_random_crop and random.random() > 0:
-            i, j, h, w = transforms.RandomResizedCrop(size=self.img_size). \
-                get_params(img=imgs[0], scale=(0.8, 1.0), ratio=(1, 1))
+        # if self.with_random_crop and random.random() > 0:
+        #     i, j, h, w = transforms.RandomResizedCrop(size=self.img_size). \
+        #         get_params(img=imgs[0], scale=(0.8, 1.0), ratio=(1, 1))
 
-            imgs = [TF.resized_crop(img, i, j, h, w,
-                                    size=(self.img_size, self.img_size),
-                                    interpolation=Image.CUBIC)
-                    for img in imgs]
+        #     imgs = [TF.resized_crop(img, i, j, h, w,
+        #                             size=(self.img_size, self.img_size),
+        #                             interpolation=Image.CUBIC)
+        #             for img in imgs]
 
-            labels = [TF.resized_crop(img, i, j, h, w,
-                                      size=(self.img_size, self.img_size),
-                                      interpolation=Image.NEAREST)
-                      for img in labels]
+        #     labels = [TF.resized_crop(img, i, j, h, w,
+        #                               size=(self.img_size, self.img_size),
+        #                               interpolation=Image.NEAREST)
+        #               for img in labels]
 
-        if self.with_scale_random_crop:
-            # rescale
-            scale_range = [1, 1.2]
-            target_scale = scale_range[0] + random.random() * (scale_range[1] - scale_range[0])
+        # if self.with_scale_random_crop:
+        #     # rescale
+        #     scale_range = [1, 1.2]
+        #     target_scale = scale_range[0] + random.random() * (scale_range[1] - scale_range[0])
 
-            imgs = [pil_rescale(img, target_scale, order=3) for img in imgs]
-            labels = [pil_rescale(img, target_scale, order=0) for img in labels]
-            # crop
-            imgsize = imgs[0].size  # h, w
-            box = get_random_crop_box(imgsize=imgsize, cropsize=self.img_size)
-            imgs = [pil_crop(img, box, cropsize=self.img_size, default_value=0)
-                    for img in imgs]
-            labels = [pil_crop(img, box, cropsize=self.img_size, default_value=255)
-                    for img in labels]
+        #     imgs = [pil_rescale(img, target_scale, order=3) for img in imgs]
+        #     labels = [pil_rescale(img, target_scale, order=0) for img in labels]
+        #     # crop
+        #     imgsize = imgs[0].size  # h, w
+        #     box = get_random_crop_box(imgsize=imgsize, cropsize=self.img_size)
+        #     imgs = [pil_crop(img, box, cropsize=self.img_size, default_value=0)
+        #             for img in imgs]
+        #     labels = [pil_crop(img, box, cropsize=self.img_size, default_value=255)
+        #             for img in labels]
 
         if self.with_random_blur and random.random() > 0:
             radius = random.random()

@@ -787,10 +787,7 @@ class UNet_Change_Two_Transformer(nn.Module):
         self.conv9_2 = ConvRelu(decoder_filters[-4] + encoder_filters[-5]*2 , decoder_filters[-4])
         self.conv10 = ConvRelu(decoder_filters[-4], decoder_filters[-5])
         
-        self.res = nn.Conv2d(decoder_filters[-5], 5, 1, stride=1, padding=0)
-
-        
-
+        self.res = nn.Conv2d(decoder_filters[-5], 2, 1, stride=1, padding=0)
 
         self._initialize_weights()
 
@@ -829,9 +826,9 @@ class UNet_Change_Two_Transformer(nn.Module):
                                        dim_head=dim_head,
                                        mlp_dim=mlp_dim, dropout=0.01)
 
-        self.transformer2 = Transformer(dim=dim2, depth=2, heads=2,
-                                       dim_head=dim_head,
-                                       mlp_dim=dim2, dropout=0.001)
+        # self.transformer2 = Transformer(dim=dim2, depth=2, heads=2,
+        #                                dim_head=dim_head,
+        #                                mlp_dim=dim2, dropout=0.001)
 
         self.transformer3 = Transformer(dim=dim3, depth=2, heads=2,
                                        dim_head=dim_head,
@@ -894,33 +891,33 @@ class UNet_Change_Two_Transformer(nn.Module):
 
         # run4: depth=2, heads=2
         enc3 = self.ca_skip_3(enc3_1, enc3_2)
-        # B_, C_, H_, W_ = enc3.shape
-        # enc3_i = enc3.view([B_, C_, H_*W_]).contiguous()
+        B_, C_, H_, W_ = enc3.shape
+        enc3_i = enc3.view([B_, C_, H_*W_]).contiguous()
 
-        # enc3_diff = (enc3_1 - enc3_2)
-        # spatial_attention = enc3_diff.view([B_, C_, H_*W_]).contiguous()
-        # spatial_attention = torch.softmax(spatial_attention, dim=-1)
+        enc3_diff = (enc3_1 - enc3_2)
+        spatial_attention = enc3_diff.view([B_, C_, H_*W_]).contiguous()
+        spatial_attention = torch.softmax(spatial_attention, dim=-1)
 
-        # enc3_i = torch.einsum('bln,bln->bln', spatial_attention, enc3_i)
-        # enc3_t = self.transformer3(enc3_i)
-        # enc3_t = enc3_t.view([B_, C_, H_, W_]).contiguous()
-        # enc3 = self.ca_skip_3(enc3, enc3_t)
+        enc3_i = torch.einsum('bln,bln->bln', spatial_attention, enc3_i)
+        enc3_t = self.transformer3(enc3_i)
+        enc3_t = enc3_t.view([B_, C_, H_, W_]).contiguous()
+        enc3 = self.ca_skip_3(enc3, enc3_t)
 
         dec7 = self.conv7(F.interpolate(dec6, scale_factor=2))
-        dec7 = self.conv7_2(torch.cat([dec7, enc3_1, enc3_2], 1))
+        dec7 = self.conv7_2(torch.cat([dec7, enc3], 1))
         
         ## run0: depth=2, heads=1
         enc2 = self.ca_skip_2(enc2_1, enc2_2)
-        B_, C_, H_, W_ = enc2.shape
-        enc2 = enc2.view([B_, C_, H_*W_]).contiguous()
+        # B_, C_, H_, W_ = enc2.shape
+        # enc2 = enc2.view([B_, C_, H_*W_]).contiguous()
 
-        enc2_diff = (enc2_1 - enc2_2)
-        spatial_attention = enc2_diff.view([B_, C_, H_*W_]).contiguous()
-        spatial_attention = torch.softmax(spatial_attention, dim=-1)
+        # enc2_diff = (enc2_1 - enc2_2)
+        # spatial_attention = enc2_diff.view([B_, C_, H_*W_]).contiguous()
+        # spatial_attention = torch.softmax(spatial_attention, dim=-1)
 
-        enc2 = torch.einsum('bln,bln->bln', spatial_attention, enc2)
-        enc2 = self.transformer2(enc2)
-        enc2 = enc2.view([B_, C_, H_,W_]).contiguous()
+        # enc2 = torch.einsum('bln,bln->bln', spatial_attention, enc2)
+        # enc2 = self.transformer2(enc2)
+        # enc2 = enc2.view([B_, C_, H_,W_]).contiguous()
 
         dec8 = self.conv8(F.interpolate(dec7, scale_factor=2))
         dec8 = self.conv8_2(torch.cat([dec8, enc2], 1))

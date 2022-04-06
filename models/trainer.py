@@ -36,7 +36,7 @@ class CDTrainer():
         self.lr = args.lr
 
         # define optimizers
-        # self.optimizer_G = optim.AdamW(self.net_G.parameters(), lr=self.lr,
+        # self.optimizer_G = optim.Adam(self.net_G.parameters(), lr=self.lr,
         #                              weight_decay=1e-6)
 
         self.optimizer_G = optim.SGD(self.net_G.parameters(), lr=self.lr,
@@ -81,7 +81,7 @@ class CDTrainer():
         if args.loss == 'ce':
             self._pxl_loss = cross_entropy
         elif args.loss == 'focal':
-            self._pxl_loss = losses.focal_loss2D
+            self._pxl_loss = losses.focal_loss
         elif args.loss == 'ce_multi':
             self._pxl_loss = losses.multi_cross_entropy
         elif args.loss == 'ce_dice':
@@ -244,40 +244,43 @@ class CDTrainer():
         self.running_metric.clear()
 
 
-    # def _forward_pass(self, batch):
-    #     self.batch = batch
-    #     img_in1 = batch['A'].to(self.device)
-    #     img_in2 = batch['B'].to(self.device)
-    #     self.G_pred = self.net_G(img_in1, img_in2)
-
-    # def _backward_G(self):
-    #     gt = self.batch['L'].to(self.device).long()
-    #     # self._pxl_loss1 = losses.focal_loss
-    #     # self._pxl_loss2 = losses.multi_cross_entropy
-    #     # # self.G_loss = self._pxl_loss1(self.G_pred, gt) + 0.5 * self._pxl_loss2(self.G_pred, gt)
-    #     self.G_loss = self._pxl_loss(self.G_pred, gt)
-    #     self.G_loss.backward()
-
     def _forward_pass(self, batch):
         self.batch = batch
         img_in1 = batch['A'].to(self.device)
         img_in2 = batch['B'].to(self.device)
         self.G_pred = self.net_G(img_in1, img_in2)
-        self.G_final_pred = self.G_pred[-1]
-            
+        self.G_final_pred = self.G_pred
+
     def _backward_G(self):
-        gt = self.batch['L'].to(self.device).float()
-        i         = 0
-        temp_loss = 0.0
-        self.weights = [0.5, 0.5, 0.5, 0.8, 1.0]
-        for pred in self.G_pred:
-            if pred.size(2) != gt.size(2):
-                temp_loss = temp_loss + self.weights[i]*self._pxl_loss(pred, F.interpolate(gt, size=pred.size(2), mode="nearest"))
-            else:
-                temp_loss = temp_loss + self.weights[i]*self._pxl_loss(pred, gt)
-            i+=1
-        self.G_loss = temp_loss
+        gt = self.batch['L'].to(self.device).long()
+        # self._pxl_loss1 = losses.focal_loss
+        # self._pxl_loss2 = losses.multi_cross_entropy
+        # # self.G_loss = self._pxl_loss1(self.G_pred, gt) + 0.5 * self._pxl_loss2(self.G_pred, gt)
+        self.G_loss = self._pxl_loss(self.G_pred, gt)
         self.G_loss.backward()
+
+    # def _forward_pass(self, batch):
+    #     self.batch = batch
+    #     img_in1 = batch['A'].to(self.device)
+    #     img_in2 = batch['B'].to(self.device)
+    #     self.G_pred = self.net_G(img_in1, img_in2)
+    #     self.G_final_pred = self.G_pred[-1]
+            
+    # def _backward_G(self):
+    #     gt = self.batch['L'].to(self.device).float()
+    #     i         = 0
+    #     temp_loss = 0.0
+    #     self.weights = [0.5, 0.5, 0.5, 0.8, 1.0]
+    #     for pred in self.G_pred:
+    #         if pred.size(2) != gt.size(2):
+    #             temp_loss_ = self.weights[i]*self._pxl_loss(pred, F.interpolate(gt, size=(pred.shape[-1],pred.shape[-1]), mode="nearest"))
+    #             if temp_loss_ != 0:
+    #                 temp_loss = temp_loss + self.weights[i]*self._pxl_loss(pred, F.interpolate(gt, size=(pred.shape[-1],pred.shape[-1]), mode="nearest"))
+    #         else:
+    #             temp_loss = temp_loss + self.weights[i]*self._pxl_loss(pred, gt)
+    #         i+=1
+    #     self.G_loss = temp_loss
+    #     self.G_loss.backward()
 
 
     def train_models(self):
