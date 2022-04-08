@@ -67,19 +67,19 @@ class CDDataAugmentation:
         labels = [Image.fromarray(np.array(img)[y0:y0+self.img_size, x0:x0+self.img_size]) for img in labels]
 
 
-        # if not self.img_size_dynamic:
-        #     if imgs[0].size != (self.img_size, self.img_size):
-        #         imgs = [TF.resize(img, [self.img_size, self.img_size], interpolation=3)
-        #                 for img in imgs]
-        # else:
-        #     self.img_size = imgs[0].size[0]
+    #    if not self.img_size_dynamic:
+    #         if imgs[0].size != (self.img_size, self.img_size):
+    #             imgs = [img.resize((self.img_size, self.img_size))
+    #                     for img in imgs]
+    #     else:
+    #         self.img_size = imgs[0].size[0]
 
-        # labels = [TF.to_pil_image(img) for img in labels]
-        # if len(labels) != 0:
-        #     if labels[0].size != (self.img_size, self.img_size):
-        #         labels = [TF.resize(img, [self.img_size, self.img_size], interpolation=0)
-        #                 for img in labels]
-
+    #     labels = [TF.to_pil_image(img) for img in labels]
+    #     if len(labels) != 0:
+    #         if labels[0].size != (self.img_size, self.img_size):
+    #             labels = [img.resize((self.img_size, self.img_size))
+    #                     for img in labels]
+    
         random_base = 0.5
         if self.with_random_hflip and random.random() > 0.5:
             imgs = [TF.hflip(img) for img in imgs]

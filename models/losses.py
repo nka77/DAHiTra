@@ -21,7 +21,7 @@ def cross_entropy(input, target, weight=None, reduction='mean',ignore_index=255)
     if input.shape[-1] != target.shape[-1]:
         input = F.interpolate(input, size=target.shape[1:], mode='bilinear',align_corners=True)
 
-    weight_ = torch.Tensor([1, 100]).cuda()
+    weight_ = torch.Tensor([1, 50]).cuda()
     return F.cross_entropy(input=input, target=target, weight=weight_,
                            ignore_index=ignore_index, reduction=reduction)
 

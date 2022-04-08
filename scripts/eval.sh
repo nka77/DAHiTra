@@ -3,9 +3,9 @@
 gpus=0
 
 data_name=LEVIR
-net_G=changeFormerV6
+net_G=unet_coupled_two_trans_256
 split=test
-project_name=changeform
+project_name=CD_unet_coupled_two_trans_256_LEVIR_b8_lr0.001_train_val_200_linear_focal_100wt
 checkpoint_name=best_ckpt.pt
 
 # CD_unet_coupled_two_trans_256_LEVIR_b8_lr0.001_train_val_200_linear_focal_100wt

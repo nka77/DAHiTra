@@ -11,16 +11,16 @@ checkpoint_root=checkpoints
 
 data_name=LEVIR  # dataset name 
 dataset=CDDataset
-loss=focal
+loss=ce
 n_class=2
-lr=0.01
+lr=0.005
 lr_policy=linear
 
 img_size=256
 batch_size=8
 
-max_epochs=100  #training epochs
-net_G=unet_coupled_trans_256
+max_epochs=200  #training epochs
+net_G=newUNetTrans
 #unet_coupled_trans_256
 #base_transformer_pos_s4_dd8
 #base_transformer_pos_s4_dd8_o5

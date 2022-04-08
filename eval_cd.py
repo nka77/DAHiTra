@@ -47,8 +47,8 @@ def main():
     os.makedirs(args.vis_dir, exist_ok=True)
 
     dataloader = utils.get_loader(args.data_name, img_size=args.img_size,
-                                  batch_size=args.batch_size, is_train=False,
-                                  split=args.split)
+                                  batch_size=args.batch_size, is_train=True,
+                                  split='train')
     model = CDEvaluator(args=args, dataloader=dataloader)
 
     model.eval_models(checkpoint_name=args.checkpoint_name)
