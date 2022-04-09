@@ -43,12 +43,12 @@ def main():
     args.checkpoint_dir = os.path.join('checkpoints', args.project_name)
     os.makedirs(args.checkpoint_dir, exist_ok=True)
     #  visualize dir
-    args.vis_dir = os.path.join('vis', args.project_name)
+    args.vis_dir = os.path.join('vis2', args.project_name)
     os.makedirs(args.vis_dir, exist_ok=True)
 
     dataloader = utils.get_loader(args.data_name, img_size=args.img_size,
-                                  batch_size=args.batch_size, is_train=True,
-                                  split='train')
+                                  batch_size=args.batch_size, is_train=False,
+                                  split='test')
     model = CDEvaluator(args=args, dataloader=dataloader)
 
     model.eval_models(checkpoint_name=args.checkpoint_name)
