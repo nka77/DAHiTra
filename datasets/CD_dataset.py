@@ -78,7 +78,8 @@ class ImageDataset(data.Dataset):
                 with_random_hflip=True,
                 with_random_vflip=True,
                 with_scale_random_crop=True,
-                with_random_blur=True
+                with_random_blur=True,
+                with_random_resize=True
             )
         else:
             self.augm = CDDataAugmentation(
@@ -103,11 +104,12 @@ class ImageDataset(data.Dataset):
 class CDDataset(ImageDataset):
 
     def __init__(self, root_dir, img_size, split='train', is_train=True, label_transform=None,
-                 to_tensor=True):
+                 to_tensor=True, patch=None):
         super(CDDataset, self).__init__(root_dir, img_size=img_size, split=split, is_train=is_train,
                                         to_tensor=to_tensor)
         self.label_transform = label_transform
         self.split = split
+        self.patch = patch
 
     def __getitem__(self, index):
         name = self.img_name_list[index]
@@ -127,7 +129,7 @@ class CDDataset(ImageDataset):
         # # 2 class model
         # label[label <= 1] = 0
         # label[label > 1] = 1
-        [img, img_B], [label] = self.augm.transform([img, img_B], [label], to_tensor=self.to_tensor)
+        [img, img_B], [label] = self.augm.transform([img, img_B], [label], to_tensor=self.to_tensor, patch=self.patch)
         # [img, img_B], [label] = self.augm.transform([img, img_B], [label], to_tensor=self.to_tensor, split=self.split)
         return {'name': name, 'A': img, 'B': img_B, 'L': label}
 

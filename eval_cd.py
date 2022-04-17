@@ -46,12 +46,13 @@ def main():
     args.vis_dir = os.path.join('vis2', args.project_name)
     os.makedirs(args.vis_dir, exist_ok=True)
 
-    dataloader = utils.get_loader(args.data_name, img_size=args.img_size,
-                                  batch_size=args.batch_size, is_train=False,
-                                  split='test')
-    model = CDEvaluator(args=args, dataloader=dataloader)
+    for i in range(16):
+        dataloader = utils.get_loader(args.data_name, img_size=args.img_size,
+                                    batch_size=args.batch_size, is_train=False,
+                                    split='test', patch=i)
+        model = CDEvaluator(args=args, dataloader=dataloader)
 
-    model.eval_models(checkpoint_name=args.checkpoint_name)
+        model.eval_models(checkpoint_name=args.checkpoint_name)
 
 
 if __name__ == '__main__':

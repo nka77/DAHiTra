@@ -34,26 +34,27 @@ class CDDataAugmentation:
             with_random_crop=False,
             with_scale_random_crop=False,
             with_random_blur=False,
+            with_random_resize=False
     ):
         self.img_size = img_size
         if self.img_size is None:
             self.img_size_dynamic = True
         else:
             self.img_size_dynamic = False
+        self.with_random_resize = with_random_resize
         self.with_random_hflip = with_random_hflip
         self.with_random_vflip = with_random_vflip
         self.with_random_rot = with_random_rot
         self.with_random_crop = with_random_crop
         self.with_scale_random_crop = with_scale_random_crop
         self.with_random_blur = with_random_blur
-    def transform(self, imgs, labels, to_tensor=True, split=''):
+    def transform(self, imgs, labels, to_tensor=True, split='', patch=None):
         """
         :param imgs: [ndarray,]
         :param labels: [ndarray,]
         :return: [ndarray,],[ndarray,]
         """
-        # resize image and covert to tensor
-        imgs = [TF.to_pil_image(img) for img in imgs]
+        
         if self.img_size is None:
             self.img_size = None
 
@@ -61,24 +62,48 @@ class CDDataAugmentation:
             x0 = random.randint(0, imgs[0].size[1] - self.img_size)
             y0 = random.randint(0, imgs[0].size[0] - self.img_size)
         else:
-            x0, y0 = (256,256)
+            if patch:
+                x0, y0 = 256*(patch//4), 256*(patch%4)
+            else:
+                x0, y0 = (256,256)
+            # if random.random() > 0.5:
+            #     x0, y0 = (256,256)
+            # else:
+            #     x0, y0 = (768,768)
+                
+        imgs = [TF.to_pil_image(img) for img in imgs]
 
         imgs = [Image.fromarray(np.array(img)[y0:y0+self.img_size, x0:x0+self.img_size, :]) for img in imgs]
         labels = [Image.fromarray(np.array(img)[y0:y0+self.img_size, x0:x0+self.img_size]) for img in labels]
+        
+        # if self.with_random_resize:
+        #     if random.random()>0.75:
+        #         tmp_size = self.img_size*2
+        #         x0 = random.randint(0, (imgs[0].shape[1] - tmp_size))
+        #         y0 = random.randint(0, (imgs[0].shape[0] - tmp_size))
+        #         imgs = [(np.array(img)[y0:y0+tmp_size, x0:x0+tmp_size, :]) for img in imgs]
+        #         labels = [(np.array(img)[y0:y0+tmp_size, x0:x0+tmp_size]) for img in labels]
+        #     elif random.random()>0.75:
+        #         tmp_size = self.img_size*3
+        #         x0 = random.randint(0, (imgs[0].shape[1] - tmp_size))
+        #         y0 = random.randint(0, (imgs[0].shape[0] - tmp_size))
+        #         imgs = [np.array(img)[y0:y0+tmp_size, x0:x0+tmp_size, :] for img in imgs]
+        #         labels = [np.array(img)[y0:y0+tmp_size, x0:x0+tmp_size] for img in labels]
 
 
-    #    if not self.img_size_dynamic:
-    #         if imgs[0].size != (self.img_size, self.img_size):
-    #             imgs = [img.resize((self.img_size, self.img_size))
-    #                     for img in imgs]
-    #     else:
-    #         self.img_size = imgs[0].size[0]
+        # # resize image and covert to tensor
+        # if not self.img_size_dynamic:
+        #     if imgs[0].size != (self.img_size, self.img_size):
+        #         imgs = [img.resize((self.img_size, self.img_size))
+        #                 for img in imgs]
+        # else:
+        #     self.img_size = imgs[0].size[0]
 
-    #     labels = [TF.to_pil_image(img) for img in labels]
-    #     if len(labels) != 0:
-    #         if labels[0].size != (self.img_size, self.img_size):
-    #             labels = [img.resize((self.img_size, self.img_size))
-    #                     for img in labels]
+        # labels = [TF.to_pil_image(img) for img in labels]
+        # if len(labels) != 0:
+        #     if labels[0].size != (self.img_size, self.img_size):
+        #         labels = [img.resize((self.img_size, self.img_size))
+        #                 for img in labels]
     
         random_base = 0.5
         if self.with_random_hflip and random.random() > 0.5:

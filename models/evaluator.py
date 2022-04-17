@@ -8,6 +8,8 @@ from misc.logger_tool import Logger
 from utils import de_norm
 import utils
 
+from skimage.filters import threshold_otsu
+import cv2
 
 # Decide which device we want to run on
 # torch.cuda.current_device()
@@ -27,6 +29,7 @@ class CDEvaluator():
         self.device = torch.device("cuda:%s" % args.gpu_ids[0] if torch.cuda.is_available() and len(args.gpu_ids)>0
                                    else "cpu")
         print(self.device)
+        self.model_str = args.net_G
 
         # define some other vars to record the training states
         self.running_metric = ConfuseMatrixMeter(n_class=self.n_class)
@@ -111,25 +114,28 @@ class CDEvaluator():
                       (self.is_training, self.batch_id, m, running_acc)
             self.logger.write(message)
 
-        if np.mod(self.batch_id, 100) == 1:
-            vis_input = utils.make_numpy_grid(de_norm(self.batch['A']))
-            vis_input2 = utils.make_numpy_grid(de_norm(self.batch['B']))
+        # if np.mod(self.batch_id, 1) == 1:
+        vis_input = utils.make_numpy_grid(de_norm(self.batch['A']))
+        vis_input2 = utils.make_numpy_grid(de_norm(self.batch['B']))
 
-            vis_pred = utils.make_numpy_grid(self._visualize_pred())
+        vis_pred = self._visualize_pred().detach().cpu().numpy()
+        # thresh = threshold_otsu(vis_pred)
+        # vis_pred = vis_pred > thresh
+        vis_pred = utils.make_numpy_grid(torch.tensor(vis_pred))
 
-            vis_gt = utils.make_numpy_grid(self.batch['L'])
-            vis = np.concatenate([vis_input, vis_input2, vis_pred, vis_gt], axis=0)
-            vis = np.clip(vis, a_min=0.0, a_max=1.0)
-            file_name = os.path.join(
-                self.vis_dir, 'eval_' + str(self.batch_id)+'.jpg')
-            plt.imsave(file_name, vis)
+        vis_gt = utils.make_numpy_grid(self.batch['L'])
+        vis = np.concatenate([vis_input, vis_input2, vis_pred, vis_gt], axis=0)
+        vis = np.clip(vis, a_min=0.0, a_max=1.0)
+        file_name = os.path.join(
+            self.vis_dir, 'eval_' + str(self.batch_id)+'.jpg')
+        plt.imsave(file_name, vis)
 
 
     def _collect_epoch_states(self):
 
         scores_dict = self.running_metric.get_scores()
 
-        np.save(os.path.join(self.checkpoint_dir, 'scores_dict.npy'), scores_dict)
+        # np.save(os.path.join(self.checkpoint_dir, 'scores_dict.npy'), scores_dict)
 
         self.epoch_acc = scores_dict['mf1']
 
@@ -151,7 +157,11 @@ class CDEvaluator():
         self.batch = batch
         img_in1 = batch['A'].to(self.device)
         img_in2 = batch['B'].to(self.device)
-        self.G_pred = self.net_G(img_in1, img_in2)
+        
+        if  self.model_str == "changeFormerV6":
+            self.G_pred = self.net_G(img_in1, img_in2)[-1]
+        else:
+            self.G_pred = self.net_G(img_in1, img_in2)
 
     def eval_models(self,checkpoint_name='best_ckpt.pt'):
 

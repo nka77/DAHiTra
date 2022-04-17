@@ -511,32 +511,7 @@ class Transformer(nn.Module):
             x = ff(x)
         return x
 
-'''
-class Attention_block(nn.Module):
-    def __init__(self,F_g,F_l,F_int):
-        super(Attention_block,self).__init__()
-        self.W_g = nn.Sequential(
-            nn.Conv2d(F_g, F_int, kernel_size=1,stride=1,padding=0,bias=True),
-            nn.BatchNorm2d(F_int)
-            )
-        self.W_x = nn.Sequential(
-            nn.Conv2d(F_l, F_int, kernel_size=1,stride=1,padding=0,bias=True),
-            nn.BatchNorm2d(F_int)
-        )
-        self.psi = nn.Sequential(
-            nn.Conv2d(F_int, 1, kernel_size=1,stride=1,padding=0,bias=True),
-            nn.BatchNorm2d(1),
-            nn.Sigmoid()
-        )
-        self.relu = nn.ReLU(inplace=True)
-        
-    def forward(self,g,x):
-        g1 = self.W_g(g)
-        x1 = self.W_x(x)
-        psi = self.relu(g1+x1)
-        psi = self.psi(psi)
-        return x*psi
-'''
+
 # Attention for bottleneck layers
 class ChannelAttention_OnBottle(nn.Module):
     def __init__(self, in_planes, ratio=16, att_type='max'):
@@ -1263,14 +1238,36 @@ class BASE_Transformer_UNet(ResNet_UNet):
         self.transformer_decoder_layers = [self.transformer_decoder_2, self.transformer_decoder_3, self.transformer_decoder_4, self.transformer_decoder_5]
 
         self.conv_layer2_0 = TwoLayerConv2d(in_channels=128, out_channels=32, kernel_size=3)
-        # self.conv_layer2 = nn.Conv2d(in_channels=48, out_channels=16, kernel_size=3, padding=1)
-        # self.conv_layer3 = nn.Conv2d(in_channels=48, out_channels=16, kernel_size=3, padding=1)
-        # self.conv_layer4 = nn.Conv2d(in_channels=64, out_channels=16, kernel_size=3, padding=1)
-        # self.classifier = nn.Conv2d(in_channels=16, out_channels=output_nc, kernel_size=3, padding=1)
-        
+
+        # # EXP NEW : Worked Better than BiT and changeformer
+        self.conv_layer2 = nn.Sequential(nn.Conv2d(in_channels=32, out_channels=32, kernel_size=3, padding=1),
+                                        nn.ReLU())
+        self.conv_layer3 = nn.Sequential(nn.Conv2d(in_channels=32, out_channels=32, kernel_size=3, padding=1),
+                                        nn.ReLU())
+        self.conv_layer4 = nn.Sequential(nn.Conv2d(in_channels=32, out_channels=32, kernel_size=3, padding=1),
+                                        nn.ReLU())
         self.classifier = nn.Conv2d(in_channels=32, out_channels=output_nc, kernel_size=3, padding=1)
-        # self.seg_head = nn.Conv2d(in_channels=32, out_channels=1, kernel_size=3, padding=1)
-        # self.cls_head = nn.Conv2d(in_channels=32, out_channels=4, kernel_size=3, padding=1)
+        
+        # FINALIZED CLASSIFIER: Works Best      
+        # self.classifier = nn.Conv2d(in_channels=32, out_channels=output_nc, kernel_size=3, padding=1)
+        
+        # # EXP NEW
+        # self.conv_layer2 = nn.Sequential(nn.Conv2d(in_channels=40, out_channels=16, kernel_size=3, padding=1),
+        #                                 nn.ReLU(),
+        #                                 nn.Conv2d(in_channels=16, out_channels=8, kernel_size=3, padding=1),
+        #                                 nn.ReLU())
+        # self.conv_layer3 = nn.Sequential(nn.Conv2d(in_channels=48, out_channels=16, kernel_size=3, padding=1),
+        #                                 nn.ReLU(),
+        #                                 nn.Conv2d(in_channels=16, out_channels=8, kernel_size=3, padding=1),
+        #                                 nn.ReLU())
+        # self.conv_layer4 = nn.Sequential(nn.Conv2d(in_channels=64, out_channels=32, kernel_size=3, padding=1),
+        #                                 nn.ReLU(),
+        #                                 nn.Conv2d(in_channels=32, out_channels=16, kernel_size=3, padding=1),
+        #                                 nn.ReLU())
+        # self.classifier = nn.Sequential(nn.Conv2d(in_channels=8, out_channels=5, kernel_size=3, padding=1),
+        #                                 nn.ReLU(),
+        #                                 nn.Conv2d(in_channels=5, out_channels=output_nc, kernel_size=3, padding=1))
+
 
 
     def _forward_semantic_tokens(self, x, layer=None):
@@ -1335,8 +1332,8 @@ class BASE_Transformer_UNet(ResNet_UNet):
         x1, x2 = a_32, b_32
         out_4 = self._forward_trans_module(x1, x2, layer=2)
         out_4 = out_4 + out_5
-        # out_4 = self.conv_layer4(torch.cat([out_4, out_5], axis=1))
         out_4 = self.upsamplex2(out_4)
+        out_4 = self.conv_layer4(out_4)
 
         # level 3: in=64x64x64 out=32x64x64
         x1, x2 = a_64, b_64
@@ -1344,12 +1341,14 @@ class BASE_Transformer_UNet(ResNet_UNet):
         out_3 = out_3 + out_4
         # out_3 = self.conv_layer3(torch.cat([out_3, out_4], axis=1))
         out_3 = self.upsamplex2(out_3)
+        out_3 = self.conv_layer3(out_3)
 
         # level 2: in=64x128x128
         out_2 = self.conv_layer2_0(torch.cat([a_128, b_128], 1))
         out_2 = out_2 + out_3
         # out_2 = self.conv_layer2(torch.cat([out_2, out_3], axis=1))
         out_2 = self.upsamplex2(out_2)
+        out_2 = self.conv_layer2(out_2)
 
         # print(out_2.shape, out_3.shape, out_4.shape, out_5.shape)
         # forward small cnn

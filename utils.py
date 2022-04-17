@@ -8,7 +8,7 @@ from datasets.CD_dataset import CDDataset, xBDataset, xBDatasetMulti
 
 
 def get_loader(data_name, img_size=256, batch_size=8, split='test',
-               is_train=False, dataset='CDDataset'):
+               is_train=False, dataset='CDDataset', patch=None):
     dataConfig = data_config.DataConfig().get_data_config(data_name)
     root_dir = dataConfig.root_dir
     label_transform = dataConfig.label_transform
@@ -17,7 +17,7 @@ def get_loader(data_name, img_size=256, batch_size=8, split='test',
     if dataset == 'CDDataset':
         data_set = CDDataset(root_dir=root_dir, split=split,
                                  img_size=img_size, is_train=is_train,
-                                 label_transform=label_transform)
+                                 label_transform=label_transform, patch=patch)
     elif dataset == 'xBDataset':
         data_set = xBDataset(root_dir=root_dir, split=split,
                                  img_size=img_size, is_train=is_train,
@@ -83,7 +83,7 @@ def get_loaders(args):
 
 
 def make_numpy_grid(tensor_data, pad_value=0,padding=0):
-    tensor_data = tensor_data.detach()
+    # tensor_data = tensor_data.detach()
     vis = utils.make_grid(tensor_data, pad_value=pad_value,padding=padding)
     vis = np.array(vis.cpu()).transpose((1,2,0))
     if vis.shape[2] == 1:

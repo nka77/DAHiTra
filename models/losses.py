@@ -21,7 +21,7 @@ def cross_entropy(input, target, weight=None, reduction='mean',ignore_index=255)
     if input.shape[-1] != target.shape[-1]:
         input = F.interpolate(input, size=target.shape[1:], mode='bilinear',align_corners=True)
 
-    weight_ = torch.Tensor([1, 50]).cuda()
+    weight_ = torch.Tensor([1, 1]).cuda()
     return F.cross_entropy(input=input, target=target, weight=weight_,
                            ignore_index=ignore_index, reduction=reduction)
 
@@ -325,6 +325,15 @@ def ce_dice(input, target, weight=None, ignore_index=255, reduction='mean'):
     target = target.type(torch.float32)
     diceloss = dice(input, target)
 
-    loss = 0.7*diceloss + 0.3*celoss
+    loss = 0.5*diceloss + 0.5*celoss
 
+    return loss
+
+
+def diceloss(input, target, weight=None):
+    input = torch.argmax(input, dim=1).type(torch.float32)
+    target = target.type(torch.float32)
+
+    diceloss = smp_losses.DiceLoss(mode='binary')
+    loss = diceloss(input, target)
     return loss

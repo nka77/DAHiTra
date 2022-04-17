@@ -36,12 +36,12 @@ class CDTrainer():
         self.lr = args.lr
 
         # define optimizers
-        # self.optimizer_G = optim.Adam(self.net_G.parameters(), lr=self.lr,
-        #                              weight_decay=1e-6)
+        self.optimizer_G = optim.AdamW(self.net_G.parameters(), lr=self.lr,
+                                    betas=(0.9, 0.999), weight_decay=0.01)
 
-        self.optimizer_G = optim.SGD(self.net_G.parameters(), lr=self.lr,
-                                     momentum=0.9,
-                                     weight_decay=5e-4)
+        # self.optimizer_G = optim.SGD(self.net_G.parameters(), lr=self.lr,
+        #                              momentum=0.9,
+        #                              weight_decay=5e-4)
 
         # define lr schedulers
         self.exp_lr_scheduler_G = get_scheduler(self.optimizer_G, args)
@@ -103,7 +103,7 @@ class CDTrainer():
             os.mkdir(self.vis_dir)
 
 
-    def _load_checkpoint(self, ckpt_name='last_ckpt.pt'):
+    def _load_checkpoint(self, ckpt_name='best_ckpt.pt'):
 
         if os.path.exists(os.path.join(self.checkpoint_dir, ckpt_name)):
             self.logger.write('loading last checkpoint...\n')
@@ -253,10 +253,12 @@ class CDTrainer():
 
     def _backward_G(self):
         gt = self.batch['L'].to(self.device).long()
-        # self._pxl_loss1 = losses.focal_loss
-        # self._pxl_loss2 = losses.multi_cross_entropy
-        # # self.G_loss = self._pxl_loss1(self.G_pred, gt) + 0.5 * self._pxl_loss2(self.G_pred, gt)
-        self.G_loss = self._pxl_loss(self.G_pred, gt)
+        self._pxl_loss1 = losses.diceloss
+        self._pxl_loss2 = losses.focal_loss
+        if gt.shape[0] != 1:
+            self.G_loss = self._pxl_loss1(self.G_pred, gt) + self._pxl_loss2(self.G_pred, gt)
+        else:
+            self.G_loss = losses.cross_entropy(self.G_pred, gt)
         self.G_loss.backward()
 
     # def _forward_pass(self, batch):

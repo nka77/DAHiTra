@@ -19,3 +19,5 @@ docs/src/**/*
 *.pt
 *.pth
 checkpoints
+vis
+vis2
