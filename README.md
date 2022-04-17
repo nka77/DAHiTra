@@ -1,5 +1,7 @@
 # Remote Sensing Damage Classification and Change Detection with Transformers
 
+We propose a novel transformer based network for building damage assessment which uses attention on the features difference and hierarchically builds the damage prediction mask with high accuracy. The model is tested on a large scale disaster damage dataset (xBD) and a change detection dataset (LEVIR-CD) where it achieves state of the art performance for both the damage classification and change detection tasks.
+
 ## Requirements
 ```
 Python 3.6
