@@ -1,0 +1,118 @@
+OUTPUT_DIR: ''
+LOG_DIR: ''
+GPUS: [0,]
+WORKERS: 4
+PRINT_FREQ: 20
+AUTO_RESUME: False
+PIN_MEMORY: True
+RANK: 0
+
+# Cudnn related params
+CUDNN:
+  BENCHMARK: True
+  DETERMINISTIC: False
+  ENABLED: True
+
+# common params for NETWORK
+MODEL:
+  NAME: 'dual-hrnet'
+  PRETRAINED: './Checkpoints/HRNet/hrnetv2_w32_imagenet_pretrained.pth'
+  USE_FPN: False
+  IS_DISASTER_PRED: False
+  IS_SPLIT_LOSS: True
+  FUSE_CONV_K_SIZE: 1
+
+  # high_resoluton_net related params for segmentation
+  EXTRA:
+    PRETRAINED_LAYERS: ['*']
+    STEM_INPLANES: 64
+    FINAL_CONV_KERNEL: 1
+    WITH_HEAD: True
+
+    STAGE1:
+      NUM_MODULES: 1
+      NUM_BRANCHES: 1
+      NUM_BLOCKS: [4]
+      NUM_CHANNELS: [64]
+      BLOCK: 'BOTTLENECK'
+      FUSE_METHOD: 'SUM'
+
+    STAGE2:
+      NUM_MODULES: 1
+      NUM_BRANCHES: 2
+      NUM_BLOCKS: [4, 4]
+      NUM_CHANNELS: [32, 64]
+      BLOCK: 'BASIC'
+      FUSE_METHOD: 'SUM'
+
+    STAGE3:
+      NUM_MODULES: 4
+      NUM_BRANCHES: 3
+      NUM_BLOCKS: [4, 4, 4]
+      NUM_CHANNELS: [32, 64, 128]
+      BLOCK: 'BASIC'
+      FUSE_METHOD: 'SUM'
+
+    STAGE4:
+      NUM_MODULES: 3
+      NUM_BRANCHES: 4
+      NUM_BLOCKS: [4, 4, 4, 4]
+      NUM_CHANNELS: [32, 64, 128, 256]
+      BLOCK: 'BASIC'
+      FUSE_METHOD: 'SUM'
+
+#_C.MODEL.EXTRA= CN(new_allowed=True)
+
+LOSS:
+  CLASS_BALANCE: True
+
+# DATASET related params
+DATASET:
+  NUM_CLASSES: 4
+
+# training
+TRAIN:
+  # Augmentation
+  FLIP: True
+  MULTI_SCALE: [0.8, 1.2]
+  CROP_SIZE: [512, 512]
+
+  LR_FACTOR: 0.1
+  LR_STEP: [90, 110]
+  LR: 0.05
+  EXTRA_LR: 0.001
+
+  OPTIMIZER: 'sgd'
+  MOMENTUM: 0.9
+  WD: 0.0001
+  NESTEROV: False
+  IGNORE_LABEL: -1
+
+  NUM_EPOCHS: 500
+  RESUME: False
+
+  BATCH_SIZE_PER_GPU: 16
+  SHUFFLE: True
+# only using some training samples
+  NUM_SAMPLES: 0
+  CLASS_WEIGHTS: [0.4, 1.2, 1.2, 1.2]
+
+# testing
+TEST:
+  BATCH_SIZE_PER_GPU: 32
+# only testing some samples
+  NUM_SAMPLES: 0
+
+  MODEL_FILE: ''
+  FLIP_TEST: False
+  MULTI_SCALE: False
+  CENTER_CROP_TEST: False
+  SCALE_LIST: [1]
+
+# debug
+DEBUG:
+  DEBUG: False
+  SAVE_BATCH_IMAGES_GT: False
+  SAVE_BATCH_IMAGES_PRED: False
+  SAVE_HEATMAPS_GT: False
+  SAVE_HEATMAPS_PRED: False
