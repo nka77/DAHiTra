@@ -1,0 +1,199 @@
+================ (Fri Apr  8 16:49:56 2022) ================
+gpu_ids: [0] project_name: CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce checkpoint_root: checkpoints num_workers: 4 dataset: CDDataset data_name: LEVIR batch_size: 4 split: train split_val: val img_size: 256 n_class: 2 net_G: newUNetTrans loss: ce optimizer: sgd lr: 0.001 max_epochs: 200 lr_policy: linear lr_decay_iters: 100 checkpoint_dir: checkpoints/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce vis_dir: vis/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce loading last checkpoint...
+Eval Historical_best_acc = 0.9172 (at epoch 169)
+
+Begin evaluation...
+Is_training: False. [1,32],  running_mf1: 0.50000
+acc: 0.98242 miou: 0.84035 mf1: 0.90681 iou_0: 0.98167 iou_1: 0.69904 F1_0: 0.99075 F1_1: 0.82286 precision_0: 0.98773 precision_1: 0.87402 recall_0: 0.99379 recall_1: 0.77737 
+
+================ (Fri Apr  8 18:34:55 2022) ================
+gpu_ids: [0] project_name: CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce print_models: False num_workers: 4 dataset: CDDataset data_name: LEVIR batch_size: 8 split: test img_size: 256 n_class: 2 net_G: newUNetTrans checkpoint_name: best_ckpt.pt checkpoint_dir: checkpoints/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce vis_dir: vis/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce loading last checkpoint...
+Eval Historical_best_acc = 0.9172 (at epoch 169)
+
+Begin evaluation...
+Is_training: False. [1,16],  running_mf1: 0.87672
+acc: 0.97894 miou: 0.82823 mf1: 0.89866 iou_0: 0.97796 iou_1: 0.67851 F1_0: 0.98886 F1_1: 0.80846 precision_0: 0.98415 precision_1: 0.88092 recall_0: 0.99361 recall_1: 0.74702 
+
+================ (Fri Apr  8 18:36:09 2022) ================
+gpu_ids: [0] project_name: CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce print_models: False num_workers: 4 dataset: CDDataset data_name: LEVIR batch_size: 8 split: test img_size: 256 n_class: 2 net_G: newUNetTrans checkpoint_name: best_ckpt.pt checkpoint_dir: checkpoints/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce vis_dir: vis/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce loading last checkpoint...
+Eval Historical_best_acc = 0.9172 (at epoch 169)
+
+Begin evaluation...
+Is_training: False. [1,16],  running_mf1: 0.91828
+acc: 0.98437 miou: 0.84083 mf1: 0.90694 iou_0: 0.98378 iou_1: 0.69789 F1_0: 0.99182 F1_1: 0.82207 precision_0: 0.98819 precision_1: 0.89364 recall_0: 0.99549 recall_1: 0.76111 
+
+================ (Fri Apr  8 19:36:40 2022) ================
+gpu_ids: [0] project_name: CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce print_models: False num_workers: 4 dataset: CDDataset data_name: LEVIR batch_size: 8 split: test img_size: 256 n_class: 2 net_G: newUNetTrans checkpoint_name: best_ckpt.pt checkpoint_dir: checkpoints/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce vis_dir: vis2/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce loading last checkpoint...
+Eval Historical_best_acc = 0.9172 (at epoch 169)
+
+Begin evaluation...
+Is_training: False. [1,16],  running_mf1: 0.91828
+acc: 0.98437 miou: 0.84083 mf1: 0.90694 iou_0: 0.98378 iou_1: 0.69789 F1_0: 0.99182 F1_1: 0.82207 precision_0: 0.98819 precision_1: 0.89364 recall_0: 0.99549 recall_1: 0.76111 
+
+================ (Tue Apr 12 20:58:13 2022) ================
+gpu_ids: [0] project_name: CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce print_models: False num_workers: 4 dataset: CDDataset data_name: LEVIR batch_size: 8 split: test img_size: 256 n_class: 2 net_G: newUNetTrans checkpoint_name: best_ckpt.pt checkpoint_dir: checkpoints/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce vis_dir: vis2/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce loading last checkpoint...
+================ (Tue Apr 12 20:58:42 2022) ================
+gpu_ids: [0] project_name: CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce print_models: False num_workers: 4 dataset: CDDataset data_name: LEVIR batch_size: 8 split: test img_size: 256 n_class: 2 net_G: newUNetTrans checkpoint_name: best_ckpt.pt checkpoint_dir: checkpoints/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce vis_dir: vis2/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce loading last checkpoint...
+Eval Historical_best_acc = 0.9172 (at epoch 169)
+
+acc: 0.98437 miou: 0.84083 mf1: 0.90694 iou_0: 0.98378 iou_1: 0.69789 F1_0: 0.99182 F1_1: 0.82207 precision_0: 0.98819 precision_1: 0.89364 recall_0: 0.99549 recall_1: 0.76111 
+acc: 0.98435 miou: 0.84106 mf1: 0.90711 iou_0: 0.98376 iou_1: 0.69837 F1_0: 0.99181 F1_1: 0.82240 precision_0: 0.98860 precision_1: 0.88488 recall_0: 0.99505 recall_1: 0.76816 
+acc: 0.98323 miou: 0.84384 mf1: 0.90913 iou_0: 0.98253 iou_1: 0.70515 F1_0: 0.99119 F1_1: 0.82708 precision_0: 0.98801 precision_1: 0.88270 recall_0: 0.99438 recall_1: 0.77806 
+acc: 0.98175 miou: 0.84632 mf1: 0.91098 iou_0: 0.98089 iou_1: 0.71175 F1_0: 0.99035 F1_1: 0.83161 precision_0: 0.98706 precision_1: 0.88292 recall_0: 0.99366 recall_1: 0.78593 
+acc: 0.98286 miou: 0.83432 mf1: 0.90255 iou_0: 0.98219 iou_1: 0.68645 F1_0: 0.99102 F1_1: 0.81408 precision_0: 0.98689 precision_1: 0.89129 recall_0: 0.99518 recall_1: 0.74917 
+acc: 0.98437 miou: 0.84083 mf1: 0.90694 iou_0: 0.98378 iou_1: 0.69789 F1_0: 0.99182 F1_1: 0.82207 precision_0: 0.98819 precision_1: 0.89364 recall_0: 0.99549 recall_1: 0.76111 
+acc: 0.98041 miou: 0.82535 mf1: 0.89644 iou_0: 0.97960 iou_1: 0.67110 F1_0: 0.98969 F1_1: 0.80319 precision_0: 0.98519 precision_1: 0.87994 recall_0: 0.99423 recall_1: 0.73875 
+acc: 0.97915 miou: 0.83461 mf1: 0.90313 iou_0: 0.97813 iou_1: 0.69108 F1_0: 0.98895 F1_1: 0.81732 precision_0: 0.98448 precision_1: 0.88359 recall_0: 0.99345 recall_1: 0.76030 
+acc: 0.98680 miou: 0.85935 mf1: 0.91932 iou_0: 0.98630 iou_1: 0.73240 F1_0: 0.99310 F1_1: 0.84554 precision_0: 0.99084 precision_1: 0.89103 recall_0: 0.99537 recall_1: 0.80446 
+acc: 0.98705 miou: 0.86050 mf1: 0.92006 iou_0: 0.98657 iou_1: 0.73444 F1_0: 0.99324 F1_1: 0.84689 precision_0: 0.99079 precision_1: 0.89719 recall_0: 0.99571 recall_1: 0.80192 
+acc: 0.98006 miou: 0.82453 mf1: 0.89589 iou_0: 0.97922 iou_1: 0.66985 F1_0: 0.98950 F1_1: 0.80228 precision_0: 0.98450 precision_1: 0.88714 recall_0: 0.99455 recall_1: 0.73225 
+acc: 0.98378 miou: 0.85824 mf1: 0.91884 iou_0: 0.98302 iou_1: 0.73346 F1_0: 0.99144 F1_1: 0.84624 precision_0: 0.98853 precision_1: 0.89339 recall_0: 0.99436 recall_1: 0.80381 
+acc: 0.98703 miou: 0.86551 mf1: 0.92338 iou_0: 0.98652 iou_1: 0.74451 F1_0: 0.99321 F1_1: 0.85354 precision_0: 0.99124 precision_1: 0.89178 recall_0: 0.99519 recall_1: 0.81845 
+acc: 0.98759 miou: 0.87261 mf1: 0.92797 iou_0: 0.98709 iou_1: 0.75813 F1_0: 0.99350 F1_1: 0.86243 precision_0: 0.99209 precision_1: 0.88931 recall_0: 0.99492 recall_1: 0.83713 
+acc: 0.98390 miou: 0.85101 mf1: 0.91397 iou_0: 0.98321 iou_1: 0.71882 F1_0: 0.99153 F1_1: 0.83641 precision_0: 0.98812 precision_1: 0.89618 recall_0: 0.99497 recall_1: 0.78411 
+================ (Tue Apr 12 21:02:39 2022) ================
+gpu_ids: [0] project_name: CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce print_models: False num_workers: 4 dataset: CDDataset data_name: LEVIR batch_size: 8 split: test img_size: 256 n_class: 2 net_G: newUNetTrans checkpoint_name: best_ckpt.pt checkpoint_dir: checkpoints/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce vis_dir: vis2/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce loading last checkpoint...
+Eval Historical_best_acc = 0.9172 (at epoch 169)
+
+Begin evaluation...
+Is_training: False. [1,16],  running_mf1: 0.85226
+acc: 0.97541 miou: 0.81000 mf1: 0.88585 iou_0: 0.97425 iou_1: 0.64574 F1_0: 0.98696 F1_1: 0.78474 precision_0: 0.98178 precision_1: 0.85959 recall_0: 0.99219 recall_1: 0.72188 
+
+================ (Thu Apr 14 23:11:11 2022) ================
+gpu_ids: [0] project_name: CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce print_models: False num_workers: 4 dataset: CDDataset data_name: LEVIR batch_size: 8 split: test img_size: 256 n_class: 2 net_G: newUNetTrans checkpoint_name: best_ckpt.pt checkpoint_dir: checkpoints/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce vis_dir: vis2/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce loading last checkpoint...
+Eval Historical_best_acc = 0.9172 (at epoch 169)
+
+Begin evaluation...
+Is_training: False. [1,16],  running_mf1: 0.91828
+acc: 0.98437 miou: 0.84083 mf1: 0.90694 iou_0: 0.98378 iou_1: 0.69789 F1_0: 0.99182 F1_1: 0.82207 precision_0: 0.98819 precision_1: 0.89364 recall_0: 0.99549 recall_1: 0.76111 
+
+================ (Thu Apr 14 23:11:27 2022) ================
+gpu_ids: [0] project_name: CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce print_models: False num_workers: 4 dataset: CDDataset data_name: LEVIR batch_size: 8 split: test img_size: 256 n_class: 2 net_G: newUNetTrans checkpoint_name: best_ckpt.pt checkpoint_dir: checkpoints/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce vis_dir: vis2/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce loading last checkpoint...
+Eval Historical_best_acc = 0.9172 (at epoch 169)
+
+Begin evaluation...
+Is_training: False. [1,16],  running_mf1: 0.94383
+acc: 0.98435 miou: 0.84106 mf1: 0.90711 iou_0: 0.98376 iou_1: 0.69837 F1_0: 0.99181 F1_1: 0.82240 precision_0: 0.98860 precision_1: 0.88488 recall_0: 0.99505 recall_1: 0.76816 
+
+================ (Thu Apr 14 23:11:41 2022) ================
+gpu_ids: [0] project_name: CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce print_models: False num_workers: 4 dataset: CDDataset data_name: LEVIR batch_size: 8 split: test img_size: 256 n_class: 2 net_G: newUNetTrans checkpoint_name: best_ckpt.pt checkpoint_dir: checkpoints/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce vis_dir: vis2/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce loading last checkpoint...
+Eval Historical_best_acc = 0.9172 (at epoch 169)
+
+Begin evaluation...
+Is_training: False. [1,16],  running_mf1: 0.93026
+acc: 0.98323 miou: 0.84384 mf1: 0.90913 iou_0: 0.98253 iou_1: 0.70515 F1_0: 0.99119 F1_1: 0.82708 precision_0: 0.98801 precision_1: 0.88270 recall_0: 0.99438 recall_1: 0.77806 
+
+================ (Thu Apr 14 23:11:55 2022) ================
+gpu_ids: [0] project_name: CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce print_models: False num_workers: 4 dataset: CDDataset data_name: LEVIR batch_size: 8 split: test img_size: 256 n_class: 2 net_G: newUNetTrans checkpoint_name: best_ckpt.pt checkpoint_dir: checkpoints/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce vis_dir: vis2/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce loading last checkpoint...
+Eval Historical_best_acc = 0.9172 (at epoch 169)
+
+Begin evaluation...
+Is_training: False. [1,16],  running_mf1: 0.92000
+acc: 0.98175 miou: 0.84632 mf1: 0.91098 iou_0: 0.98089 iou_1: 0.71175 F1_0: 0.99035 F1_1: 0.83161 precision_0: 0.98706 precision_1: 0.88292 recall_0: 0.99366 recall_1: 0.78593 
+
+================ (Thu Apr 14 23:12:09 2022) ================
+gpu_ids: [0] project_name: CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce print_models: False num_workers: 4 dataset: CDDataset data_name: LEVIR batch_size: 8 split: test img_size: 256 n_class: 2 net_G: newUNetTrans checkpoint_name: best_ckpt.pt checkpoint_dir: checkpoints/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce vis_dir: vis2/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce loading last checkpoint...
+Eval Historical_best_acc = 0.9172 (at epoch 169)
+
+Begin evaluation...
+Is_training: False. [1,16],  running_mf1: 0.93358
+acc: 0.98286 miou: 0.83432 mf1: 0.90255 iou_0: 0.98219 iou_1: 0.68645 F1_0: 0.99102 F1_1: 0.81408 precision_0: 0.98689 precision_1: 0.89129 recall_0: 0.99518 recall_1: 0.74917 
+
+================ (Thu Apr 14 23:12:22 2022) ================
+gpu_ids: [0] project_name: CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce print_models: False num_workers: 4 dataset: CDDataset data_name: LEVIR batch_size: 8 split: test img_size: 256 n_class: 2 net_G: newUNetTrans checkpoint_name: best_ckpt.pt checkpoint_dir: checkpoints/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce vis_dir: vis2/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce loading last checkpoint...
+Eval Historical_best_acc = 0.9172 (at epoch 169)
+
+Begin evaluation...
+Is_training: False. [1,16],  running_mf1: 0.91828
+acc: 0.98437 miou: 0.84083 mf1: 0.90694 iou_0: 0.98378 iou_1: 0.69789 F1_0: 0.99182 F1_1: 0.82207 precision_0: 0.98819 precision_1: 0.89364 recall_0: 0.99549 recall_1: 0.76111 
+
+================ (Thu Apr 14 23:12:36 2022) ================
+gpu_ids: [0] project_name: CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce print_models: False num_workers: 4 dataset: CDDataset data_name: LEVIR batch_size: 8 split: test img_size: 256 n_class: 2 net_G: newUNetTrans checkpoint_name: best_ckpt.pt checkpoint_dir: checkpoints/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce vis_dir: vis2/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce loading last checkpoint...
+Eval Historical_best_acc = 0.9172 (at epoch 169)
+
+Begin evaluation...
+Is_training: False. [1,16],  running_mf1: 0.89689
+acc: 0.98041 miou: 0.82535 mf1: 0.89644 iou_0: 0.97960 iou_1: 0.67110 F1_0: 0.98969 F1_1: 0.80319 precision_0: 0.98519 precision_1: 0.87994 recall_0: 0.99423 recall_1: 0.73875 
+
+================ (Thu Apr 14 23:12:50 2022) ================
+gpu_ids: [0] project_name: CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce print_models: False num_workers: 4 dataset: CDDataset data_name: LEVIR batch_size: 8 split: test img_size: 256 n_class: 2 net_G: newUNetTrans checkpoint_name: best_ckpt.pt checkpoint_dir: checkpoints/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce vis_dir: vis2/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce loading last checkpoint...
+Eval Historical_best_acc = 0.9172 (at epoch 169)
+
+Begin evaluation...
+Is_training: False. [1,16],  running_mf1: 0.90114
+acc: 0.97915 miou: 0.83461 mf1: 0.90313 iou_0: 0.97813 iou_1: 0.69108 F1_0: 0.98895 F1_1: 0.81732 precision_0: 0.98448 precision_1: 0.88359 recall_0: 0.99345 recall_1: 0.76030 
+
+================ (Thu Apr 14 23:13:04 2022) ================
+gpu_ids: [0] project_name: CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce print_models: False num_workers: 4 dataset: CDDataset data_name: LEVIR batch_size: 8 split: test img_size: 256 n_class: 2 net_G: newUNetTrans checkpoint_name: best_ckpt.pt checkpoint_dir: checkpoints/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce vis_dir: vis2/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce loading last checkpoint...
+Eval Historical_best_acc = 0.9172 (at epoch 169)
+
+Begin evaluation...
+Is_training: False. [1,16],  running_mf1: 0.88788
+acc: 0.98680 miou: 0.85935 mf1: 0.91932 iou_0: 0.98630 iou_1: 0.73240 F1_0: 0.99310 F1_1: 0.84554 precision_0: 0.99084 precision_1: 0.89103 recall_0: 0.99537 recall_1: 0.80446 
+
+================ (Thu Apr 14 23:13:17 2022) ================
+gpu_ids: [0] project_name: CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce print_models: False num_workers: 4 dataset: CDDataset data_name: LEVIR batch_size: 8 split: test img_size: 256 n_class: 2 net_G: newUNetTrans checkpoint_name: best_ckpt.pt checkpoint_dir: checkpoints/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce vis_dir: vis2/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce loading last checkpoint...
+Eval Historical_best_acc = 0.9172 (at epoch 169)
+
+Begin evaluation...
+Is_training: False. [1,16],  running_mf1: 0.92453
+acc: 0.98705 miou: 0.86050 mf1: 0.92006 iou_0: 0.98657 iou_1: 0.73444 F1_0: 0.99324 F1_1: 0.84689 precision_0: 0.99079 precision_1: 0.89719 recall_0: 0.99571 recall_1: 0.80192 
+
+================ (Thu Apr 14 23:13:31 2022) ================
+gpu_ids: [0] project_name: CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce print_models: False num_workers: 4 dataset: CDDataset data_name: LEVIR batch_size: 8 split: test img_size: 256 n_class: 2 net_G: newUNetTrans checkpoint_name: best_ckpt.pt checkpoint_dir: checkpoints/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce vis_dir: vis2/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce loading last checkpoint...
+Eval Historical_best_acc = 0.9172 (at epoch 169)
+
+Begin evaluation...
+Is_training: False. [1,16],  running_mf1: 0.90422
+acc: 0.98006 miou: 0.82453 mf1: 0.89589 iou_0: 0.97922 iou_1: 0.66985 F1_0: 0.98950 F1_1: 0.80228 precision_0: 0.98450 precision_1: 0.88714 recall_0: 0.99455 recall_1: 0.73225 
+
+================ (Thu Apr 14 23:13:44 2022) ================
+gpu_ids: [0] project_name: CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce print_models: False num_workers: 4 dataset: CDDataset data_name: LEVIR batch_size: 8 split: test img_size: 256 n_class: 2 net_G: newUNetTrans checkpoint_name: best_ckpt.pt checkpoint_dir: checkpoints/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce vis_dir: vis2/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce loading last checkpoint...
+Eval Historical_best_acc = 0.9172 (at epoch 169)
+
+Begin evaluation...
+Is_training: False. [1,16],  running_mf1: 0.90226
+acc: 0.98378 miou: 0.85824 mf1: 0.91884 iou_0: 0.98302 iou_1: 0.73346 F1_0: 0.99144 F1_1: 0.84624 precision_0: 0.98853 precision_1: 0.89339 recall_0: 0.99436 recall_1: 0.80381 
+
+================ (Thu Apr 14 23:13:58 2022) ================
+gpu_ids: [0] project_name: CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce print_models: False num_workers: 4 dataset: CDDataset data_name: LEVIR batch_size: 8 split: test img_size: 256 n_class: 2 net_G: newUNetTrans checkpoint_name: best_ckpt.pt checkpoint_dir: checkpoints/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce vis_dir: vis2/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce loading last checkpoint...
+Eval Historical_best_acc = 0.9172 (at epoch 169)
+
+Begin evaluation...
+Is_training: False. [1,16],  running_mf1: 0.88428
+acc: 0.98703 miou: 0.86551 mf1: 0.92338 iou_0: 0.98652 iou_1: 0.74451 F1_0: 0.99321 F1_1: 0.85354 precision_0: 0.99124 precision_1: 0.89178 recall_0: 0.99519 recall_1: 0.81845 
+
+================ (Thu Apr 14 23:14:12 2022) ================
+gpu_ids: [0] project_name: CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce print_models: False num_workers: 4 dataset: CDDataset data_name: LEVIR batch_size: 8 split: test img_size: 256 n_class: 2 net_G: newUNetTrans checkpoint_name: best_ckpt.pt checkpoint_dir: checkpoints/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce vis_dir: vis2/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce loading last checkpoint...
+Eval Historical_best_acc = 0.9172 (at epoch 169)
+
+Begin evaluation...
+Is_training: False. [1,16],  running_mf1: 0.92390
+acc: 0.98759 miou: 0.87261 mf1: 0.92797 iou_0: 0.98709 iou_1: 0.75813 F1_0: 0.99350 F1_1: 0.86243 precision_0: 0.99209 precision_1: 0.88931 recall_0: 0.99492 recall_1: 0.83713 
+
+================ (Thu Apr 14 23:14:26 2022) ================
+gpu_ids: [0] project_name: CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce print_models: False num_workers: 4 dataset: CDDataset data_name: LEVIR batch_size: 8 split: test img_size: 256 n_class: 2 net_G: newUNetTrans checkpoint_name: best_ckpt.pt checkpoint_dir: checkpoints/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce vis_dir: vis2/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce loading last checkpoint...
+Eval Historical_best_acc = 0.9172 (at epoch 169)
+
+Begin evaluation...
+Is_training: False. [1,16],  running_mf1: 0.92426
+acc: 0.98390 miou: 0.85101 mf1: 0.91397 iou_0: 0.98321 iou_1: 0.71882 F1_0: 0.99153 F1_1: 0.83641 precision_0: 0.98812 precision_1: 0.89618 recall_0: 0.99497 recall_1: 0.78411 
+
+================ (Thu Apr 14 23:14:39 2022) ================
+gpu_ids: [0] project_name: CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce print_models: False num_workers: 4 dataset: CDDataset data_name: LEVIR batch_size: 8 split: test img_size: 256 n_class: 2 net_G: newUNetTrans checkpoint_name: best_ckpt.pt checkpoint_dir: checkpoints/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce vis_dir: vis2/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce loading last checkpoint...
+Eval Historical_best_acc = 0.9172 (at epoch 169)
+
+Begin evaluation...
+Is_training: False. [1,16],  running_mf1: 0.85226
+acc: 0.97541 miou: 0.81000 mf1: 0.88585 iou_0: 0.97425 iou_1: 0.64574 F1_0: 0.98696 F1_1: 0.78474 precision_0: 0.98178 precision_1: 0.85959 recall_0: 0.99219 recall_1: 0.72188 
+
+================ (Thu Apr 14 23:40:29 2022) ================
+gpu_ids: [0] project_name: CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce print_models: False num_workers: 4 dataset: CDDataset data_name: LEVIR batch_size: 8 split: test img_size: 256 n_class: 2 net_G: newUNetTrans checkpoint_name: best_ckpt.pt checkpoint_dir: checkpoints/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce vis_dir: vis2/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce loading last checkpoint...
+Eval Historical_best_acc = 0.9172 (at epoch 169)
+
+Begin evaluation...
+================ (Thu Apr 14 23:43:20 2022) ================
+gpu_ids: [0] project_name: CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce print_models: False num_workers: 4 dataset: CDDataset data_name: LEVIR batch_size: 8 split: test img_size: 256 n_class: 2 net_G: newUNetTrans checkpoint_name: best_ckpt.pt checkpoint_dir: checkpoints/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce vis_dir: vis2/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce loading last checkpoint...
+Eval Historical_best_acc = 0.9172 (at epoch 169)
+
+Begin evaluation...

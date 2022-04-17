@@ -1,0 +1,2445 @@
+================ (Fri Apr  8 15:21:54 2022) ================
+gpu_ids: [0] project_name: CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce checkpoint_root: checkpoints num_workers: 4 dataset: CDDataset data_name: LEVIR batch_size: 4 split: train split_val: val img_size: 256 n_class: 2 net_G: newUNetTrans loss: ce optimizer: sgd lr: 0.001 max_epochs: 200 lr_policy: linear lr_decay_iters: 100 checkpoint_dir: checkpoints/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce vis_dir: vis/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce lr: 0.0010000
+================ (Fri Apr  8 15:22:13 2022) ================
+gpu_ids: [0] project_name: CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce checkpoint_root: checkpoints num_workers: 4 dataset: CDDataset data_name: LEVIR batch_size: 4 split: train split_val: val img_size: 256 n_class: 2 net_G: newUNetTrans loss: ce optimizer: sgd lr: 0.001 max_epochs: 200 lr_policy: linear lr_decay_iters: 100 checkpoint_dir: checkpoints/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce vis_dir: vis/CROP_newUNetTrans_LEVIR_b4_lr0.001_train_val_200_linear_ce lr: 0.0010000
+Is_training: True. [0,199][1,112], imps: 39.86, est: 2.50h, G_loss: 0.25149, running_mf1: 0.48905
+Is_training: True. Epoch 0 / 199, epoch_mF1= 0.55497
+acc: 0.94810 miou: 0.51063 mf1: 0.55497 iou_0: 0.94789 iou_1: 0.07336 F1_0: 0.97325 F1_1: 0.13670 precision_0: 0.95689 precision_1: 0.30487 recall_0: 0.99017 recall_1: 0.08810 
+
+Begin evaluation...
+Is_training: False. [0,199][1,16], imps: 1.33, est: 74.82h, G_loss: 0.52179, running_mf1: 0.57118
+Is_training: False. Epoch 0 / 199, epoch_mF1= 0.67190
+acc: 0.91901 miou: 0.57847 mf1: 0.67190 iou_0: 0.91689 iou_1: 0.24005 F1_0: 0.95664 F1_1: 0.38716 precision_0: 0.97849 precision_1: 0.29428 recall_0: 0.93575 recall_1: 0.56572 
+
+Lastest model updated. Epoch_acc=0.6719, Historical_best_acc=0.0000 (at epoch 0)
+
+**********Best model updated!
+
+lr: 0.0009950
+Is_training: True. [1,199][1,112], imps: 48.46, est: 2.04h, G_loss: 0.22334, running_mf1: 0.55441
+Is_training: True. Epoch 1 / 199, epoch_mF1= 0.60837
+acc: 0.95372 miou: 0.54507 mf1: 0.60837 iou_0: 0.95338 iou_1: 0.13676 F1_0: 0.97613 F1_1: 0.24061 precision_0: 0.95834 precision_1: 0.58806 recall_0: 0.99460 recall_1: 0.15125 
+
+Begin evaluation...
+Is_training: False. [1,199][1,16], imps: 26.89, est: 3.68h, G_loss: 0.06782, running_mf1: 0.69132
+Is_training: False. Epoch 1 / 199, epoch_mF1= 0.63383
+acc: 0.97603 miou: 0.56930 mf1: 0.63383 iou_0: 0.97592 iou_1: 0.16269 F1_0: 0.98781 F1_1: 0.27985 precision_0: 0.97743 precision_1: 0.75247 recall_0: 0.99843 recall_1: 0.17189 
+
+Lastest model updated. Epoch_acc=0.6338, Historical_best_acc=0.6719 (at epoch 0)
+
+lr: 0.0009900
+Is_training: True. [2,199][1,112], imps: 50.80, est: 1.94h, G_loss: 0.08257, running_mf1: 0.49873
+Is_training: True. Epoch 2 / 199, epoch_mF1= 0.64284
+acc: 0.96373 miou: 0.57144 mf1: 0.64284 iou_0: 0.96344 iou_1: 0.17945 F1_0: 0.98138 F1_1: 0.30429 precision_0: 0.96910 precision_1: 0.57794 recall_0: 0.99398 recall_1: 0.20651 
+
+Begin evaluation...
+Is_training: False. [2,199][1,16], imps: 38.33, est: 2.57h, G_loss: 0.40416, running_mf1: 0.48673
+Is_training: False. Epoch 2 / 199, epoch_mF1= 0.68339
+acc: 0.96724 miou: 0.60212 mf1: 0.68339 iou_0: 0.96690 iou_1: 0.23733 F1_0: 0.98317 F1_1: 0.38362 precision_0: 0.97337 precision_1: 0.60794 recall_0: 0.99318 recall_1: 0.28022 
+
+Lastest model updated. Epoch_acc=0.6834, Historical_best_acc=0.6719 (at epoch 0)
+
+**********Best model updated!
+
+lr: 0.0009851
+Is_training: True. [3,199][1,112], imps: 53.57, est: 1.83h, G_loss: 0.10052, running_mf1: 0.48918
+Is_training: True. Epoch 3 / 199, epoch_mF1= 0.69181
+acc: 0.96027 miou: 0.60650 mf1: 0.69181 iou_0: 0.95973 iou_1: 0.25327 F1_0: 0.97945 F1_1: 0.40418 precision_0: 0.96647 precision_1: 0.66185 recall_0: 0.99278 recall_1: 0.29092 
+
+Begin evaluation...
+Is_training: False. [3,199][1,16], imps: 43.36, est: 2.26h, G_loss: 0.02016, running_mf1: 0.83113
+Is_training: False. Epoch 3 / 199, epoch_mF1= 0.71103
+acc: 0.96251 miou: 0.62260 mf1: 0.71103 iou_0: 0.96195 iou_1: 0.28325 F1_0: 0.98060 F1_1: 0.44145 precision_0: 0.97339 precision_1: 0.56119 recall_0: 0.98792 recall_1: 0.36383 
+
+Lastest model updated. Epoch_acc=0.7110, Historical_best_acc=0.6834 (at epoch 2)
+
+**********Best model updated!
+
+lr: 0.0009801
+Is_training: True. [4,199][1,112], imps: 52.95, est: 1.84h, G_loss: 0.53974, running_mf1: 0.53745
+Is_training: True. Epoch 4 / 199, epoch_mF1= 0.69754
+acc: 0.96120 miou: 0.61130 mf1: 0.69754 iou_0: 0.96066 iou_1: 0.26194 F1_0: 0.97994 F1_1: 0.41514 precision_0: 0.96744 precision_1: 0.66584 recall_0: 0.99276 recall_1: 0.30158 
+
+Begin evaluation...
+Is_training: False. [4,199][1,16], imps: 45.21, est: 2.16h, G_loss: 0.01922, running_mf1: 0.49900
+Is_training: False. Epoch 4 / 199, epoch_mF1= 0.69512
+acc: 0.97611 miou: 0.61391 mf1: 0.69512 iou_0: 0.97592 iou_1: 0.25190 F1_0: 0.98781 F1_1: 0.40243 precision_0: 0.97716 precision_1: 0.86398 recall_0: 0.99869 recall_1: 0.26231 
+
+Lastest model updated. Epoch_acc=0.6951, Historical_best_acc=0.7110 (at epoch 3)
+
+lr: 0.0009751
+Is_training: True. [5,199][1,112], imps: 55.81, est: 1.74h, G_loss: 0.25786, running_mf1: 0.56540
+Is_training: True. Epoch 5 / 199, epoch_mF1= 0.71479
+acc: 0.96533 miou: 0.62653 mf1: 0.71479 iou_0: 0.96484 iou_1: 0.28823 F1_0: 0.98210 F1_1: 0.44748 precision_0: 0.97074 precision_1: 0.70082 recall_0: 0.99374 recall_1: 0.32867 
+
+Begin evaluation...
+Is_training: False. [5,199][1,16], imps: 48.74, est: 1.99h, G_loss: 0.00666, running_mf1: 0.57097
+Is_training: False. Epoch 5 / 199, epoch_mF1= 0.69403
+acc: 0.96240 miou: 0.60889 mf1: 0.69403 iou_0: 0.96191 iou_1: 0.25587 F1_0: 0.98058 F1_1: 0.40748 precision_0: 0.96762 precision_1: 0.68936 recall_0: 0.99390 recall_1: 0.28922 
+
+Lastest model updated. Epoch_acc=0.6940, Historical_best_acc=0.7110 (at epoch 3)
+
+lr: 0.0009701
+Is_training: True. [6,199][1,112], imps: 57.87, est: 1.67h, G_loss: 0.13437, running_mf1: 0.59003
+Is_training: True. Epoch 6 / 199, epoch_mF1= 0.72747
+acc: 0.96334 miou: 0.63664 mf1: 0.72747 iou_0: 0.96272 iou_1: 0.31056 F1_0: 0.98101 F1_1: 0.47394 precision_0: 0.97019 precision_1: 0.68561 recall_0: 0.99207 recall_1: 0.36214 
+
+Begin evaluation...
+Is_training: False. [6,199][1,16], imps: 51.41, est: 1.88h, G_loss: 0.84903, running_mf1: 0.50000
+Is_training: False. Epoch 6 / 199, epoch_mF1= 0.66068
+acc: 0.96127 miou: 0.58332 mf1: 0.66068 iou_0: 0.96088 iou_1: 0.20576 F1_0: 0.98005 F1_1: 0.34130 precision_0: 0.96520 precision_1: 0.69391 recall_0: 0.99537 recall_1: 0.22630 
+
+Lastest model updated. Epoch_acc=0.6607, Historical_best_acc=0.7110 (at epoch 3)
+
+lr: 0.0009652
+Is_training: True. [7,199][1,112], imps: 59.42, est: 1.62h, G_loss: 0.11758, running_mf1: 0.81333
+Is_training: True. Epoch 7 / 199, epoch_mF1= 0.73651
+acc: 0.96427 miou: 0.64475 mf1: 0.73651 iou_0: 0.96364 iou_1: 0.32586 F1_0: 0.98148 F1_1: 0.49154 precision_0: 0.97110 precision_1: 0.69590 recall_0: 0.99209 recall_1: 0.37996 
+
+Begin evaluation...
+Is_training: False. [7,199][1,16], imps: 53.51, est: 1.80h, G_loss: 0.09981, running_mf1: 0.86309
+Is_training: False. Epoch 7 / 199, epoch_mF1= 0.68631
+acc: 0.96921 miou: 0.60496 mf1: 0.68631 iou_0: 0.96890 iou_1: 0.24101 F1_0: 0.98421 F1_1: 0.38841 precision_0: 0.97377 precision_1: 0.66414 recall_0: 0.99487 recall_1: 0.27446 
+
+Lastest model updated. Epoch_acc=0.6863, Historical_best_acc=0.7110 (at epoch 3)
+
+lr: 0.0009602
+Is_training: True. [8,199][1,112], imps: 60.65, est: 1.58h, G_loss: 0.03077, running_mf1: 0.81965
+Is_training: True. Epoch 8 / 199, epoch_mF1= 0.73272
+acc: 0.96402 miou: 0.64137 mf1: 0.73272 iou_0: 0.96340 iou_1: 0.31934 F1_0: 0.98136 F1_1: 0.48408 precision_0: 0.97149 precision_1: 0.67350 recall_0: 0.99143 recall_1: 0.37783 
+
+Begin evaluation...
+Is_training: False. [8,199][1,16], imps: 55.18, est: 1.73h, G_loss: 0.02063, running_mf1: 0.49929
+Is_training: False. Epoch 8 / 199, epoch_mF1= 0.70001
+acc: 0.97128 miou: 0.61630 mf1: 0.70001 iou_0: 0.97098 iou_1: 0.26162 F1_0: 0.98528 F1_1: 0.41473 precision_0: 0.97270 precision_1: 0.85353 recall_0: 0.99819 recall_1: 0.27391 
+
+Lastest model updated. Epoch_acc=0.7000, Historical_best_acc=0.7110 (at epoch 3)
+
+lr: 0.0009552
+Is_training: True. [9,199][1,112], imps: 61.63, est: 1.54h, G_loss: 0.02116, running_mf1: 0.88246
+Is_training: True. Epoch 9 / 199, epoch_mF1= 0.74241
+acc: 0.96491 miou: 0.65015 mf1: 0.74241 iou_0: 0.96427 iou_1: 0.33602 F1_0: 0.98181 F1_1: 0.50301 precision_0: 0.97209 precision_1: 0.69230 recall_0: 0.99174 recall_1: 0.39501 
+
+Begin evaluation...
+Is_training: False. [9,199][1,16], imps: 56.56, est: 1.68h, G_loss: 0.04622, running_mf1: 0.50000
+Is_training: False. Epoch 9 / 199, epoch_mF1= 0.56028
+acc: 0.97993 miou: 0.52491 mf1: 0.56028 iou_0: 0.97990 iou_1: 0.06992 F1_0: 0.98985 F1_1: 0.13070 precision_0: 0.98090 precision_1: 0.59629 recall_0: 0.99896 recall_1: 0.07340 
+
+Lastest model updated. Epoch_acc=0.5603, Historical_best_acc=0.7110 (at epoch 3)
+
+lr: 0.0009502
+Is_training: True. [10,199][1,112], imps: 62.42, est: 1.52h, G_loss: 0.06202, running_mf1: 0.72577
+Is_training: True. Epoch 10 / 199, epoch_mF1= 0.77256
+acc: 0.96381 miou: 0.67785 mf1: 0.77256 iou_0: 0.96294 iou_1: 0.39276 F1_0: 0.98112 F1_1: 0.56400 precision_0: 0.97093 precision_1: 0.74447 recall_0: 0.99153 recall_1: 0.45395 
+
+Begin evaluation...
+Is_training: False. [10,199][1,16], imps: 57.72, est: 1.64h, G_loss: 0.05110, running_mf1: 0.68171
+Is_training: False. Epoch 10 / 199, epoch_mF1= 0.71894
+acc: 0.96571 miou: 0.63010 mf1: 0.71894 iou_0: 0.96521 iou_1: 0.29499 F1_0: 0.98230 F1_1: 0.45558 precision_0: 0.97131 precision_1: 0.69862 recall_0: 0.99354 recall_1: 0.33800 
+
+Lastest model updated. Epoch_acc=0.7189, Historical_best_acc=0.7110 (at epoch 3)
+
+**********Best model updated!
+
+lr: 0.0009453
+Is_training: True. [11,199][1,112], imps: 62.28, est: 1.51h, G_loss: 0.08686, running_mf1: 0.55567
+Is_training: True. Epoch 11 / 199, epoch_mF1= 0.78088
+acc: 0.96777 miou: 0.68701 mf1: 0.78088 iou_0: 0.96704 iou_1: 0.40698 F1_0: 0.98324 F1_1: 0.57852 precision_0: 0.97430 precision_1: 0.75230 recall_0: 0.99236 recall_1: 0.46995 
+
+Begin evaluation...
+Is_training: False. [11,199][1,16], imps: 58.00, est: 1.62h, G_loss: 0.08626, running_mf1: 0.58781
+Is_training: False. Epoch 11 / 199, epoch_mF1= 0.74544
+acc: 0.97330 miou: 0.65518 mf1: 0.74544 iou_0: 0.97293 iou_1: 0.33744 F1_0: 0.98628 F1_1: 0.50460 precision_0: 0.97674 precision_1: 0.77932 recall_0: 0.99600 recall_1: 0.37309 
+
+Lastest model updated. Epoch_acc=0.7454, Historical_best_acc=0.7189 (at epoch 10)
+
+**********Best model updated!
+
+lr: 0.0009403
+Is_training: True. [12,199][1,112], imps: 62.12, est: 1.51h, G_loss: 0.09473, running_mf1: 0.49016
+Is_training: True. Epoch 12 / 199, epoch_mF1= 0.76835
+acc: 0.97144 miou: 0.67581 mf1: 0.76835 iou_0: 0.97093 iou_1: 0.38070 F1_0: 0.98525 F1_1: 0.55146 precision_0: 0.97761 precision_1: 0.72360 recall_0: 0.99302 recall_1: 0.44548 
+
+Begin evaluation...
+Is_training: False. [12,199][1,16], imps: 58.18, est: 1.61h, G_loss: 0.01613, running_mf1: 0.74646
+Is_training: False. Epoch 12 / 199, epoch_mF1= 0.73588
+acc: 0.96468 miou: 0.64431 mf1: 0.73588 iou_0: 0.96407 iou_1: 0.32454 F1_0: 0.98171 F1_1: 0.49005 precision_0: 0.97593 precision_1: 0.58691 recall_0: 0.98755 recall_1: 0.42062 
+
+Lastest model updated. Epoch_acc=0.7359, Historical_best_acc=0.7454 (at epoch 11)
+
+lr: 0.0009353
+Is_training: True. [13,199][1,112], imps: 62.70, est: 1.48h, G_loss: 0.02827, running_mf1: 0.49862
+Is_training: True. Epoch 13 / 199, epoch_mF1= 0.81550
+acc: 0.97436 miou: 0.72451 mf1: 0.81550 iou_0: 0.97375 iou_1: 0.47526 F1_0: 0.98670 F1_1: 0.64431 precision_0: 0.98086 precision_1: 0.76647 recall_0: 0.99262 recall_1: 0.55573 
+
+Begin evaluation...
+Is_training: False. [13,199][1,16], imps: 58.98, est: 1.58h, G_loss: 0.03326, running_mf1: 0.60826
+Is_training: False. Epoch 13 / 199, epoch_mF1= 0.75987
+acc: 0.97335 miou: 0.66834 mf1: 0.75987 iou_0: 0.97294 iou_1: 0.36374 F1_0: 0.98628 F1_1: 0.53345 precision_0: 0.97817 precision_1: 0.74294 recall_0: 0.99453 recall_1: 0.41611 
+
+Lastest model updated. Epoch_acc=0.7599, Historical_best_acc=0.7454 (at epoch 11)
+
+**********Best model updated!
+
+lr: 0.0009303
+Is_training: True. [14,199][1,112], imps: 62.60, est: 1.48h, G_loss: 0.04411, running_mf1: 0.83745
+Is_training: True. Epoch 14 / 199, epoch_mF1= 0.80173
+acc: 0.97062 miou: 0.70893 mf1: 0.80173 iou_0: 0.96990 iou_1: 0.44795 F1_0: 0.98472 F1_1: 0.61874 precision_0: 0.97802 precision_1: 0.74643 recall_0: 0.99152 recall_1: 0.52836 
+
+Begin evaluation...
+Is_training: False. [14,199][1,16], imps: 59.16, est: 1.56h, G_loss: 0.00912, running_mf1: 0.73495
+Is_training: False. Epoch 14 / 199, epoch_mF1= 0.71095
+acc: 0.96355 miou: 0.62284 mf1: 0.71095 iou_0: 0.96302 iou_1: 0.28266 F1_0: 0.98116 F1_1: 0.44073 precision_0: 0.96824 precision_1: 0.72998 recall_0: 0.99443 recall_1: 0.31566 
+
+Lastest model updated. Epoch_acc=0.7109, Historical_best_acc=0.7599 (at epoch 13)
+
+lr: 0.0009254
+Is_training: True. [15,199][1,112], imps: 63.10, est: 1.46h, G_loss: 0.07265, running_mf1: 0.80760
+Is_training: True. Epoch 15 / 199, epoch_mF1= 0.81148
+acc: 0.97172 miou: 0.71954 mf1: 0.81148 iou_0: 0.97100 iou_1: 0.46809 F1_0: 0.98528 F1_1: 0.63768 precision_0: 0.97868 precision_1: 0.76467 recall_0: 0.99198 recall_1: 0.54686 
+
+Begin evaluation...
+Is_training: False. [15,199][1,16], imps: 59.82, est: 1.54h, G_loss: 0.01049, running_mf1: 0.64965
+Is_training: False. Epoch 15 / 199, epoch_mF1= 0.73985
+acc: 0.97361 miou: 0.65031 mf1: 0.73985 iou_0: 0.97326 iou_1: 0.32735 F1_0: 0.98645 F1_1: 0.49324 precision_0: 0.97765 precision_1: 0.74352 recall_0: 0.99541 recall_1: 0.36902 
+
+Lastest model updated. Epoch_acc=0.7398, Historical_best_acc=0.7599 (at epoch 13)
+
+lr: 0.0009204
+Is_training: True. [16,199][1,112], imps: 63.54, est: 1.44h, G_loss: 0.02559, running_mf1: 0.49792
+Is_training: True. Epoch 16 / 199, epoch_mF1= 0.78986
+acc: 0.97073 miou: 0.69674 mf1: 0.78986 iou_0: 0.97009 iou_1: 0.42340 F1_0: 0.98482 F1_1: 0.59491 precision_0: 0.97722 precision_1: 0.75072 recall_0: 0.99254 recall_1: 0.49266 
+
+Begin evaluation...
+Is_training: False. [16,199][1,16], imps: 60.35, est: 1.52h, G_loss: 0.01112, running_mf1: 0.89823
+Is_training: False. Epoch 16 / 199, epoch_mF1= 0.82136
+acc: 0.97328 miou: 0.73068 mf1: 0.82136 iou_0: 0.97258 iou_1: 0.48879 F1_0: 0.98610 F1_1: 0.65663 precision_0: 0.98405 precision_1: 0.69217 recall_0: 0.98815 recall_1: 0.62456 
+
+Lastest model updated. Epoch_acc=0.8214, Historical_best_acc=0.7599 (at epoch 13)
+
+**********Best model updated!
+
+lr: 0.0009154
+Is_training: True. [17,199][1,112], imps: 63.03, est: 1.45h, G_loss: 0.09443, running_mf1: 0.80768
+Is_training: True. Epoch 17 / 199, epoch_mF1= 0.80658
+acc: 0.97273 miou: 0.71454 mf1: 0.80658 iou_0: 0.97209 iou_1: 0.45699 F1_0: 0.98585 F1_1: 0.62731 precision_0: 0.97944 precision_1: 0.75795 recall_0: 0.99234 recall_1: 0.53508 
+
+Begin evaluation...
+Is_training: False. [17,199][1,16], imps: 60.12, est: 1.51h, G_loss: 0.11306, running_mf1: 0.50000
+Is_training: False. Epoch 17 / 199, epoch_mF1= 0.79169
+acc: 0.97528 miou: 0.69973 mf1: 0.79169 iou_0: 0.97482 iou_1: 0.42463 F1_0: 0.98725 F1_1: 0.59613 precision_0: 0.97844 precision_1: 0.83409 recall_0: 0.99622 recall_1: 0.46380 
+
+Lastest model updated. Epoch_acc=0.7917, Historical_best_acc=0.8214 (at epoch 16)
+
+lr: 0.0009104
+Is_training: True. [18,199][1,112], imps: 63.43, est: 1.43h, G_loss: 0.02370, running_mf1: 0.49842
+Is_training: True. Epoch 18 / 199, epoch_mF1= 0.82045
+acc: 0.97324 miou: 0.72967 mf1: 0.82045 iou_0: 0.97255 iou_1: 0.48678 F1_0: 0.98608 F1_1: 0.65482 precision_0: 0.98012 precision_1: 0.77120 recall_0: 0.99212 recall_1: 0.56895 
+
+Begin evaluation...
+Is_training: False. [18,199][1,16], imps: 60.63, est: 1.49h, G_loss: 0.00992, running_mf1: 0.74638
+Is_training: False. Epoch 18 / 199, epoch_mF1= 0.84161
+acc: 0.97332 miou: 0.75380 mf1: 0.84161 iou_0: 0.97247 iou_1: 0.53513 F1_0: 0.98604 F1_1: 0.69718 precision_0: 0.98127 precision_1: 0.77939 recall_0: 0.99086 recall_1: 0.63065 
+
+Lastest model updated. Epoch_acc=0.8416, Historical_best_acc=0.8214 (at epoch 16)
+
+**********Best model updated!
+
+lr: 0.0009055
+Is_training: True. [19,199][1,112], imps: 63.30, est: 1.42h, G_loss: 0.05072, running_mf1: 0.72057
+Is_training: True. Epoch 19 / 199, epoch_mF1= 0.83308
+acc: 0.97470 miou: 0.74419 mf1: 0.83308 iou_0: 0.97400 iou_1: 0.51438 F1_0: 0.98683 F1_1: 0.67933 precision_0: 0.98162 precision_1: 0.78007 recall_0: 0.99209 recall_1: 0.60162 
+
+Begin evaluation...
+Is_training: False. [19,199][1,16], imps: 60.66, est: 1.49h, G_loss: 0.00154, running_mf1: 0.88933
+Is_training: False. Epoch 19 / 199, epoch_mF1= 0.77604
+acc: 0.97803 miou: 0.68492 mf1: 0.77604 iou_0: 0.97772 iou_1: 0.39212 F1_0: 0.98873 F1_1: 0.56335 precision_0: 0.97984 precision_1: 0.86918 recall_0: 0.99779 recall_1: 0.41672 
+
+Lastest model updated. Epoch_acc=0.7760, Historical_best_acc=0.8416 (at epoch 18)
+
+lr: 0.0009005
+Is_training: True. [20,199][1,112], imps: 63.64, est: 1.41h, G_loss: 0.00226, running_mf1: 0.50000
+Is_training: True. Epoch 20 / 199, epoch_mF1= 0.83937
+acc: 0.97713 miou: 0.75198 mf1: 0.83937 iou_0: 0.97653 iou_1: 0.52743 F1_0: 0.98812 F1_1: 0.69061 precision_0: 0.98378 precision_1: 0.78033 recall_0: 0.99250 recall_1: 0.61939 
+
+Begin evaluation...
+Is_training: False. [20,199][1,16], imps: 61.10, est: 1.47h, G_loss: 0.00117, running_mf1: 0.75205
+Is_training: False. Epoch 20 / 199, epoch_mF1= 0.77272
+acc: 0.97468 miou: 0.68084 mf1: 0.77272 iou_0: 0.97427 iou_1: 0.38742 F1_0: 0.98697 F1_1: 0.55847 precision_0: 0.97838 precision_1: 0.79486 recall_0: 0.99571 recall_1: 0.43046 
+
+Lastest model updated. Epoch_acc=0.7727, Historical_best_acc=0.8416 (at epoch 18)
+
+lr: 0.0008955
+Is_training: True. [21,199][1,112], imps: 63.91, est: 1.39h, G_loss: 0.08986, running_mf1: 0.82594
+Is_training: True. Epoch 21 / 199, epoch_mF1= 0.84984
+acc: 0.97687 miou: 0.76432 mf1: 0.84984 iou_0: 0.97619 iou_1: 0.55246 F1_0: 0.98795 F1_1: 0.71172 precision_0: 0.98375 precision_1: 0.79267 recall_0: 0.99219 recall_1: 0.64577 
+
+Begin evaluation...
+Is_training: False. [21,199][1,16], imps: 60.82, est: 1.46h, G_loss: 0.25568, running_mf1: 0.92347
+Is_training: False. Epoch 21 / 199, epoch_mF1= 0.79488
+acc: 0.97519 miou: 0.70295 mf1: 0.79488 iou_0: 0.97472 iou_1: 0.43119 F1_0: 0.98720 F1_1: 0.60256 precision_0: 0.98056 precision_1: 0.76269 recall_0: 0.99392 recall_1: 0.49800 
+
+Lastest model updated. Epoch_acc=0.7949, Historical_best_acc=0.8416 (at epoch 18)
+
+lr: 0.0008905
+Is_training: True. [22,199][1,112], imps: 63.40, est: 1.40h, G_loss: 0.03241, running_mf1: 0.89170
+Is_training: True. Epoch 22 / 199, epoch_mF1= 0.85017
+acc: 0.97809 miou: 0.76497 mf1: 0.85017 iou_0: 0.97748 iou_1: 0.55247 F1_0: 0.98861 F1_1: 0.71173 precision_0: 0.98446 precision_1: 0.79684 recall_0: 0.99280 recall_1: 0.64304 
+
+Begin evaluation...
+Is_training: False. [22,199][1,16], imps: 61.08, est: 1.45h, G_loss: 1.05027, running_mf1: 0.49933
+Is_training: False. Epoch 22 / 199, epoch_mF1= 0.81324
+acc: 0.97557 miou: 0.72234 mf1: 0.81324 iou_0: 0.97503 iou_1: 0.46965 F1_0: 0.98736 F1_1: 0.63913 precision_0: 0.98392 precision_1: 0.70998 recall_0: 0.99082 recall_1: 0.58114 
+
+Lastest model updated. Epoch_acc=0.8132, Historical_best_acc=0.8416 (at epoch 18)
+
+lr: 0.0008856
+Is_training: True. [23,199][1,112], imps: 63.67, est: 1.38h, G_loss: 0.08112, running_mf1: 0.88080
+Is_training: True. Epoch 23 / 199, epoch_mF1= 0.76995
+acc: 0.96189 miou: 0.67482 mf1: 0.76995 iou_0: 0.96095 iou_1: 0.38870 F1_0: 0.98008 F1_1: 0.55981 precision_0: 0.97789 precision_1: 0.58908 recall_0: 0.98229 recall_1: 0.53330 
+
+Begin evaluation...
+Is_training: False. [23,199][1,16], imps: 61.46, est: 1.43h, G_loss: 0.01336, running_mf1: 0.56719
+Is_training: False. Epoch 23 / 199, epoch_mF1= 0.74956
+acc: 0.97113 miou: 0.65829 mf1: 0.74956 iou_0: 0.97069 iou_1: 0.34589 F1_0: 0.98513 F1_1: 0.51399 precision_0: 0.97702 precision_1: 0.70527 recall_0: 0.99337 recall_1: 0.40433 
+
+Lastest model updated. Epoch_acc=0.7496, Historical_best_acc=0.8416 (at epoch 18)
+
+lr: 0.0008806
+Is_training: True. [24,199][1,112], imps: 63.95, est: 1.37h, G_loss: 4.73178, running_mf1: 0.34579
+Is_training: True. Epoch 24 / 199, epoch_mF1= 0.67542
+acc: 0.94730 miou: 0.58988 mf1: 0.67542 iou_0: 0.94644 iou_1: 0.23332 F1_0: 0.97248 F1_1: 0.37836 precision_0: 0.97297 precision_1: 0.37410 recall_0: 0.97199 recall_1: 0.38272 
+
+Begin evaluation...
+Is_training: False. [24,199][1,16], imps: 61.77, est: 1.42h, G_loss: 0.04341, running_mf1: 0.88179
+Is_training: False. Epoch 24 / 199, epoch_mF1= 0.73217
+acc: 0.96871 miou: 0.64222 mf1: 0.73217 iou_0: 0.96825 iou_1: 0.31619 F1_0: 0.98387 F1_1: 0.48047 precision_0: 0.97808 precision_1: 0.59369 recall_0: 0.98973 recall_1: 0.40351 
+
+Lastest model updated. Epoch_acc=0.7322, Historical_best_acc=0.8416 (at epoch 18)
+
+lr: 0.0008756
+Is_training: True. [25,199][1,112], imps: 64.13, est: 1.36h, G_loss: 0.19965, running_mf1: 0.78494
+Is_training: True. Epoch 25 / 199, epoch_mF1= 0.80616
+acc: 0.97143 miou: 0.71379 mf1: 0.80616 iou_0: 0.97073 iou_1: 0.45685 F1_0: 0.98515 F1_1: 0.62718 precision_0: 0.97957 precision_1: 0.73158 recall_0: 0.99078 recall_1: 0.54885 
+
+Begin evaluation...
+Is_training: False. [25,199][1,16], imps: 62.05, est: 1.40h, G_loss: 0.00645, running_mf1: 0.87394
+Is_training: False. Epoch 25 / 199, epoch_mF1= 0.69410
+acc: 0.96258 miou: 0.60899 mf1: 0.69410 iou_0: 0.96209 iou_1: 0.25590 F1_0: 0.98068 F1_1: 0.40751 precision_0: 0.96446 precision_1: 0.84150 recall_0: 0.99745 recall_1: 0.26885 
+
+Lastest model updated. Epoch_acc=0.6941, Historical_best_acc=0.8416 (at epoch 18)
+
+lr: 0.0008706
+Is_training: True. [26,199][1,112], imps: 64.36, est: 1.35h, G_loss: 0.09560, running_mf1: 0.89968
+Is_training: True. Epoch 26 / 199, epoch_mF1= 0.81235
+acc: 0.96877 miou: 0.71979 mf1: 0.81235 iou_0: 0.96788 iou_1: 0.47170 F1_0: 0.98368 F1_1: 0.64103 precision_0: 0.97717 precision_1: 0.75096 recall_0: 0.99027 recall_1: 0.55917 
+
+Begin evaluation...
+Is_training: False. [26,199][1,16], imps: 62.35, est: 1.39h, G_loss: 0.01852, running_mf1: 0.78955
+Is_training: False. Epoch 26 / 199, epoch_mF1= 0.73178
+acc: 0.97132 miou: 0.64264 mf1: 0.73178 iou_0: 0.97094 iou_1: 0.31433 F1_0: 0.98526 F1_1: 0.47831 precision_0: 0.97664 precision_1: 0.69534 recall_0: 0.99402 recall_1: 0.36454 
+
+Lastest model updated. Epoch_acc=0.7318, Historical_best_acc=0.8416 (at epoch 18)
+
+lr: 0.0008657
+Is_training: True. [27,199][1,112], imps: 64.59, est: 1.33h, G_loss: 0.08227, running_mf1: 0.81017
+Is_training: True. Epoch 27 / 199, epoch_mF1= 0.84049
+acc: 0.97458 miou: 0.75275 mf1: 0.84049 iou_0: 0.97382 iou_1: 0.53168 F1_0: 0.98674 F1_1: 0.69425 precision_0: 0.98093 precision_1: 0.80397 recall_0: 0.99261 recall_1: 0.61088 
+
+Begin evaluation...
+Is_training: False. [27,199][1,16], imps: 62.61, est: 1.38h, G_loss: 0.00384, running_mf1: 0.90893
+Is_training: False. Epoch 27 / 199, epoch_mF1= 0.79353
+acc: 0.97375 miou: 0.70122 mf1: 0.79353 iou_0: 0.97322 iou_1: 0.42922 F1_0: 0.98643 F1_1: 0.60064 precision_0: 0.97870 precision_1: 0.78263 recall_0: 0.99429 recall_1: 0.48732 
+
+Lastest model updated. Epoch_acc=0.7935, Historical_best_acc=0.8416 (at epoch 18)
+
+lr: 0.0008607
+Is_training: True. [28,199][1,112], imps: 64.72, est: 1.32h, G_loss: 0.06482, running_mf1: 0.85546
+Is_training: True. Epoch 28 / 199, epoch_mF1= 0.83896
+acc: 0.97463 miou: 0.75097 mf1: 0.83896 iou_0: 0.97389 iou_1: 0.52806 F1_0: 0.98677 F1_1: 0.69115 precision_0: 0.98137 precision_1: 0.79300 recall_0: 0.99223 recall_1: 0.61249 
+
+Begin evaluation...
+Is_training: False. [28,199][1,16], imps: 62.80, est: 1.36h, G_loss: 0.38207, running_mf1: 0.88106
+Is_training: False. Epoch 28 / 199, epoch_mF1= 0.81568
+acc: 0.97482 miou: 0.72481 mf1: 0.81568 iou_0: 0.97423 iou_1: 0.47538 F1_0: 0.98695 F1_1: 0.64442 precision_0: 0.97978 precision_1: 0.80470 recall_0: 0.99422 recall_1: 0.53738 
+
+Lastest model updated. Epoch_acc=0.8157, Historical_best_acc=0.8416 (at epoch 18)
+
+lr: 0.0008557
+Is_training: True. [29,199][1,112], imps: 64.77, est: 1.31h, G_loss: 0.07522, running_mf1: 0.88021
+Is_training: True. Epoch 29 / 199, epoch_mF1= 0.85382
+acc: 0.97794 miou: 0.76936 mf1: 0.85382 iou_0: 0.97730 iou_1: 0.56142 F1_0: 0.98852 F1_1: 0.71912 precision_0: 0.98446 precision_1: 0.79995 recall_0: 0.99262 recall_1: 0.65312 
+
+Begin evaluation...
+Is_training: False. [29,199][1,16], imps: 62.89, est: 1.35h, G_loss: 0.00759, running_mf1: 0.87532
+Is_training: False. Epoch 29 / 199, epoch_mF1= 0.82523
+acc: 0.98390 miou: 0.73737 mf1: 0.82523 iou_0: 0.98365 iou_1: 0.49109 F1_0: 0.99176 F1_1: 0.65870 precision_0: 0.98930 precision_1: 0.73413 recall_0: 0.99422 recall_1: 0.59732 
+
+Lastest model updated. Epoch_acc=0.8252, Historical_best_acc=0.8416 (at epoch 18)
+
+lr: 0.0008507
+Is_training: True. [30,199][1,112], imps: 64.88, est: 1.30h, G_loss: 0.00869, running_mf1: 0.49979
+Is_training: True. Epoch 30 / 199, epoch_mF1= 0.85596
+acc: 0.97841 miou: 0.77207 mf1: 0.85596 iou_0: 0.97778 iou_1: 0.56637 F1_0: 0.98876 F1_1: 0.72316 precision_0: 0.98477 precision_1: 0.80342 recall_0: 0.99279 recall_1: 0.65748 
+
+Begin evaluation...
+Is_training: False. [30,199][1,16], imps: 63.08, est: 1.34h, G_loss: 0.01950, running_mf1: 0.56295
+Is_training: False. Epoch 30 / 199, epoch_mF1= 0.80470
+acc: 0.97691 miou: 0.71355 mf1: 0.80470 iou_0: 0.97646 iou_1: 0.45064 F1_0: 0.98809 F1_1: 0.62130 precision_0: 0.98626 precision_1: 0.66023 recall_0: 0.98993 recall_1: 0.58671 
+
+Lastest model updated. Epoch_acc=0.8047, Historical_best_acc=0.8416 (at epoch 18)
+
+lr: 0.0008458
+Is_training: True. [31,199][1,112], imps: 64.99, est: 1.29h, G_loss: 0.05109, running_mf1: 0.92061
+Is_training: True. Epoch 31 / 199, epoch_mF1= 0.85101
+acc: 0.97911 miou: 0.76620 mf1: 0.85101 iou_0: 0.97856 iou_1: 0.55384 F1_0: 0.98916 F1_1: 0.71286 precision_0: 0.98494 precision_1: 0.80433 recall_0: 0.99343 recall_1: 0.64007 
+
+Begin evaluation...
+Is_training: False. [31,199][1,16], imps: 63.25, est: 1.33h, G_loss: 0.02877, running_mf1: 0.49991
+Is_training: False. Epoch 31 / 199, epoch_mF1= 0.82801
+acc: 0.97700 miou: 0.73894 mf1: 0.82801 iou_0: 0.97645 iou_1: 0.50143 F1_0: 0.98809 F1_1: 0.66794 precision_0: 0.98416 precision_1: 0.75135 recall_0: 0.99204 recall_1: 0.60119 
+
+Lastest model updated. Epoch_acc=0.8280, Historical_best_acc=0.8416 (at epoch 18)
+
+lr: 0.0008408
+Is_training: True. [32,199][1,112], imps: 65.15, est: 1.28h, G_loss: 0.01411, running_mf1: 0.86597
+Is_training: True. Epoch 32 / 199, epoch_mF1= 0.86813
+acc: 0.97797 miou: 0.78719 mf1: 0.86813 iou_0: 0.97723 iou_1: 0.59716 F1_0: 0.98848 F1_1: 0.74777 precision_0: 0.98408 precision_1: 0.82888 recall_0: 0.99292 recall_1: 0.68113 
+
+Begin evaluation...
+Is_training: False. [32,199][1,16], imps: 63.47, est: 1.32h, G_loss: 0.00146, running_mf1: 0.70596
+Is_training: False. Epoch 32 / 199, epoch_mF1= 0.78871
+acc: 0.97641 miou: 0.69700 mf1: 0.78871 iou_0: 0.97601 iou_1: 0.41800 F1_0: 0.98786 F1_1: 0.58956 precision_0: 0.98235 precision_1: 0.72751 recall_0: 0.99343 recall_1: 0.49559 
+
+Lastest model updated. Epoch_acc=0.7887, Historical_best_acc=0.8416 (at epoch 18)
+
+lr: 0.0008358
+Is_training: True. [33,199][1,112], imps: 65.32, est: 1.27h, G_loss: 0.02346, running_mf1: 0.91387
+Is_training: True. Epoch 33 / 199, epoch_mF1= 0.86745
+acc: 0.97975 miou: 0.78666 mf1: 0.86745 iou_0: 0.97913 iou_1: 0.59418 F1_0: 0.98946 F1_1: 0.74543 precision_0: 0.98569 precision_1: 0.82117 recall_0: 0.99325 recall_1: 0.68248 
+
+Begin evaluation...
+Is_training: False. [33,199][1,16], imps: 63.65, est: 1.31h, G_loss: 0.66239, running_mf1: 0.90567
+Is_training: False. Epoch 33 / 199, epoch_mF1= 0.83295
+acc: 0.97946 miou: 0.74508 mf1: 0.83295 iou_0: 0.97901 iou_1: 0.51115 F1_0: 0.98939 F1_1: 0.67650 precision_0: 0.98868 precision_1: 0.69169 recall_0: 0.99011 recall_1: 0.66197 
+
+Lastest model updated. Epoch_acc=0.8329, Historical_best_acc=0.8416 (at epoch 18)
+
+lr: 0.0008308
+Is_training: True. [34,199][1,112], imps: 65.43, est: 1.26h, G_loss: 0.15431, running_mf1: 0.76455
+Is_training: True. Epoch 34 / 199, epoch_mF1= 0.86024
+acc: 0.97862 miou: 0.77740 mf1: 0.86024 iou_0: 0.97798 iou_1: 0.57681 F1_0: 0.98887 F1_1: 0.73162 precision_0: 0.98629 precision_1: 0.78083 recall_0: 0.99146 recall_1: 0.68824 
+
+Begin evaluation...
+Is_training: False. [34,199][1,16], imps: 63.82, est: 1.29h, G_loss: 0.10670, running_mf1: 0.69713
+Is_training: False. Epoch 34 / 199, epoch_mF1= 0.82218
+acc: 0.98288 miou: 0.73377 mf1: 0.82218 iou_0: 0.98260 iou_1: 0.48493 F1_0: 0.99123 F1_1: 0.65314 precision_0: 0.98645 precision_1: 0.80768 recall_0: 0.99605 recall_1: 0.54824 
+
+Lastest model updated. Epoch_acc=0.8222, Historical_best_acc=0.8416 (at epoch 18)
+
+lr: 0.0008259
+Is_training: True. [35,199][1,112], imps: 65.58, est: 1.25h, G_loss: 0.07957, running_mf1: 0.86413
+Is_training: True. Epoch 35 / 199, epoch_mF1= 0.86669
+acc: 0.97793 miou: 0.78536 mf1: 0.86669 iou_0: 0.97719 iou_1: 0.59352 F1_0: 0.98847 F1_1: 0.74492 precision_0: 0.98478 precision_1: 0.81209 recall_0: 0.99218 recall_1: 0.68801 
+
+Begin evaluation...
+Is_training: False. [35,199][1,16], imps: 64.02, est: 1.28h, G_loss: 0.00156, running_mf1: 0.82577
+Is_training: False. Epoch 35 / 199, epoch_mF1= 0.82516
+acc: 0.96918 miou: 0.73400 mf1: 0.82516 iou_0: 0.96820 iou_1: 0.49979 F1_0: 0.98384 F1_1: 0.66648 precision_0: 0.98672 precision_1: 0.62867 recall_0: 0.98099 recall_1: 0.70913 
+
+Lastest model updated. Epoch_acc=0.8252, Historical_best_acc=0.8416 (at epoch 18)
+
+lr: 0.0008209
+Is_training: True. [36,199][1,112], imps: 65.72, est: 1.24h, G_loss: 0.05224, running_mf1: 0.49755
+Is_training: True. Epoch 36 / 199, epoch_mF1= 0.87302
+acc: 0.98197 miou: 0.79419 mf1: 0.87302 iou_0: 0.98145 iou_1: 0.60693 F1_0: 0.99064 F1_1: 0.75539 precision_0: 0.98739 precision_1: 0.82642 recall_0: 0.99391 recall_1: 0.69561 
+
+Begin evaluation...
+Is_training: False. [36,199][1,16], imps: 64.20, est: 1.27h, G_loss: 0.00074, running_mf1: 0.87978
+Is_training: False. Epoch 36 / 199, epoch_mF1= 0.77976
+acc: 0.96865 miou: 0.68613 mf1: 0.77976 iou_0: 0.96796 iou_1: 0.40429 F1_0: 0.98372 F1_1: 0.57580 precision_0: 0.98230 precision_1: 0.59827 recall_0: 0.98514 recall_1: 0.55494 
+
+Lastest model updated. Epoch_acc=0.7798, Historical_best_acc=0.8416 (at epoch 18)
+
+lr: 0.0008159
+Is_training: True. [37,199][1,112], imps: 65.86, est: 1.23h, G_loss: 0.02015, running_mf1: 0.90804
+Is_training: True. Epoch 37 / 199, epoch_mF1= 0.87470
+acc: 0.98067 miou: 0.79613 mf1: 0.87470 iou_0: 0.98006 iou_1: 0.61221 F1_0: 0.98993 F1_1: 0.75947 precision_0: 0.98673 precision_1: 0.82308 recall_0: 0.99314 recall_1: 0.70499 
+
+Begin evaluation...
+Is_training: False. [37,199][1,16], imps: 64.35, est: 1.26h, G_loss: 0.26245, running_mf1: 0.49662
+Is_training: False. Epoch 37 / 199, epoch_mF1= 0.83378
+acc: 0.98219 miou: 0.74662 mf1: 0.83378 iou_0: 0.98185 iou_1: 0.51138 F1_0: 0.99084 F1_1: 0.67671 precision_0: 0.99525 precision_1: 0.58527 recall_0: 0.98647 recall_1: 0.80202 
+
+Lastest model updated. Epoch_acc=0.8338, Historical_best_acc=0.8416 (at epoch 18)
+
+lr: 0.0008109
+Is_training: True. [38,199][1,112], imps: 65.97, est: 1.22h, G_loss: 0.00690, running_mf1: 0.49960
+Is_training: True. Epoch 38 / 199, epoch_mF1= 0.86586
+acc: 0.97861 miou: 0.78443 mf1: 0.86586 iou_0: 0.97793 iou_1: 0.59093 F1_0: 0.98884 F1_1: 0.74288 precision_0: 0.98525 precision_1: 0.81103 recall_0: 0.99246 recall_1: 0.68528 
+
+Begin evaluation...
+Is_training: False. [38,199][1,16], imps: 64.49, est: 1.25h, G_loss: 0.13530, running_mf1: 0.85690
+Is_training: False. Epoch 38 / 199, epoch_mF1= 0.84677
+acc: 0.97884 miou: 0.76105 mf1: 0.84677 iou_0: 0.97829 iou_1: 0.54382 F1_0: 0.98903 F1_1: 0.70451 precision_0: 0.98592 precision_1: 0.76982 recall_0: 0.99215 recall_1: 0.64942 
+
+Lastest model updated. Epoch_acc=0.8468, Historical_best_acc=0.8416 (at epoch 18)
+
+**********Best model updated!
+
+lr: 0.0008060
+Is_training: True. [39,199][1,112], imps: 65.74, est: 1.22h, G_loss: 0.11276, running_mf1: 0.82663
+Is_training: True. Epoch 39 / 199, epoch_mF1= 0.86936
+acc: 0.97828 miou: 0.78882 mf1: 0.86936 iou_0: 0.97754 iou_1: 0.60009 F1_0: 0.98864 F1_1: 0.75007 precision_0: 0.98476 precision_1: 0.82132 recall_0: 0.99256 recall_1: 0.69019 
+
+Begin evaluation...
+Is_training: False. [39,199][1,16], imps: 64.32, est: 1.25h, G_loss: 0.03955, running_mf1: 0.81268
+Is_training: False. Epoch 39 / 199, epoch_mF1= 0.84170
+acc: 0.97299 miou: 0.75384 mf1: 0.84170 iou_0: 0.97213 iou_1: 0.53555 F1_0: 0.98587 F1_1: 0.69754 precision_0: 0.98606 precision_1: 0.69466 recall_0: 0.98568 recall_1: 0.70043 
+
+Lastest model updated. Epoch_acc=0.8417, Historical_best_acc=0.8468 (at epoch 38)
+
+lr: 0.0008010
+Is_training: True. [40,199][1,112], imps: 65.83, est: 1.21h, G_loss: 0.00431, running_mf1: 0.50000
+Is_training: True. Epoch 40 / 199, epoch_mF1= 0.87620
+acc: 0.97870 miou: 0.79774 mf1: 0.87620 iou_0: 0.97794 iou_1: 0.61753 F1_0: 0.98885 F1_1: 0.76355 precision_0: 0.98526 precision_1: 0.82743 recall_0: 0.99246 recall_1: 0.70883 
+
+Begin evaluation...
+Is_training: False. [40,199][1,16], imps: 64.46, est: 1.24h, G_loss: 0.02038, running_mf1: 0.78400
+Is_training: False. Epoch 40 / 199, epoch_mF1= 0.86710
+acc: 0.97261 miou: 0.78488 mf1: 0.86710 iou_0: 0.97144 iou_1: 0.59833 F1_0: 0.98551 F1_1: 0.74869 precision_0: 0.98654 precision_1: 0.73538 recall_0: 0.98449 recall_1: 0.76250 
+
+Lastest model updated. Epoch_acc=0.8671, Historical_best_acc=0.8468 (at epoch 38)
+
+**********Best model updated!
+
+lr: 0.0007960
+Is_training: True. [41,199][1,112], imps: 65.71, est: 1.20h, G_loss: 0.03938, running_mf1: 0.91757
+Is_training: True. Epoch 41 / 199, epoch_mF1= 0.88478
+acc: 0.98235 miou: 0.80973 mf1: 0.88478 iou_0: 0.98179 iou_1: 0.63767 F1_0: 0.99081 F1_1: 0.77875 precision_0: 0.98808 precision_1: 0.83425 recall_0: 0.99356 recall_1: 0.73017 
+
+Begin evaluation...
+Is_training: False. [41,199][1,16], imps: 64.03, est: 1.24h, G_loss: 0.00473, running_mf1: 0.92662
+Is_training: False. Epoch 41 / 199, epoch_mF1= 0.85822
+acc: 0.98154 miou: 0.77546 mf1: 0.85822 iou_0: 0.98108 iou_1: 0.56984 F1_0: 0.99045 F1_1: 0.72598 precision_0: 0.98525 precision_1: 0.85531 recall_0: 0.99570 recall_1: 0.63063 
+
+Lastest model updated. Epoch_acc=0.8582, Historical_best_acc=0.8671 (at epoch 40)
+
+lr: 0.0007910
+Is_training: True. [42,199][1,112], imps: 65.42, est: 1.20h, G_loss: 0.03283, running_mf1: 0.85870
+Is_training: True. Epoch 42 / 199, epoch_mF1= 0.88958
+acc: 0.98275 miou: 0.81628 mf1: 0.88958 iou_0: 0.98218 iou_1: 0.65038 F1_0: 0.99101 F1_1: 0.78816 precision_0: 0.98819 precision_1: 0.84498 recall_0: 0.99385 recall_1: 0.73850 
+
+Begin evaluation...
+Is_training: False. [42,199][1,16], imps: 64.11, est: 1.23h, G_loss: 0.19793, running_mf1: 0.83100
+Is_training: False. Epoch 42 / 199, epoch_mF1= 0.82539
+acc: 0.97610 miou: 0.73580 mf1: 0.82539 iou_0: 0.97552 iou_1: 0.49608 F1_0: 0.98761 F1_1: 0.66318 precision_0: 0.98337 precision_1: 0.75118 recall_0: 0.99188 recall_1: 0.59363 
+
+Lastest model updated. Epoch_acc=0.8254, Historical_best_acc=0.8671 (at epoch 40)
+
+lr: 0.0007861
+Is_training: True. [43,199][1,112], imps: 65.54, est: 1.19h, G_loss: 0.21337, running_mf1: 0.77855
+Is_training: True. Epoch 43 / 199, epoch_mF1= 0.87909
+acc: 0.97970 miou: 0.80171 mf1: 0.87909 iou_0: 0.97899 iou_1: 0.62443 F1_0: 0.98939 F1_1: 0.76880 precision_0: 0.98611 precision_1: 0.82871 recall_0: 0.99268 recall_1: 0.71697 
+
+Begin evaluation...
+Is_training: False. [43,199][1,16], imps: 64.24, est: 1.22h, G_loss: 0.00078, running_mf1: 0.50000
+Is_training: False. Epoch 43 / 199, epoch_mF1= 0.81295
+acc: 0.97830 miou: 0.72266 mf1: 0.81295 iou_0: 0.97787 iou_1: 0.46745 F1_0: 0.98881 F1_1: 0.63709 precision_0: 0.98685 precision_1: 0.68105 recall_0: 0.99078 recall_1: 0.59846 
+
+Lastest model updated. Epoch_acc=0.8130, Historical_best_acc=0.8671 (at epoch 40)
+
+lr: 0.0007811
+Is_training: True. [44,199][1,112], imps: 65.61, est: 1.18h, G_loss: 0.01926, running_mf1: 0.49937
+Is_training: True. Epoch 44 / 199, epoch_mF1= 0.88238
+acc: 0.98192 miou: 0.80645 mf1: 0.88238 iou_0: 0.98135 iou_1: 0.63155 F1_0: 0.99059 F1_1: 0.77417 precision_0: 0.98780 precision_1: 0.83034 recall_0: 0.99339 recall_1: 0.72512 
+
+Begin evaluation...
+Is_training: False. [44,199][1,16], imps: 64.35, est: 1.21h, G_loss: 0.03856, running_mf1: 0.92861
+Is_training: False. Epoch 44 / 199, epoch_mF1= 0.84306
+acc: 0.98021 miou: 0.75695 mf1: 0.84306 iou_0: 0.97975 iou_1: 0.53415 F1_0: 0.98977 F1_1: 0.69635 precision_0: 0.98868 precision_1: 0.71994 recall_0: 0.99087 recall_1: 0.67426 
+
+Lastest model updated. Epoch_acc=0.8431, Historical_best_acc=0.8671 (at epoch 40)
+
+lr: 0.0007761
+Is_training: True. [45,199][1,112], imps: 65.71, est: 1.17h, G_loss: 0.09523, running_mf1: 0.91452
+Is_training: True. Epoch 45 / 199, epoch_mF1= 0.88239
+acc: 0.98134 miou: 0.80636 mf1: 0.88239 iou_0: 0.98072 iou_1: 0.63200 F1_0: 0.99027 F1_1: 0.77451 precision_0: 0.98707 precision_1: 0.83724 recall_0: 0.99348 recall_1: 0.72052 
+
+Begin evaluation...
+Is_training: False. [45,199][1,16], imps: 64.49, est: 1.20h, G_loss: 0.08869, running_mf1: 0.88313
+Is_training: False. Epoch 45 / 199, epoch_mF1= 0.84754
+acc: 0.98221 miou: 0.76267 mf1: 0.84754 iou_0: 0.98183 iou_1: 0.54351 F1_0: 0.99083 F1_1: 0.70425 precision_0: 0.98750 precision_1: 0.79024 recall_0: 0.99418 recall_1: 0.63514 
+
+Lastest model updated. Epoch_acc=0.8475, Historical_best_acc=0.8671 (at epoch 40)
+
+lr: 0.0007711
+Is_training: True. [46,199][1,112], imps: 65.82, est: 1.16h, G_loss: 0.09386, running_mf1: 0.88731
+Is_training: True. Epoch 46 / 199, epoch_mF1= 0.89450
+acc: 0.98260 miou: 0.82300 mf1: 0.89450 iou_0: 0.98198 iou_1: 0.66402 F1_0: 0.99091 F1_1: 0.79809 precision_0: 0.98828 precision_1: 0.84820 recall_0: 0.99355 recall_1: 0.75357 
+
+Begin evaluation...
+Is_training: False. [46,199][1,16], imps: 64.62, est: 1.19h, G_loss: 0.05687, running_mf1: 0.84141
+Is_training: False. Epoch 46 / 199, epoch_mF1= 0.86612
+acc: 0.97547 miou: 0.78417 mf1: 0.86612 iou_0: 0.97456 iou_1: 0.59379 F1_0: 0.98711 F1_1: 0.74513 precision_0: 0.98649 precision_1: 0.75452 recall_0: 0.98774 recall_1: 0.73597 
+
+Lastest model updated. Epoch_acc=0.8661, Historical_best_acc=0.8671 (at epoch 40)
+
+lr: 0.0007662
+Is_training: True. [47,199][1,112], imps: 65.92, est: 1.16h, G_loss: 0.07143, running_mf1: 0.89326
+Is_training: True. Epoch 47 / 199, epoch_mF1= 0.88458
+acc: 0.98104 miou: 0.80924 mf1: 0.88458 iou_0: 0.98039 iou_1: 0.63810 F1_0: 0.99010 F1_1: 0.77907 precision_0: 0.98710 precision_1: 0.83572 recall_0: 0.99311 recall_1: 0.72962 
+
+Begin evaluation...
+Is_training: False. [47,199][1,16], imps: 64.72, est: 1.18h, G_loss: 0.05322, running_mf1: 0.72025
+Is_training: False. Epoch 47 / 199, epoch_mF1= 0.80838
+acc: 0.97611 miou: 0.71726 mf1: 0.80838 iou_0: 0.97562 iou_1: 0.45890 F1_0: 0.98766 F1_1: 0.62911 precision_0: 0.98409 precision_1: 0.70592 recall_0: 0.99125 recall_1: 0.56737 
+
+Lastest model updated. Epoch_acc=0.8084, Historical_best_acc=0.8671 (at epoch 40)
+
+lr: 0.0007612
+Is_training: True. [48,199][1,112], imps: 65.99, est: 1.15h, G_loss: 0.02217, running_mf1: 0.77828
+Is_training: True. Epoch 48 / 199, epoch_mF1= 0.88487
+acc: 0.98133 miou: 0.80968 mf1: 0.88487 iou_0: 0.98069 iou_1: 0.63867 F1_0: 0.99025 F1_1: 0.77950 precision_0: 0.98750 precision_1: 0.83185 recall_0: 0.99301 recall_1: 0.73335 
+
+Begin evaluation...
+Is_training: False. [48,199][1,16], imps: 64.81, est: 1.17h, G_loss: 0.00038, running_mf1: 0.86325
+Is_training: False. Epoch 48 / 199, epoch_mF1= 0.84189
+acc: 0.97914 miou: 0.75535 mf1: 0.84189 iou_0: 0.97864 iou_1: 0.53207 F1_0: 0.98920 F1_1: 0.69458 precision_0: 0.98313 precision_1: 0.84153 recall_0: 0.99535 recall_1: 0.59132 
+
+Lastest model updated. Epoch_acc=0.8419, Historical_best_acc=0.8671 (at epoch 40)
+
+lr: 0.0007562
+Is_training: True. [49,199][1,112], imps: 66.06, est: 1.14h, G_loss: 0.07415, running_mf1: 0.92546
+Is_training: True. Epoch 49 / 199, epoch_mF1= 0.89094
+acc: 0.98367 miou: 0.81827 mf1: 0.89094 iou_0: 0.98315 iou_1: 0.65339 F1_0: 0.99151 F1_1: 0.79037 precision_0: 0.98925 precision_1: 0.83753 recall_0: 0.99377 recall_1: 0.74823 
+
+Begin evaluation...
+Is_training: False. [49,199][1,16], imps: 64.91, est: 1.16h, G_loss: 0.30476, running_mf1: 0.76867
+Is_training: False. Epoch 49 / 199, epoch_mF1= 0.84070
+acc: 0.97582 miou: 0.75325 mf1: 0.84070 iou_0: 0.97514 iou_1: 0.53137 F1_0: 0.98741 F1_1: 0.69398 precision_0: 0.98291 precision_1: 0.78088 recall_0: 0.99195 recall_1: 0.62449 
+
+Lastest model updated. Epoch_acc=0.8407, Historical_best_acc=0.8671 (at epoch 40)
+
+lr: 0.0007512
+Is_training: True. [50,199][1,112], imps: 66.14, est: 1.13h, G_loss: 0.03006, running_mf1: 0.49800
+Is_training: True. Epoch 50 / 199, epoch_mF1= 0.88630
+acc: 0.98193 miou: 0.81170 mf1: 0.88630 iou_0: 0.98132 iou_1: 0.64207 F1_0: 0.99057 F1_1: 0.78203 precision_0: 0.98759 precision_1: 0.84078 recall_0: 0.99358 recall_1: 0.73094 
+
+Begin evaluation...
+Is_training: False. [50,199][1,16], imps: 65.02, est: 1.15h, G_loss: 0.00728, running_mf1: 0.71499
+Is_training: False. Epoch 50 / 199, epoch_mF1= 0.87939
+acc: 0.97848 miou: 0.80189 mf1: 0.87939 iou_0: 0.97767 iou_1: 0.62611 F1_0: 0.98871 F1_1: 0.77007 precision_0: 0.98664 precision_1: 0.80443 recall_0: 0.99079 recall_1: 0.73853 
+
+Lastest model updated. Epoch_acc=0.8794, Historical_best_acc=0.8671 (at epoch 40)
+
+**********Best model updated!
+
+lr: 0.0007463
+Is_training: True. [51,199][1,112], imps: 65.99, est: 1.12h, G_loss: 0.00508, running_mf1: 0.49989
+Is_training: True. Epoch 51 / 199, epoch_mF1= 0.89038
+acc: 0.98350 miou: 0.81749 mf1: 0.89038 iou_0: 0.98298 iou_1: 0.65201 F1_0: 0.99141 F1_1: 0.78936 precision_0: 0.98878 precision_1: 0.84455 recall_0: 0.99406 recall_1: 0.74093 
+
+Begin evaluation...
+Is_training: False. [51,199][1,16], imps: 64.90, est: 1.14h, G_loss: 0.01035, running_mf1: 0.68632
+Is_training: False. Epoch 51 / 199, epoch_mF1= 0.80974
+acc: 0.97604 miou: 0.71869 mf1: 0.80974 iou_0: 0.97554 iou_1: 0.46185 F1_0: 0.98762 F1_1: 0.63187 precision_0: 0.98400 precision_1: 0.70932 recall_0: 0.99126 recall_1: 0.56967 
+
+Lastest model updated. Epoch_acc=0.8097, Historical_best_acc=0.8794 (at epoch 50)
+
+lr: 0.0007413
+Is_training: True. [52,199][1,112], imps: 66.09, est: 1.11h, G_loss: 0.01860, running_mf1: 0.93886
+Is_training: True. Epoch 52 / 199, epoch_mF1= 0.88140
+acc: 0.98182 miou: 0.80513 mf1: 0.88140 iou_0: 0.98124 iou_1: 0.62902 F1_0: 0.99053 F1_1: 0.77227 precision_0: 0.98758 precision_1: 0.83201 recall_0: 0.99350 recall_1: 0.72053 
+
+Begin evaluation...
+Is_training: False. [52,199][1,16], imps: 65.00, est: 1.13h, G_loss: 0.01778, running_mf1: 0.80954
+Is_training: False. Epoch 52 / 199, epoch_mF1= 0.86482
+acc: 0.97643 miou: 0.78271 mf1: 0.86482 iou_0: 0.97561 iou_1: 0.58982 F1_0: 0.98765 F1_1: 0.74200 precision_0: 0.98592 precision_1: 0.77027 recall_0: 0.98939 recall_1: 0.71573 
+
+Lastest model updated. Epoch_acc=0.8648, Historical_best_acc=0.8794 (at epoch 50)
+
+lr: 0.0007363
+Is_training: True. [53,199][1,112], imps: 66.16, est: 1.11h, G_loss: 0.08051, running_mf1: 0.91453
+Is_training: True. Epoch 53 / 199, epoch_mF1= 0.89211
+acc: 0.98186 miou: 0.81959 mf1: 0.89211 iou_0: 0.98121 iou_1: 0.65798 F1_0: 0.99051 F1_1: 0.79372 precision_0: 0.98779 precision_1: 0.84442 recall_0: 0.99326 recall_1: 0.74875 
+
+Begin evaluation...
+Is_training: False. [53,199][1,16], imps: 65.10, est: 1.12h, G_loss: 0.09530, running_mf1: 0.90403
+Is_training: False. Epoch 53 / 199, epoch_mF1= 0.85540
+acc: 0.97766 miou: 0.77123 mf1: 0.85540 iou_0: 0.97699 iou_1: 0.56547 F1_0: 0.98836 F1_1: 0.72243 precision_0: 0.98507 precision_1: 0.78497 recall_0: 0.99167 recall_1: 0.66912 
+
+Lastest model updated. Epoch_acc=0.8554, Historical_best_acc=0.8794 (at epoch 50)
+
+lr: 0.0007313
+Is_training: True. [54,199][1,112], imps: 66.24, est: 1.10h, G_loss: 0.12568, running_mf1: 0.76548
+Is_training: True. Epoch 54 / 199, epoch_mF1= 0.89098
+acc: 0.98165 miou: 0.81801 mf1: 0.89098 iou_0: 0.98099 iou_1: 0.65502 F1_0: 0.99040 F1_1: 0.79156 precision_0: 0.98777 precision_1: 0.84026 recall_0: 0.99305 recall_1: 0.74820 
+
+Begin evaluation...
+Is_training: False. [54,199][1,16], imps: 65.19, est: 1.11h, G_loss: 0.00043, running_mf1: 0.80851
+Is_training: False. Epoch 54 / 199, epoch_mF1= 0.85914
+acc: 0.98350 miou: 0.77698 mf1: 0.85914 iou_0: 0.98313 iou_1: 0.57083 F1_0: 0.99149 F1_1: 0.72678 precision_0: 0.98734 precision_1: 0.84034 recall_0: 0.99568 recall_1: 0.64026 
+
+Lastest model updated. Epoch_acc=0.8591, Historical_best_acc=0.8794 (at epoch 50)
+
+lr: 0.0007264
+Is_training: True. [55,199][1,112], imps: 66.30, est: 1.09h, G_loss: 0.03481, running_mf1: 0.88057
+Is_training: True. Epoch 55 / 199, epoch_mF1= 0.89859
+acc: 0.98283 miou: 0.82873 mf1: 0.89859 iou_0: 0.98219 iou_1: 0.67527 F1_0: 0.99102 F1_1: 0.80616 precision_0: 0.98887 precision_1: 0.84585 recall_0: 0.99318 recall_1: 0.77003 
+
+Begin evaluation...
+Is_training: False. [55,199][1,16], imps: 65.28, est: 1.11h, G_loss: 0.00419, running_mf1: 0.88166
+Is_training: False. Epoch 55 / 199, epoch_mF1= 0.85828
+acc: 0.97935 miou: 0.77511 mf1: 0.85828 iou_0: 0.97876 iou_1: 0.57146 F1_0: 0.98927 F1_1: 0.72730 precision_0: 0.98470 precision_1: 0.82454 recall_0: 0.99388 recall_1: 0.65057 
+
+Lastest model updated. Epoch_acc=0.8583, Historical_best_acc=0.8794 (at epoch 50)
+
+lr: 0.0007214
+Is_training: True. [56,199][1,112], imps: 66.38, est: 1.08h, G_loss: 0.08845, running_mf1: 0.80900
+Is_training: True. Epoch 56 / 199, epoch_mF1= 0.89201
+acc: 0.98456 miou: 0.81989 mf1: 0.89201 iou_0: 0.98410 iou_1: 0.65569 F1_0: 0.99198 F1_1: 0.79204 precision_0: 0.98968 precision_1: 0.84303 recall_0: 0.99430 recall_1: 0.74687 
+
+Begin evaluation...
+Is_training: False. [56,199][1,16], imps: 65.36, est: 1.10h, G_loss: 0.04920, running_mf1: 0.72928
+Is_training: False. Epoch 56 / 199, epoch_mF1= 0.82972
+acc: 0.98016 miou: 0.74157 mf1: 0.82972 iou_0: 0.97975 iou_1: 0.50339 F1_0: 0.98977 F1_1: 0.66968 precision_0: 0.98307 precision_1: 0.85866 recall_0: 0.99656 recall_1: 0.54887 
+
+Lastest model updated. Epoch_acc=0.8297, Historical_best_acc=0.8794 (at epoch 50)
+
+lr: 0.0007164
+Is_training: True. [57,199][1,112], imps: 66.44, est: 1.07h, G_loss: 0.04166, running_mf1: 0.89529
+Is_training: True. Epoch 57 / 199, epoch_mF1= 0.89296
+acc: 0.98293 miou: 0.82093 mf1: 0.89296 iou_0: 0.98234 iou_1: 0.65952 F1_0: 0.99109 F1_1: 0.79484 precision_0: 0.98872 precision_1: 0.84130 recall_0: 0.99347 recall_1: 0.75324 
+
+Begin evaluation...
+Is_training: False. [57,199][1,16], imps: 65.45, est: 1.09h, G_loss: 0.12033, running_mf1: 0.50000
+Is_training: False. Epoch 57 / 199, epoch_mF1= 0.86228
+acc: 0.98378 miou: 0.78092 mf1: 0.86228 iou_0: 0.98341 iou_1: 0.57843 F1_0: 0.99164 F1_1: 0.73292 precision_0: 0.98804 precision_1: 0.82924 recall_0: 0.99526 recall_1: 0.65664 
+
+Lastest model updated. Epoch_acc=0.8623, Historical_best_acc=0.8794 (at epoch 50)
+
+lr: 0.0007114
+Is_training: True. [58,199][1,112], imps: 66.52, est: 1.06h, G_loss: 0.02076, running_mf1: 0.92478
+Is_training: True. Epoch 58 / 199, epoch_mF1= 0.90087
+acc: 0.98327 miou: 0.83201 mf1: 0.90087 iou_0: 0.98265 iou_1: 0.68137 F1_0: 0.99125 F1_1: 0.81050 precision_0: 0.98896 precision_1: 0.85330 recall_0: 0.99355 recall_1: 0.77178 
+
+Begin evaluation...
+Is_training: False. [58,199][1,16], imps: 65.54, est: 1.08h, G_loss: 0.01604, running_mf1: 0.84373
+Is_training: False. Epoch 58 / 199, epoch_mF1= 0.85842
+acc: 0.97798 miou: 0.77502 mf1: 0.85842 iou_0: 0.97731 iou_1: 0.57273 F1_0: 0.98852 F1_1: 0.72832 precision_0: 0.98968 precision_1: 0.70881 recall_0: 0.98738 recall_1: 0.74894 
+
+Lastest model updated. Epoch_acc=0.8584, Historical_best_acc=0.8794 (at epoch 50)
+
+lr: 0.0007065
+Is_training: True. [59,199][1,112], imps: 66.59, est: 1.05h, G_loss: 0.03385, running_mf1: 0.85877
+Is_training: True. Epoch 59 / 199, epoch_mF1= 0.89778
+acc: 0.98231 miou: 0.82752 mf1: 0.89778 iou_0: 0.98164 iou_1: 0.67340 F1_0: 0.99074 F1_1: 0.80483 precision_0: 0.98835 precision_1: 0.84801 recall_0: 0.99314 recall_1: 0.76583 
+
+Begin evaluation...
+Is_training: False. [59,199][1,16], imps: 65.62, est: 1.07h, G_loss: 0.01096, running_mf1: 0.91805
+Is_training: False. Epoch 59 / 199, epoch_mF1= 0.85304
+acc: 0.97705 miou: 0.76823 mf1: 0.85304 iou_0: 0.97636 iou_1: 0.56011 F1_0: 0.98804 F1_1: 0.71804 precision_0: 0.98411 precision_1: 0.79253 recall_0: 0.99199 recall_1: 0.65634 
+
+Lastest model updated. Epoch_acc=0.8530, Historical_best_acc=0.8794 (at epoch 50)
+
+lr: 0.0007015
+Is_training: True. [60,199][1,112], imps: 66.66, est: 1.05h, G_loss: 0.04580, running_mf1: 0.89218
+Is_training: True. Epoch 60 / 199, epoch_mF1= 0.89355
+acc: 0.98295 miou: 0.82175 mf1: 0.89355 iou_0: 0.98236 iou_1: 0.66114 F1_0: 0.99110 F1_1: 0.79601 precision_0: 0.98875 precision_1: 0.84198 recall_0: 0.99347 recall_1: 0.75479 
+
+Begin evaluation...
+Is_training: False. [60,199][1,16], imps: 65.71, est: 1.06h, G_loss: 0.08294, running_mf1: 0.77672
+Is_training: False. Epoch 60 / 199, epoch_mF1= 0.87124
+acc: 0.98622 miou: 0.79269 mf1: 0.87124 iou_0: 0.98593 iou_1: 0.59945 F1_0: 0.99291 F1_1: 0.74957 precision_0: 0.99075 precision_1: 0.81226 recall_0: 0.99509 recall_1: 0.69586 
+
+Lastest model updated. Epoch_acc=0.8712, Historical_best_acc=0.8794 (at epoch 50)
+
+lr: 0.0006965
+Is_training: True. [61,199][1,112], imps: 66.71, est: 1.04h, G_loss: 0.00225, running_mf1: 0.50000
+Is_training: True. Epoch 61 / 199, epoch_mF1= 0.88903
+acc: 0.98370 miou: 0.81568 mf1: 0.88903 iou_0: 0.98320 iou_1: 0.64817 F1_0: 0.99153 F1_1: 0.78653 precision_0: 0.98929 precision_1: 0.83415 recall_0: 0.99378 recall_1: 0.74405 
+
+Begin evaluation...
+Is_training: False. [61,199][1,16], imps: 65.52, est: 1.06h, G_loss: 0.03403, running_mf1: 0.93486
+Is_training: False. Epoch 61 / 199, epoch_mF1= 0.84519
+acc: 0.98074 miou: 0.75957 mf1: 0.84519 iou_0: 0.98030 iou_1: 0.53885 F1_0: 0.99005 F1_1: 0.70033 precision_0: 0.98374 precision_1: 0.86800 recall_0: 0.99644 recall_1: 0.58695 
+
+Lastest model updated. Epoch_acc=0.8452, Historical_best_acc=0.8794 (at epoch 50)
+
+lr: 0.0006915
+Is_training: True. [62,199][1,112], imps: 66.47, est: 1.03h, G_loss: 0.04707, running_mf1: 0.91227
+Is_training: True. Epoch 62 / 199, epoch_mF1= 0.89788
+acc: 0.98315 miou: 0.82779 mf1: 0.89788 iou_0: 0.98255 iou_1: 0.67303 F1_0: 0.99120 F1_1: 0.80456 precision_0: 0.98879 precision_1: 0.85062 recall_0: 0.99362 recall_1: 0.76323 
+
+Begin evaluation...
+Is_training: False. [62,199][1,16], imps: 65.55, est: 1.05h, G_loss: 0.05055, running_mf1: 0.90611
+Is_training: False. Epoch 62 / 199, epoch_mF1= 0.87935
+acc: 0.98024 miou: 0.80215 mf1: 0.87935 iou_0: 0.97957 iou_1: 0.62472 F1_0: 0.98968 F1_1: 0.76902 precision_0: 0.98759 precision_1: 0.80732 recall_0: 0.99178 recall_1: 0.73419 
+
+Lastest model updated. Epoch_acc=0.8794, Historical_best_acc=0.8794 (at epoch 50)
+
+lr: 0.0006866
+Is_training: True. [63,199][1,112], imps: 66.54, est: 1.02h, G_loss: 0.00233, running_mf1: 0.49989
+Is_training: True. Epoch 63 / 199, epoch_mF1= 0.90423
+acc: 0.98427 miou: 0.83693 mf1: 0.90423 iou_0: 0.98370 iou_1: 0.69017 F1_0: 0.99178 F1_1: 0.81669 precision_0: 0.98970 precision_1: 0.85686 recall_0: 0.99387 recall_1: 0.78011 
+
+Begin evaluation...
+Is_training: False. [63,199][1,16], imps: 65.63, est: 1.04h, G_loss: 0.04624, running_mf1: 0.85986
+Is_training: False. Epoch 63 / 199, epoch_mF1= 0.86774
+acc: 0.98671 miou: 0.78833 mf1: 0.86774 iou_0: 0.98645 iou_1: 0.59020 F1_0: 0.99318 F1_1: 0.74230 precision_0: 0.98991 precision_1: 0.84803 recall_0: 0.99647 recall_1: 0.66001 
+
+Lastest model updated. Epoch_acc=0.8677, Historical_best_acc=0.8794 (at epoch 50)
+
+lr: 0.0006816
+Is_training: True. [64,199][1,112], imps: 66.60, est: 1.02h, G_loss: 0.00206, running_mf1: 0.50000
+Is_training: True. Epoch 64 / 199, epoch_mF1= 0.90217
+acc: 0.98449 miou: 0.83403 mf1: 0.90217 iou_0: 0.98395 iou_1: 0.68411 F1_0: 0.99191 F1_1: 0.81243 precision_0: 0.98951 precision_1: 0.86081 recall_0: 0.99432 recall_1: 0.76920 
+
+Begin evaluation...
+Is_training: False. [64,199][1,16], imps: 65.71, est: 1.03h, G_loss: 0.00302, running_mf1: 0.90020
+Is_training: False. Epoch 64 / 199, epoch_mF1= 0.87515
+acc: 0.98435 miou: 0.79739 mf1: 0.87515 iou_0: 0.98396 iou_1: 0.61082 F1_0: 0.99191 F1_1: 0.75839 precision_0: 0.99269 precision_1: 0.74110 recall_0: 0.99114 recall_1: 0.77652 
+
+Lastest model updated. Epoch_acc=0.8752, Historical_best_acc=0.8794 (at epoch 50)
+
+lr: 0.0006766
+Is_training: True. [65,199][1,112], imps: 66.66, est: 1.01h, G_loss: 0.00132, running_mf1: 0.50000
+Is_training: True. Epoch 65 / 199, epoch_mF1= 0.89736
+acc: 0.98315 miou: 0.82706 mf1: 0.89736 iou_0: 0.98255 iou_1: 0.67156 F1_0: 0.99120 F1_1: 0.80351 precision_0: 0.98919 precision_1: 0.84165 recall_0: 0.99322 recall_1: 0.76868 
+
+Begin evaluation...
+Is_training: False. [65,199][1,16], imps: 65.79, est: 1.02h, G_loss: 0.11877, running_mf1: 0.82435
+Is_training: False. Epoch 65 / 199, epoch_mF1= 0.84639
+acc: 0.97353 miou: 0.75950 mf1: 0.84639 iou_0: 0.97266 iou_1: 0.54635 F1_0: 0.98614 F1_1: 0.70663 precision_0: 0.99025 precision_1: 0.64956 recall_0: 0.98206 recall_1: 0.77470 
+
+Lastest model updated. Epoch_acc=0.8464, Historical_best_acc=0.8794 (at epoch 50)
+
+lr: 0.0006716
+Is_training: True. [66,199][1,112], imps: 66.73, est: 1.00h, G_loss: 0.02602, running_mf1: 0.92232
+Is_training: True. Epoch 66 / 199, epoch_mF1= 0.90503
+acc: 0.98506 miou: 0.83819 mf1: 0.90503 iou_0: 0.98454 iou_1: 0.69184 F1_0: 0.99221 F1_1: 0.81786 precision_0: 0.99040 precision_1: 0.85431 recall_0: 0.99402 recall_1: 0.78438 
+
+Begin evaluation...
+Is_training: False. [66,199][1,16], imps: 65.86, est: 1.01h, G_loss: 0.00061, running_mf1: 0.89391
+Is_training: False. Epoch 66 / 199, epoch_mF1= 0.86524
+acc: 0.97713 miou: 0.78338 mf1: 0.86524 iou_0: 0.97635 iou_1: 0.59040 F1_0: 0.98803 F1_1: 0.74245 precision_0: 0.98614 precision_1: 0.77448 recall_0: 0.98994 recall_1: 0.71297 
+
+Lastest model updated. Epoch_acc=0.8652, Historical_best_acc=0.8794 (at epoch 50)
+
+lr: 0.0006667
+Is_training: True. [67,199][1,112], imps: 66.79, est: 0.99h, G_loss: 0.00085, running_mf1: 0.50000
+Is_training: True. Epoch 67 / 199, epoch_mF1= 0.90435
+acc: 0.98306 miou: 0.83692 mf1: 0.90435 iou_0: 0.98240 iou_1: 0.69145 F1_0: 0.99112 F1_1: 0.81758 precision_0: 0.98891 precision_1: 0.85696 recall_0: 0.99334 recall_1: 0.78167 
+
+Begin evaluation...
+Is_training: False. [67,199][1,16], imps: 65.93, est: 1.00h, G_loss: 0.00776, running_mf1: 0.68211
+Is_training: False. Epoch 67 / 199, epoch_mF1= 0.82931
+acc: 0.97024 miou: 0.73891 mf1: 0.82931 iou_0: 0.96929 iou_1: 0.50853 F1_0: 0.98441 F1_1: 0.67421 precision_0: 0.98508 precision_1: 0.66472 recall_0: 0.98374 recall_1: 0.68397 
+
+Lastest model updated. Epoch_acc=0.8293, Historical_best_acc=0.8794 (at epoch 50)
+
+lr: 0.0006617
+Is_training: True. [68,199][1,112], imps: 66.85, est: 0.98h, G_loss: 0.08949, running_mf1: 0.92856
+Is_training: True. Epoch 68 / 199, epoch_mF1= 0.90574
+acc: 0.98431 miou: 0.83909 mf1: 0.90574 iou_0: 0.98373 iou_1: 0.69445 F1_0: 0.99180 F1_1: 0.81968 precision_0: 0.98972 precision_1: 0.85940 recall_0: 0.99389 recall_1: 0.78347 
+
+Begin evaluation...
+Is_training: False. [68,199][1,16], imps: 65.99, est: 1.00h, G_loss: 0.00105, running_mf1: 0.49941
+Is_training: False. Epoch 68 / 199, epoch_mF1= 0.86460
+acc: 0.97864 miou: 0.78285 mf1: 0.86460 iou_0: 0.97797 iou_1: 0.58774 F1_0: 0.98886 F1_1: 0.74035 precision_0: 0.98894 precision_1: 0.73894 recall_0: 0.98878 recall_1: 0.74176 
+
+Lastest model updated. Epoch_acc=0.8646, Historical_best_acc=0.8794 (at epoch 50)
+
+lr: 0.0006567
+Is_training: True. [69,199][1,112], imps: 66.89, est: 0.97h, G_loss: 0.07165, running_mf1: 0.91133
+Is_training: True. Epoch 69 / 199, epoch_mF1= 0.90193
+acc: 0.98350 miou: 0.83354 mf1: 0.90193 iou_0: 0.98289 iou_1: 0.68420 F1_0: 0.99137 F1_1: 0.81249 precision_0: 0.98940 precision_1: 0.84920 recall_0: 0.99335 recall_1: 0.77883 
+
+Begin evaluation...
+Is_training: False. [69,199][1,16], imps: 66.05, est: 0.99h, G_loss: 0.00103, running_mf1: 0.49985
+Is_training: False. Epoch 69 / 199, epoch_mF1= 0.85275
+acc: 0.97725 miou: 0.76793 mf1: 0.85275 iou_0: 0.97657 iou_1: 0.55928 F1_0: 0.98815 F1_1: 0.71735 precision_0: 0.97981 precision_1: 0.89998 recall_0: 0.99663 recall_1: 0.59634 
+
+Lastest model updated. Epoch_acc=0.8528, Historical_best_acc=0.8794 (at epoch 50)
+
+lr: 0.0006517
+Is_training: True. [70,199][1,112], imps: 66.94, est: 0.97h, G_loss: 0.04562, running_mf1: 0.87171
+Is_training: True. Epoch 70 / 199, epoch_mF1= 0.89880
+acc: 0.98358 miou: 0.82914 mf1: 0.89880 iou_0: 0.98300 iou_1: 0.67528 F1_0: 0.99143 F1_1: 0.80617 precision_0: 0.98907 precision_1: 0.85211 recall_0: 0.99380 recall_1: 0.76492 
+
+Begin evaluation...
+Is_training: False. [70,199][1,16], imps: 66.12, est: 0.98h, G_loss: 0.00257, running_mf1: 0.50000
+Is_training: False. Epoch 70 / 199, epoch_mF1= 0.86923
+acc: 0.98433 miou: 0.78977 mf1: 0.86923 iou_0: 0.98396 iou_1: 0.59558 F1_0: 0.99192 F1_1: 0.74654 precision_0: 0.98911 precision_1: 0.81957 recall_0: 0.99474 recall_1: 0.68546 
+
+Lastest model updated. Epoch_acc=0.8692, Historical_best_acc=0.8794 (at epoch 50)
+
+lr: 0.0006468
+Is_training: True. [71,199][1,112], imps: 67.00, est: 0.96h, G_loss: 0.03787, running_mf1: 0.74276
+Is_training: True. Epoch 71 / 199, epoch_mF1= 0.89870
+acc: 0.98371 miou: 0.82902 mf1: 0.89870 iou_0: 0.98314 iou_1: 0.67489 F1_0: 0.99150 F1_1: 0.80589 precision_0: 0.98923 precision_1: 0.85049 recall_0: 0.99378 recall_1: 0.76574 
+
+Begin evaluation...
+Is_training: False. [71,199][1,16], imps: 66.18, est: 0.97h, G_loss: 0.04690, running_mf1: 0.85680
+Is_training: False. Epoch 71 / 199, epoch_mF1= 0.88308
+acc: 0.97928 miou: 0.80693 mf1: 0.88308 iou_0: 0.97851 iou_1: 0.63536 F1_0: 0.98914 F1_1: 0.77703 precision_0: 0.98583 precision_1: 0.83446 recall_0: 0.99246 recall_1: 0.72699 
+
+Lastest model updated. Epoch_acc=0.8831, Historical_best_acc=0.8794 (at epoch 50)
+
+**********Best model updated!
+
+lr: 0.0006418
+Is_training: True. [72,199][1,112], imps: 66.91, est: 0.95h, G_loss: 0.00407, running_mf1: 0.49998
+Is_training: True. Epoch 72 / 199, epoch_mF1= 0.90279
+acc: 0.98291 miou: 0.83467 mf1: 0.90279 iou_0: 0.98224 iou_1: 0.68710 F1_0: 0.99104 F1_1: 0.81453 precision_0: 0.98890 precision_1: 0.85265 recall_0: 0.99319 recall_1: 0.77968 
+
+Begin evaluation...
+Is_training: False. [72,199][1,16], imps: 66.10, est: 0.96h, G_loss: 0.06970, running_mf1: 0.91379
+Is_training: False. Epoch 72 / 199, epoch_mF1= 0.86016
+acc: 0.98187 miou: 0.77792 mf1: 0.86016 iou_0: 0.98142 iou_1: 0.57442 F1_0: 0.99062 F1_1: 0.72969 precision_0: 0.98981 precision_1: 0.74729 recall_0: 0.99143 recall_1: 0.71290 
+
+Lastest model updated. Epoch_acc=0.8602, Historical_best_acc=0.8831 (at epoch 71)
+
+lr: 0.0006368
+Is_training: True. [73,199][1,112], imps: 66.96, est: 0.94h, G_loss: 0.02725, running_mf1: 0.87485
+Is_training: True. Epoch 73 / 199, epoch_mF1= 0.91296
+acc: 0.98435 miou: 0.84959 mf1: 0.91296 iou_0: 0.98371 iou_1: 0.71547 F1_0: 0.99179 F1_1: 0.83414 precision_0: 0.99007 precision_1: 0.86440 recall_0: 0.99351 recall_1: 0.80593 
+
+Begin evaluation...
+Is_training: False. [73,199][1,16], imps: 66.17, est: 0.96h, G_loss: 0.00103, running_mf1: 0.89459
+Is_training: False. Epoch 73 / 199, epoch_mF1= 0.85815
+acc: 0.98049 miou: 0.77517 mf1: 0.85815 iou_0: 0.97998 iou_1: 0.57036 F1_0: 0.98989 F1_1: 0.72641 precision_0: 0.98465 precision_1: 0.84846 recall_0: 0.99518 recall_1: 0.63505 
+
+Lastest model updated. Epoch_acc=0.8581, Historical_best_acc=0.8831 (at epoch 71)
+
+lr: 0.0006318
+Is_training: True. [74,199][1,112], imps: 67.00, est: 0.94h, G_loss: 0.01174, running_mf1: 0.93420
+Is_training: True. Epoch 74 / 199, epoch_mF1= 0.91242
+acc: 0.98623 miou: 0.84905 mf1: 0.91242 iou_0: 0.98574 iou_1: 0.71236 F1_0: 0.99282 F1_1: 0.83202 precision_0: 0.99102 precision_1: 0.86904 recall_0: 0.99463 recall_1: 0.79802 
+
+Begin evaluation...
+Is_training: False. [74,199][1,16], imps: 66.22, est: 0.95h, G_loss: 0.04424, running_mf1: 0.93574
+Is_training: False. Epoch 74 / 199, epoch_mF1= 0.87843
+acc: 0.98369 miou: 0.80154 mf1: 0.87843 iou_0: 0.98324 iou_1: 0.61983 F1_0: 0.99155 F1_1: 0.76530 precision_0: 0.99102 precision_1: 0.77679 recall_0: 0.99208 recall_1: 0.75415 
+
+Lastest model updated. Epoch_acc=0.8784, Historical_best_acc=0.8831 (at epoch 71)
+
+lr: 0.0006269
+Is_training: True. [75,199][1,112], imps: 67.05, est: 0.93h, G_loss: 0.01919, running_mf1: 0.94687
+Is_training: True. Epoch 75 / 199, epoch_mF1= 0.91205
+acc: 0.98553 miou: 0.84841 mf1: 0.91205 iou_0: 0.98499 iou_1: 0.71183 F1_0: 0.99244 F1_1: 0.83166 precision_0: 0.99087 precision_1: 0.86201 recall_0: 0.99401 recall_1: 0.80338 
+
+Begin evaluation...
+Is_training: False. [75,199][1,16], imps: 66.28, est: 0.94h, G_loss: 0.01607, running_mf1: 0.92232
+Is_training: False. Epoch 75 / 199, epoch_mF1= 0.85078
+acc: 0.98655 miou: 0.76743 mf1: 0.85078 iou_0: 0.98633 iou_1: 0.54852 F1_0: 0.99312 F1_1: 0.70845 precision_0: 0.98992 precision_1: 0.82068 recall_0: 0.99633 recall_1: 0.62322 
+
+Lastest model updated. Epoch_acc=0.8508, Historical_best_acc=0.8831 (at epoch 71)
+
+lr: 0.0006219
+Is_training: True. [76,199][1,112], imps: 67.10, est: 0.92h, G_loss: 0.03232, running_mf1: 0.90003
+Is_training: True. Epoch 76 / 199, epoch_mF1= 0.90613
+acc: 0.98443 miou: 0.83967 mf1: 0.90613 iou_0: 0.98386 iou_1: 0.69547 F1_0: 0.99186 F1_1: 0.82039 precision_0: 0.99002 precision_1: 0.85556 recall_0: 0.99372 recall_1: 0.78799 
+
+Begin evaluation...
+Is_training: False. [76,199][1,16], imps: 66.33, est: 0.93h, G_loss: 0.00101, running_mf1: 0.84340
+Is_training: False. Epoch 76 / 199, epoch_mF1= 0.82253
+acc: 0.97804 miou: 0.73306 mf1: 0.82253 iou_0: 0.97757 iou_1: 0.48854 F1_0: 0.98866 F1_1: 0.65640 precision_0: 0.98244 precision_1: 0.81215 recall_0: 0.99496 recall_1: 0.55078 
+
+Lastest model updated. Epoch_acc=0.8225, Historical_best_acc=0.8831 (at epoch 71)
+
+lr: 0.0006169
+Is_training: True. [77,199][1,112], imps: 67.15, est: 0.91h, G_loss: 0.00059, running_mf1: 0.50000
+Is_training: True. Epoch 77 / 199, epoch_mF1= 0.91127
+acc: 0.98535 miou: 0.84725 mf1: 0.91127 iou_0: 0.98481 iou_1: 0.70970 F1_0: 0.99235 F1_1: 0.83020 precision_0: 0.99072 precision_1: 0.86156 recall_0: 0.99398 recall_1: 0.80104 
+
+Begin evaluation...
+Is_training: False. [77,199][1,16], imps: 66.39, est: 0.92h, G_loss: 0.00349, running_mf1: 0.88223
+Is_training: False. Epoch 77 / 199, epoch_mF1= 0.85479
+acc: 0.98499 miou: 0.77195 mf1: 0.85479 iou_0: 0.98470 iou_1: 0.55920 F1_0: 0.99229 F1_1: 0.71729 precision_0: 0.98903 precision_1: 0.81592 recall_0: 0.99557 recall_1: 0.63994 
+
+Lastest model updated. Epoch_acc=0.8548, Historical_best_acc=0.8831 (at epoch 71)
+
+lr: 0.0006119
+Is_training: True. [78,199][1,112], imps: 67.19, est: 0.90h, G_loss: 0.04582, running_mf1: 0.90024
+Is_training: True. Epoch 78 / 199, epoch_mF1= 0.90126
+acc: 0.98446 miou: 0.83274 mf1: 0.90126 iou_0: 0.98393 iou_1: 0.68155 F1_0: 0.99190 F1_1: 0.81062 precision_0: 0.98978 precision_1: 0.85325 recall_0: 0.99402 recall_1: 0.77205 
+
+Begin evaluation...
+Is_training: False. [78,199][1,16], imps: 66.44, est: 0.91h, G_loss: 0.12022, running_mf1: 0.88105
+Is_training: False. Epoch 78 / 199, epoch_mF1= 0.88469
+acc: 0.98099 miou: 0.80938 mf1: 0.88469 iou_0: 0.98033 iou_1: 0.63843 F1_0: 0.99007 F1_1: 0.77932 precision_0: 0.98847 precision_1: 0.80827 recall_0: 0.99167 recall_1: 0.75238 
+
+Lastest model updated. Epoch_acc=0.8847, Historical_best_acc=0.8831 (at epoch 71)
+
+**********Best model updated!
+
+lr: 0.0006070
+Is_training: True. [79,199][1,112], imps: 66.92, est: 0.90h, G_loss: 0.01148, running_mf1: 0.93680
+Is_training: True. Epoch 79 / 199, epoch_mF1= 0.90861
+acc: 0.98635 miou: 0.84352 mf1: 0.90861 iou_0: 0.98590 iou_1: 0.70113 F1_0: 0.99290 F1_1: 0.82431 precision_0: 0.99159 precision_1: 0.85225 recall_0: 0.99422 recall_1: 0.79815 
+
+Begin evaluation...
+Is_training: False. [79,199][1,16], imps: 66.19, est: 0.91h, G_loss: 0.06041, running_mf1: 0.49932
+Is_training: False. Epoch 79 / 199, epoch_mF1= 0.87964
+acc: 0.98471 miou: 0.80331 mf1: 0.87964 iou_0: 0.98432 iou_1: 0.62229 F1_0: 0.99210 F1_1: 0.76718 precision_0: 0.98849 precision_1: 0.85955 recall_0: 0.99573 recall_1: 0.69273 
+
+Lastest model updated. Epoch_acc=0.8796, Historical_best_acc=0.8847 (at epoch 78)
+
+lr: 0.0006020
+Is_training: True. [80,199][1,112], imps: 66.97, est: 0.89h, G_loss: 0.02864, running_mf1: 0.93420
+Is_training: True. Epoch 80 / 199, epoch_mF1= 0.91660
+acc: 0.98606 miou: 0.85519 mf1: 0.91660 iou_0: 0.98553 iou_1: 0.72486 F1_0: 0.99271 F1_1: 0.84048 precision_0: 0.99102 precision_1: 0.87299 recall_0: 0.99440 recall_1: 0.81031 
+
+Begin evaluation...
+Is_training: False. [80,199][1,16], imps: 66.25, est: 0.90h, G_loss: 0.00036, running_mf1: 0.78433
+Is_training: False. Epoch 80 / 199, epoch_mF1= 0.85978
+acc: 0.98160 miou: 0.77739 mf1: 0.85978 iou_0: 0.98113 iou_1: 0.57366 F1_0: 0.99048 F1_1: 0.72908 precision_0: 0.98906 precision_1: 0.76014 recall_0: 0.99190 recall_1: 0.70045 
+
+Lastest model updated. Epoch_acc=0.8598, Historical_best_acc=0.8847 (at epoch 78)
+
+lr: 0.0005970
+Is_training: True. [81,199][1,112], imps: 67.01, est: 0.88h, G_loss: 0.02947, running_mf1: 0.95269
+Is_training: True. Epoch 81 / 199, epoch_mF1= 0.88640
+acc: 0.97998 miou: 0.81150 mf1: 0.88640 iou_0: 0.97923 iou_1: 0.64377 F1_0: 0.98951 F1_1: 0.78329 precision_0: 0.98686 precision_1: 0.82922 recall_0: 0.99217 recall_1: 0.74217 
+
+Begin evaluation...
+Is_training: False. [81,199][1,16], imps: 66.12, est: 0.90h, G_loss: 0.00158, running_mf1: 0.49975
+Is_training: False. Epoch 81 / 199, epoch_mF1= 0.84338
+acc: 0.98342 miou: 0.75800 mf1: 0.84338 iou_0: 0.98310 iou_1: 0.53291 F1_0: 0.99148 F1_1: 0.69529 precision_0: 0.98467 precision_1: 0.92356 recall_0: 0.99838 recall_1: 0.55749 
+
+Lastest model updated. Epoch_acc=0.8434, Historical_best_acc=0.8847 (at epoch 78)
+
+lr: 0.0005920
+Is_training: True. [82,199][1,112], imps: 66.84, est: 0.88h, G_loss: 0.16471, running_mf1: 0.84037
+Is_training: True. Epoch 82 / 199, epoch_mF1= 0.90755
+acc: 0.98624 miou: 0.84198 mf1: 0.90755 iou_0: 0.98579 iou_1: 0.69816 F1_0: 0.99284 F1_1: 0.82226 precision_0: 0.99079 precision_1: 0.86693 recall_0: 0.99491 recall_1: 0.78197 
+
+Begin evaluation...
+Is_training: False. [82,199][1,16], imps: 66.14, est: 0.89h, G_loss: 0.13773, running_mf1: 0.88760
+Is_training: False. Epoch 82 / 199, epoch_mF1= 0.88187
+acc: 0.98183 miou: 0.80576 mf1: 0.88187 iou_0: 0.98125 iou_1: 0.63027 F1_0: 0.99054 F1_1: 0.77321 precision_0: 0.98812 precision_1: 0.82138 recall_0: 0.99297 recall_1: 0.73038 
+
+Lastest model updated. Epoch_acc=0.8819, Historical_best_acc=0.8847 (at epoch 78)
+
+lr: 0.0005871
+Is_training: True. [83,199][1,112], imps: 66.89, est: 0.87h, G_loss: 0.05606, running_mf1: 0.89472
+Is_training: True. Epoch 83 / 199, epoch_mF1= 0.91163
+acc: 0.98430 miou: 0.84763 mf1: 0.91163 iou_0: 0.98367 iou_1: 0.71159 F1_0: 0.99177 F1_1: 0.83150 precision_0: 0.98996 precision_1: 0.86381 recall_0: 0.99358 recall_1: 0.80152 
+
+Begin evaluation...
+Is_training: False. [83,199][1,16], imps: 66.20, est: 0.88h, G_loss: 0.00025, running_mf1: 0.79419
+Is_training: False. Epoch 83 / 199, epoch_mF1= 0.86110
+acc: 0.98746 miou: 0.78017 mf1: 0.86110 iou_0: 0.98725 iou_1: 0.57310 F1_0: 0.99358 F1_1: 0.72863 precision_0: 0.99090 precision_1: 0.82300 recall_0: 0.99628 recall_1: 0.65367 
+
+Lastest model updated. Epoch_acc=0.8611, Historical_best_acc=0.8847 (at epoch 78)
+
+lr: 0.0005821
+Is_training: True. [84,199][1,112], imps: 66.94, est: 0.86h, G_loss: 0.00113, running_mf1: 0.50000
+Is_training: True. Epoch 84 / 199, epoch_mF1= 0.92002
+acc: 0.98661 miou: 0.86038 mf1: 0.92002 iou_0: 0.98609 iou_1: 0.73468 F1_0: 0.99300 F1_1: 0.84705 precision_0: 0.99155 precision_1: 0.87484 recall_0: 0.99444 recall_1: 0.82097 
+
+Begin evaluation...
+Is_training: False. [84,199][1,16], imps: 66.25, est: 0.87h, G_loss: 0.00224, running_mf1: 0.89981
+Is_training: False. Epoch 84 / 199, epoch_mF1= 0.88030
+acc: 0.97729 miou: 0.80288 mf1: 0.88030 iou_0: 0.97638 iou_1: 0.62939 F1_0: 0.98805 F1_1: 0.77255 precision_0: 0.98387 precision_1: 0.84039 recall_0: 0.99226 recall_1: 0.71484 
+
+Lastest model updated. Epoch_acc=0.8803, Historical_best_acc=0.8847 (at epoch 78)
+
+lr: 0.0005771
+Is_training: True. [85,199][1,112], imps: 66.98, est: 0.85h, G_loss: 0.00193, running_mf1: 0.90540
+Is_training: True. Epoch 85 / 199, epoch_mF1= 0.90974
+acc: 0.98701 miou: 0.84525 mf1: 0.90974 iou_0: 0.98660 iou_1: 0.70391 F1_0: 0.99326 F1_1: 0.82623 precision_0: 0.99153 precision_1: 0.86504 recall_0: 0.99499 recall_1: 0.79074 
+
+Begin evaluation...
+Is_training: False. [85,199][1,16], imps: 66.30, est: 0.86h, G_loss: 0.00131, running_mf1: 0.76053
+Is_training: False. Epoch 85 / 199, epoch_mF1= 0.87602
+acc: 0.98162 miou: 0.79803 mf1: 0.87602 iou_0: 0.98107 iou_1: 0.61499 F1_0: 0.99044 F1_1: 0.76160 precision_0: 0.98666 precision_1: 0.84228 recall_0: 0.99426 recall_1: 0.69503 
+
+Lastest model updated. Epoch_acc=0.8760, Historical_best_acc=0.8847 (at epoch 78)
+
+lr: 0.0005721
+Is_training: True. [86,199][1,112], imps: 67.01, est: 0.85h, G_loss: 0.04756, running_mf1: 0.80279
+Is_training: True. Epoch 86 / 199, epoch_mF1= 0.91031
+acc: 0.98627 miou: 0.84597 mf1: 0.91031 iou_0: 0.98581 iou_1: 0.70614 F1_0: 0.99285 F1_1: 0.82776 precision_0: 0.99116 precision_1: 0.86320 recall_0: 0.99455 recall_1: 0.79512 
+
+Begin evaluation...
+Is_training: False. [86,199][1,16], imps: 66.33, est: 0.86h, G_loss: 0.04179, running_mf1: 0.94989
+Is_training: False. Epoch 86 / 199, epoch_mF1= 0.85839
+acc: 0.97965 miou: 0.77530 mf1: 0.85839 iou_0: 0.97909 iou_1: 0.57152 F1_0: 0.98943 F1_1: 0.72735 precision_0: 0.98634 precision_1: 0.79143 recall_0: 0.99255 recall_1: 0.67287 
+
+Lastest model updated. Epoch_acc=0.8584, Historical_best_acc=0.8847 (at epoch 78)
+
+lr: 0.0005672
+Is_training: True. [87,199][1,112], imps: 67.04, est: 0.84h, G_loss: 0.05463, running_mf1: 0.90736
+Is_training: True. Epoch 87 / 199, epoch_mF1= 0.91273
+acc: 0.98579 miou: 0.84944 mf1: 0.91273 iou_0: 0.98526 iou_1: 0.71361 F1_0: 0.99258 F1_1: 0.83287 precision_0: 0.99039 precision_1: 0.87639 recall_0: 0.99477 recall_1: 0.79347 
+
+Begin evaluation...
+Is_training: False. [87,199][1,16], imps: 66.38, est: 0.85h, G_loss: 0.02662, running_mf1: 0.84086
+Is_training: False. Epoch 87 / 199, epoch_mF1= 0.88575
+acc: 0.98074 miou: 0.81076 mf1: 0.88575 iou_0: 0.98006 iou_1: 0.64147 F1_0: 0.98993 F1_1: 0.78158 precision_0: 0.98986 precision_1: 0.78267 recall_0: 0.98999 recall_1: 0.78050 
+
+Lastest model updated. Epoch_acc=0.8858, Historical_best_acc=0.8847 (at epoch 78)
+
+**********Best model updated!
+
+lr: 0.0005622
+Is_training: True. [88,199][1,112], imps: 66.98, est: 0.83h, G_loss: 0.01631, running_mf1: 0.91517
+Is_training: True. Epoch 88 / 199, epoch_mF1= 0.91615
+acc: 0.98749 miou: 0.85472 mf1: 0.91615 iou_0: 0.98707 iou_1: 0.72237 F1_0: 0.99349 F1_1: 0.83881 precision_0: 0.99216 precision_1: 0.86777 recall_0: 0.99483 recall_1: 0.81172 
+
+Begin evaluation...
+Is_training: False. [88,199][1,16], imps: 66.30, est: 0.84h, G_loss: 0.00041, running_mf1: 0.94197
+Is_training: False. Epoch 88 / 199, epoch_mF1= 0.88776
+acc: 0.98289 miou: 0.81383 mf1: 0.88776 iou_0: 0.98234 iou_1: 0.64533 F1_0: 0.99109 F1_1: 0.78444 precision_0: 0.98843 precision_1: 0.83924 recall_0: 0.99377 recall_1: 0.73635 
+
+Lastest model updated. Epoch_acc=0.8878, Historical_best_acc=0.8858 (at epoch 87)
+
+**********Best model updated!
+
+lr: 0.0005572
+Is_training: True. [89,199][1,112], imps: 66.82, est: 0.83h, G_loss: 0.02957, running_mf1: 0.90289
+Is_training: True. Epoch 89 / 199, epoch_mF1= 0.92460
+acc: 0.98752 miou: 0.86743 mf1: 0.92460 iou_0: 0.98704 iou_1: 0.74782 F1_0: 0.99348 F1_1: 0.85572 precision_0: 0.99219 precision_1: 0.88099 recall_0: 0.99477 recall_1: 0.83186 
+
+Begin evaluation...
+Is_training: False. [89,199][1,16], imps: 66.17, est: 0.83h, G_loss: 0.12394, running_mf1: 0.50000
+Is_training: False. Epoch 89 / 199, epoch_mF1= 0.87406
+acc: 0.98293 miou: 0.79571 mf1: 0.87406 iou_0: 0.98246 iou_1: 0.60896 F1_0: 0.99115 F1_1: 0.75696 precision_0: 0.98685 precision_1: 0.85986 recall_0: 0.99549 recall_1: 0.67606 
+
+Lastest model updated. Epoch_acc=0.8741, Historical_best_acc=0.8878 (at epoch 88)
+
+lr: 0.0005522
+Is_training: True. [90,199][1,112], imps: 66.86, est: 0.82h, G_loss: 0.01250, running_mf1: 0.84782
+Is_training: True. Epoch 90 / 199, epoch_mF1= 0.92672
+acc: 0.98755 miou: 0.87068 mf1: 0.92672 iou_0: 0.98705 iou_1: 0.75431 F1_0: 0.99348 F1_1: 0.85995 precision_0: 0.99211 precision_1: 0.88628 recall_0: 0.99486 recall_1: 0.83514 
+
+Begin evaluation...
+Is_training: False. [90,199][1,16], imps: 66.22, est: 0.83h, G_loss: 0.00008, running_mf1: 0.49924
+Is_training: False. Epoch 90 / 199, epoch_mF1= 0.87333
+acc: 0.98446 miou: 0.79504 mf1: 0.87333 iou_0: 0.98408 iou_1: 0.60601 F1_0: 0.99197 F1_1: 0.75468 precision_0: 0.99217 precision_1: 0.75015 recall_0: 0.99178 recall_1: 0.75926 
+
+Lastest model updated. Epoch_acc=0.8733, Historical_best_acc=0.8878 (at epoch 88)
+
+lr: 0.0005473
+Is_training: True. [91,199][1,112], imps: 66.91, est: 0.81h, G_loss: 0.04937, running_mf1: 0.92682
+Is_training: True. Epoch 91 / 199, epoch_mF1= 0.91713
+acc: 0.98771 miou: 0.85620 mf1: 0.91713 iou_0: 0.98730 iou_1: 0.72510 F1_0: 0.99361 F1_1: 0.84065 precision_0: 0.99244 precision_1: 0.86608 recall_0: 0.99478 recall_1: 0.81667 
+
+Begin evaluation...
+Is_training: False. [91,199][1,16], imps: 66.26, est: 0.82h, G_loss: 0.00054, running_mf1: 0.91634
+Is_training: False. Epoch 91 / 199, epoch_mF1= 0.87850
+acc: 0.98244 miou: 0.80141 mf1: 0.87850 iou_0: 0.98192 iou_1: 0.62091 F1_0: 0.99088 F1_1: 0.76613 precision_0: 0.98513 precision_1: 0.90084 recall_0: 0.99669 recall_1: 0.66646 
+
+Lastest model updated. Epoch_acc=0.8785, Historical_best_acc=0.8878 (at epoch 88)
+
+lr: 0.0005423
+Is_training: True. [92,199][1,112], imps: 66.92, est: 0.80h, G_loss: 0.03353, running_mf1: 0.91032
+Is_training: True. Epoch 92 / 199, epoch_mF1= 0.92630
+acc: 0.98740 miou: 0.87002 mf1: 0.92630 iou_0: 0.98689 iou_1: 0.75314 F1_0: 0.99340 F1_1: 0.85919 precision_0: 0.99210 precision_1: 0.88406 recall_0: 0.99471 recall_1: 0.83568 
+
+Begin evaluation...
+Is_training: False. [92,199][1,16], imps: 66.28, est: 0.81h, G_loss: 0.00039, running_mf1: 0.68056
+Is_training: False. Epoch 92 / 199, epoch_mF1= 0.88232
+acc: 0.98223 miou: 0.80643 mf1: 0.88232 iou_0: 0.98168 iou_1: 0.63118 F1_0: 0.99075 F1_1: 0.77390 precision_0: 0.98940 precision_1: 0.80067 recall_0: 0.99211 recall_1: 0.74886 
+
+Lastest model updated. Epoch_acc=0.8823, Historical_best_acc=0.8878 (at epoch 88)
+
+lr: 0.0005373
+Is_training: True. [93,199][1,112], imps: 66.94, est: 0.80h, G_loss: 0.02670, running_mf1: 0.91849
+Is_training: True. Epoch 93 / 199, epoch_mF1= 0.92174
+acc: 0.98819 miou: 0.86318 mf1: 0.92174 iou_0: 0.98778 iou_1: 0.73858 F1_0: 0.99385 F1_1: 0.84963 precision_0: 0.99250 precision_1: 0.87891 recall_0: 0.99521 recall_1: 0.82225 
+
+Begin evaluation...
+Is_training: False. [93,199][1,16], imps: 66.31, est: 0.80h, G_loss: 0.00669, running_mf1: 0.88249
+Is_training: False. Epoch 93 / 199, epoch_mF1= 0.86872
+acc: 0.98393 miou: 0.78905 mf1: 0.86872 iou_0: 0.98355 iou_1: 0.59456 F1_0: 0.99170 F1_1: 0.74574 precision_0: 0.99012 precision_1: 0.78409 recall_0: 0.99329 recall_1: 0.71096 
+
+Lastest model updated. Epoch_acc=0.8687, Historical_best_acc=0.8878 (at epoch 88)
+
+lr: 0.0005323
+Is_training: True. [94,199][1,112], imps: 66.96, est: 0.79h, G_loss: 0.01264, running_mf1: 0.93861
+Is_training: True. Epoch 94 / 199, epoch_mF1= 0.92157
+acc: 0.98672 miou: 0.86273 mf1: 0.92157 iou_0: 0.98620 iou_1: 0.73925 F1_0: 0.99305 F1_1: 0.85008 precision_0: 0.99159 precision_1: 0.87794 recall_0: 0.99451 recall_1: 0.82393 
+
+Begin evaluation...
+Is_training: False. [94,199][1,16], imps: 66.35, est: 0.80h, G_loss: 0.00651, running_mf1: 0.78489
+Is_training: False. Epoch 94 / 199, epoch_mF1= 0.85472
+acc: 0.98302 miou: 0.77147 mf1: 0.85472 iou_0: 0.98265 iou_1: 0.56029 F1_0: 0.99125 F1_1: 0.71819 precision_0: 0.98816 precision_1: 0.79844 recall_0: 0.99435 recall_1: 0.65259 
+
+Lastest model updated. Epoch_acc=0.8547, Historical_best_acc=0.8878 (at epoch 88)
+
+lr: 0.0005274
+Is_training: True. [95,199][1,112], imps: 67.00, est: 0.78h, G_loss: 0.00025, running_mf1: 0.50000
+Is_training: True. Epoch 95 / 199, epoch_mF1= 0.91827
+acc: 0.98532 miou: 0.85758 mf1: 0.91827 iou_0: 0.98471 iou_1: 0.73046 F1_0: 0.99230 F1_1: 0.84424 precision_0: 0.99052 precision_1: 0.87602 recall_0: 0.99408 recall_1: 0.81468 
+
+Begin evaluation...
+Is_training: False. [95,199][1,16], imps: 66.39, est: 0.79h, G_loss: 0.16972, running_mf1: 0.80377
+Is_training: False. Epoch 95 / 199, epoch_mF1= 0.88977
+acc: 0.98329 miou: 0.81662 mf1: 0.88977 iou_0: 0.98275 iou_1: 0.65049 F1_0: 0.99130 F1_1: 0.78824 precision_0: 0.99046 precision_1: 0.80475 recall_0: 0.99214 recall_1: 0.77238 
+
+Lastest model updated. Epoch_acc=0.8898, Historical_best_acc=0.8878 (at epoch 88)
+
+**********Best model updated!
+
+lr: 0.0005224
+Is_training: True. [96,199][1,112], imps: 66.93, est: 0.77h, G_loss: 0.03841, running_mf1: 0.92824
+Is_training: True. Epoch 96 / 199, epoch_mF1= 0.91940
+acc: 0.98653 miou: 0.85943 mf1: 0.91940 iou_0: 0.98601 iou_1: 0.73286 F1_0: 0.99296 F1_1: 0.84584 precision_0: 0.99137 precision_1: 0.87648 recall_0: 0.99454 recall_1: 0.81727 
+
+Begin evaluation...
+Is_training: False. [96,199][1,16], imps: 66.32, est: 0.78h, G_loss: 0.07668, running_mf1: 0.86605
+Is_training: False. Epoch 96 / 199, epoch_mF1= 0.88941
+acc: 0.98433 miou: 0.81630 mf1: 0.88941 iou_0: 0.98386 iou_1: 0.64874 F1_0: 0.99186 F1_1: 0.78695 precision_0: 0.98815 precision_1: 0.87271 recall_0: 0.99560 recall_1: 0.71654 
+
+Lastest model updated. Epoch_acc=0.8894, Historical_best_acc=0.8898 (at epoch 95)
+
+lr: 0.0005174
+Is_training: True. [97,199][1,112], imps: 66.96, est: 0.77h, G_loss: 0.02711, running_mf1: 0.94410
+Is_training: True. Epoch 97 / 199, epoch_mF1= 0.92344
+acc: 0.98657 miou: 0.86554 mf1: 0.92344 iou_0: 0.98602 iou_1: 0.74506 F1_0: 0.99296 F1_1: 0.85391 precision_0: 0.99143 precision_1: 0.88228 recall_0: 0.99450 recall_1: 0.82731 
+
+Begin evaluation...
+Is_training: False. [97,199][1,16], imps: 66.36, est: 0.77h, G_loss: 0.00039, running_mf1: 0.95349
+Is_training: False. Epoch 97 / 199, epoch_mF1= 0.86830
+acc: 0.98213 miou: 0.78819 mf1: 0.86830 iou_0: 0.98165 iou_1: 0.59473 F1_0: 0.99074 F1_1: 0.74587 precision_0: 0.98607 precision_1: 0.85739 recall_0: 0.99546 recall_1: 0.66002 
+
+Lastest model updated. Epoch_acc=0.8683, Historical_best_acc=0.8898 (at epoch 95)
+
+lr: 0.0005124
+Is_training: True. [98,199][1,112], imps: 66.99, est: 0.76h, G_loss: 0.01866, running_mf1: 0.95683
+Is_training: True. Epoch 98 / 199, epoch_mF1= 0.92713
+acc: 0.98659 miou: 0.87121 mf1: 0.92713 iou_0: 0.98600 iou_1: 0.75641 F1_0: 0.99295 F1_1: 0.86131 precision_0: 0.99175 precision_1: 0.88246 recall_0: 0.99416 recall_1: 0.84116 
+
+Begin evaluation...
+Is_training: False. [98,199][1,16], imps: 66.40, est: 0.76h, G_loss: 0.08172, running_mf1: 0.94363
+Is_training: False. Epoch 98 / 199, epoch_mF1= 0.87770
+acc: 0.98298 miou: 0.80046 mf1: 0.87770 iou_0: 0.98250 iou_1: 0.61842 F1_0: 0.99117 F1_1: 0.76423 precision_0: 0.98829 precision_1: 0.82881 recall_0: 0.99407 recall_1: 0.70898 
+
+Lastest model updated. Epoch_acc=0.8777, Historical_best_acc=0.8898 (at epoch 95)
+
+lr: 0.0005075
+Is_training: True. [99,199][1,112], imps: 67.03, est: 0.75h, G_loss: 0.16601, running_mf1: 0.83610
+Is_training: True. Epoch 99 / 199, epoch_mF1= 0.91546
+acc: 0.98605 miou: 0.85351 mf1: 0.91546 iou_0: 0.98553 iou_1: 0.72149 F1_0: 0.99271 F1_1: 0.83821 precision_0: 0.99118 precision_1: 0.86804 recall_0: 0.99425 recall_1: 0.81037 
+
+Begin evaluation...
+Is_training: False. [99,199][1,16], imps: 66.43, est: 0.76h, G_loss: 0.00238, running_mf1: 0.91194
+Is_training: False. Epoch 99 / 199, epoch_mF1= 0.86262
+acc: 0.98436 miou: 0.78146 mf1: 0.86262 iou_0: 0.98402 iou_1: 0.57890 F1_0: 0.99195 F1_1: 0.73330 precision_0: 0.98718 precision_1: 0.87279 recall_0: 0.99676 recall_1: 0.63225 
+
+Lastest model updated. Epoch_acc=0.8626, Historical_best_acc=0.8898 (at epoch 95)
+
+lr: 0.0005025
+Is_training: True. [100,199][1,112], imps: 67.05, est: 0.74h, G_loss: 0.00576, running_mf1: 0.84937
+Is_training: True. Epoch 100 / 199, epoch_mF1= 0.92316
+acc: 0.98680 miou: 0.86515 mf1: 0.92316 iou_0: 0.98627 iou_1: 0.74403 F1_0: 0.99309 F1_1: 0.85323 precision_0: 0.99180 precision_1: 0.87754 recall_0: 0.99439 recall_1: 0.83024 
+
+Begin evaluation...
+Is_training: False. [100,199][1,16], imps: 66.47, est: 0.75h, G_loss: 0.00007, running_mf1: 0.94288
+Is_training: False. Epoch 100 / 199, epoch_mF1= 0.88729
+acc: 0.98004 miou: 0.81272 mf1: 0.88729 iou_0: 0.97929 iou_1: 0.64616 F1_0: 0.98953 F1_1: 0.78505 precision_0: 0.98775 precision_1: 0.81539 recall_0: 0.99133 recall_1: 0.75689 
+
+Lastest model updated. Epoch_acc=0.8873, Historical_best_acc=0.8898 (at epoch 95)
+
+lr: 0.0004975
+Is_training: True. [101,199][1,112], imps: 67.08, est: 0.73h, G_loss: 0.07642, running_mf1: 0.90581
+Is_training: True. Epoch 101 / 199, epoch_mF1= 0.92339
+acc: 0.98744 miou: 0.86558 mf1: 0.92339 iou_0: 0.98696 iou_1: 0.74419 F1_0: 0.99344 F1_1: 0.85334 precision_0: 0.99203 precision_1: 0.88130 recall_0: 0.99485 recall_1: 0.82710 
+
+Begin evaluation...
+Is_training: False. [101,199][1,16], imps: 66.36, est: 0.74h, G_loss: 0.19641, running_mf1: 0.83832
+Is_training: False. Epoch 101 / 199, epoch_mF1= 0.86946
+acc: 0.97758 miou: 0.78882 mf1: 0.86946 iou_0: 0.97680 iou_1: 0.60083 F1_0: 0.98826 F1_1: 0.75065 precision_0: 0.98460 precision_1: 0.81515 recall_0: 0.99196 recall_1: 0.69560 
+
+Lastest model updated. Epoch_acc=0.8695, Historical_best_acc=0.8898 (at epoch 95)
+
+lr: 0.0004925
+Is_training: True. [102,199][1,112], imps: 66.94, est: 0.73h, G_loss: 0.02295, running_mf1: 0.95566
+Is_training: True. Epoch 102 / 199, epoch_mF1= 0.92160
+acc: 0.98651 miou: 0.86275 mf1: 0.92160 iou_0: 0.98597 iou_1: 0.73953 F1_0: 0.99294 F1_1: 0.85027 precision_0: 0.99165 precision_1: 0.87422 recall_0: 0.99422 recall_1: 0.82759 
+
+Begin evaluation...
+Is_training: False. [102,199][1,16], imps: 66.37, est: 0.73h, G_loss: 0.00029, running_mf1: 0.88582
+Is_training: False. Epoch 102 / 199, epoch_mF1= 0.88211
+acc: 0.97989 miou: 0.80574 mf1: 0.88211 iou_0: 0.97917 iou_1: 0.63231 F1_0: 0.98948 F1_1: 0.77474 precision_0: 0.98865 precision_1: 0.78877 recall_0: 0.99030 recall_1: 0.76121 
+
+Lastest model updated. Epoch_acc=0.8821, Historical_best_acc=0.8898 (at epoch 95)
+
+lr: 0.0004876
+Is_training: True. [103,199][1,112], imps: 66.98, est: 0.72h, G_loss: 0.01594, running_mf1: 0.75295
+Is_training: True. Epoch 103 / 199, epoch_mF1= 0.92780
+acc: 0.98758 miou: 0.87236 mf1: 0.92780 iou_0: 0.98708 iou_1: 0.75764 F1_0: 0.99350 F1_1: 0.86211 precision_0: 0.99250 precision_1: 0.88094 recall_0: 0.99450 recall_1: 0.84406 
+
+Begin evaluation...
+Is_training: False. [103,199][1,16], imps: 66.41, est: 0.73h, G_loss: 0.00009, running_mf1: 0.50000
+Is_training: False. Epoch 103 / 199, epoch_mF1= 0.86389
+acc: 0.98440 miou: 0.78306 mf1: 0.86389 iou_0: 0.98405 iou_1: 0.58206 F1_0: 0.99196 F1_1: 0.73582 precision_0: 0.98881 precision_1: 0.82185 recall_0: 0.99513 recall_1: 0.66610 
+
+Lastest model updated. Epoch_acc=0.8639, Historical_best_acc=0.8898 (at epoch 95)
+
+lr: 0.0004826
+Is_training: True. [104,199][1,112], imps: 67.00, est: 0.71h, G_loss: 0.02731, running_mf1: 0.90716
+Is_training: True. Epoch 104 / 199, epoch_mF1= 0.92500
+acc: 0.98779 miou: 0.86808 mf1: 0.92500 iou_0: 0.98733 iou_1: 0.74884 F1_0: 0.99362 F1_1: 0.85639 precision_0: 0.99246 precision_1: 0.87955 recall_0: 0.99479 recall_1: 0.83441 
+
+Begin evaluation...
+Is_training: False. [104,199][1,16], imps: 66.45, est: 0.72h, G_loss: 0.00026, running_mf1: 0.75755
+Is_training: False. Epoch 104 / 199, epoch_mF1= 0.88468
+acc: 0.98166 miou: 0.80948 mf1: 0.88468 iou_0: 0.98105 iou_1: 0.63791 F1_0: 0.99044 F1_1: 0.77893 precision_0: 0.98608 precision_1: 0.86753 recall_0: 0.99483 recall_1: 0.70675 
+
+Lastest model updated. Epoch_acc=0.8847, Historical_best_acc=0.8898 (at epoch 95)
+
+lr: 0.0004776
+Is_training: True. [105,199][1,112], imps: 67.04, est: 0.71h, G_loss: 0.04190, running_mf1: 0.94554
+Is_training: True. Epoch 105 / 199, epoch_mF1= 0.92961
+acc: 0.98750 miou: 0.87514 mf1: 0.92961 iou_0: 0.98698 iou_1: 0.76331 F1_0: 0.99345 F1_1: 0.86577 precision_0: 0.99225 precision_1: 0.88772 recall_0: 0.99465 recall_1: 0.84487 
+
+Begin evaluation...
+Is_training: False. [105,199][1,16], imps: 66.48, est: 0.71h, G_loss: 0.02698, running_mf1: 0.92565
+Is_training: False. Epoch 105 / 199, epoch_mF1= 0.87491
+acc: 0.98318 miou: 0.79686 mf1: 0.87491 iou_0: 0.98273 iou_1: 0.61100 F1_0: 0.99129 F1_1: 0.75853 precision_0: 0.98995 precision_1: 0.78802 recall_0: 0.99263 recall_1: 0.73117 
+
+Lastest model updated. Epoch_acc=0.8749, Historical_best_acc=0.8898 (at epoch 95)
+
+lr: 0.0004726
+Is_training: True. [106,199][1,112], imps: 67.07, est: 0.70h, G_loss: 0.01379, running_mf1: 0.57956
+Is_training: True. Epoch 106 / 199, epoch_mF1= 0.92806
+acc: 0.98801 miou: 0.87280 mf1: 0.92806 iou_0: 0.98755 iou_1: 0.75805 F1_0: 0.99373 F1_1: 0.86238 precision_0: 0.99263 precision_1: 0.88394 recall_0: 0.99484 recall_1: 0.84185 
+
+Begin evaluation...
+Is_training: False. [106,199][1,16], imps: 66.53, est: 0.70h, G_loss: 0.16840, running_mf1: 0.70957
+Is_training: False. Epoch 106 / 199, epoch_mF1= 0.88233
+acc: 0.98770 miou: 0.80737 mf1: 0.88233 iou_0: 0.98744 iou_1: 0.62731 F1_0: 0.99368 F1_1: 0.77098 precision_0: 0.99236 precision_1: 0.81009 recall_0: 0.99501 recall_1: 0.73546 
+
+Lastest model updated. Epoch_acc=0.8823, Historical_best_acc=0.8898 (at epoch 95)
+
+lr: 0.0004677
+Is_training: True. [107,199][1,112], imps: 67.11, est: 0.69h, G_loss: 0.05850, running_mf1: 0.94450
+Is_training: True. Epoch 107 / 199, epoch_mF1= 0.92469
+acc: 0.98789 miou: 0.86762 mf1: 0.92469 iou_0: 0.98744 iou_1: 0.74780 F1_0: 0.99368 F1_1: 0.85570 precision_0: 0.99245 precision_1: 0.88056 recall_0: 0.99491 recall_1: 0.83221 
+
+Begin evaluation...
+Is_training: False. [107,199][1,16], imps: 66.56, est: 0.70h, G_loss: 0.00454, running_mf1: 0.65353
+Is_training: False. Epoch 107 / 199, epoch_mF1= 0.87884
+acc: 0.98106 miou: 0.80162 mf1: 0.87884 iou_0: 0.98045 iou_1: 0.62279 F1_0: 0.99013 F1_1: 0.76756 precision_0: 0.98632 precision_1: 0.84428 recall_0: 0.99396 recall_1: 0.70361 
+
+Lastest model updated. Epoch_acc=0.8788, Historical_best_acc=0.8898 (at epoch 95)
+
+lr: 0.0004627
+Is_training: True. [108,199][1,112], imps: 67.14, est: 0.68h, G_loss: 0.04108, running_mf1: 0.92873
+Is_training: True. Epoch 108 / 199, epoch_mF1= 0.92589
+acc: 0.98838 miou: 0.86951 mf1: 0.92589 iou_0: 0.98796 iou_1: 0.75106 F1_0: 0.99394 F1_1: 0.85784 precision_0: 0.99276 precision_1: 0.88242 recall_0: 0.99512 recall_1: 0.83458 
+
+Begin evaluation...
+Is_training: False. [108,199][1,16], imps: 66.60, est: 0.69h, G_loss: 0.00035, running_mf1: 0.76116
+Is_training: False. Epoch 108 / 199, epoch_mF1= 0.88560
+acc: 0.97791 miou: 0.81008 mf1: 0.88560 iou_0: 0.97700 iou_1: 0.64317 F1_0: 0.98837 F1_1: 0.78284 precision_0: 0.98415 precision_1: 0.85092 recall_0: 0.99262 recall_1: 0.72485 
+
+Lastest model updated. Epoch_acc=0.8856, Historical_best_acc=0.8898 (at epoch 95)
+
+lr: 0.0004577
+Is_training: True. [109,199][1,112], imps: 67.18, est: 0.67h, G_loss: 0.01134, running_mf1: 0.90722
+Is_training: True. Epoch 109 / 199, epoch_mF1= 0.93532
+acc: 0.98981 miou: 0.88436 mf1: 0.93532 iou_0: 0.98943 iou_1: 0.77930 F1_0: 0.99469 F1_1: 0.87596 precision_0: 0.99389 precision_1: 0.89280 recall_0: 0.99549 recall_1: 0.85975 
+
+Begin evaluation...
+Is_training: False. [109,199][1,16], imps: 66.64, est: 0.68h, G_loss: 0.00056, running_mf1: 0.88936
+Is_training: False. Epoch 109 / 199, epoch_mF1= 0.88254
+acc: 0.98500 miou: 0.80719 mf1: 0.88254 iou_0: 0.98461 iou_1: 0.62977 F1_0: 0.99224 F1_1: 0.77284 precision_0: 0.99001 precision_1: 0.82760 recall_0: 0.99449 recall_1: 0.72487 
+
+Lastest model updated. Epoch_acc=0.8825, Historical_best_acc=0.8898 (at epoch 95)
+
+lr: 0.0004527
+Is_training: True. [110,199][1,112], imps: 67.21, est: 0.67h, G_loss: 0.00697, running_mf1: 0.90800
+Is_training: True. Epoch 110 / 199, epoch_mF1= 0.92410
+acc: 0.98643 miou: 0.86654 mf1: 0.92410 iou_0: 0.98586 iou_1: 0.74721 F1_0: 0.99288 F1_1: 0.85532 precision_0: 0.99148 precision_1: 0.88063 recall_0: 0.99429 recall_1: 0.83142 
+
+Begin evaluation...
+Is_training: False. [110,199][1,16], imps: 66.67, est: 0.67h, G_loss: 0.07730, running_mf1: 0.92063
+Is_training: False. Epoch 110 / 199, epoch_mF1= 0.88419
+acc: 0.98098 miou: 0.80870 mf1: 0.88419 iou_0: 0.98032 iou_1: 0.63708 F1_0: 0.99006 F1_1: 0.77831 precision_0: 0.98631 precision_1: 0.85038 recall_0: 0.99384 recall_1: 0.71751 
+
+Lastest model updated. Epoch_acc=0.8842, Historical_best_acc=0.8898 (at epoch 95)
+
+lr: 0.0004478
+Is_training: True. [111,199][1,112], imps: 67.23, est: 0.66h, G_loss: 0.01870, running_mf1: 0.92178
+Is_training: True. Epoch 111 / 199, epoch_mF1= 0.93151
+acc: 0.98853 miou: 0.87823 mf1: 0.93151 iou_0: 0.98807 iou_1: 0.76839 F1_0: 0.99400 F1_1: 0.86903 precision_0: 0.99292 precision_1: 0.89013 recall_0: 0.99508 recall_1: 0.84890 
+
+Begin evaluation...
+Is_training: False. [111,199][1,16], imps: 66.70, est: 0.66h, G_loss: 0.00039, running_mf1: 0.93302
+Is_training: False. Epoch 111 / 199, epoch_mF1= 0.89819
+acc: 0.98629 miou: 0.82870 mf1: 0.89819 iou_0: 0.98589 iou_1: 0.67151 F1_0: 0.99290 F1_1: 0.80348 precision_0: 0.99020 precision_1: 0.86894 recall_0: 0.99561 recall_1: 0.74719 
+
+Lastest model updated. Epoch_acc=0.8982, Historical_best_acc=0.8898 (at epoch 95)
+
+**********Best model updated!
+
+lr: 0.0004428
+Is_training: True. [112,199][1,112], imps: 67.17, est: 0.65h, G_loss: 0.06506, running_mf1: 0.93003
+Is_training: True. Epoch 112 / 199, epoch_mF1= 0.92836
+acc: 0.98715 miou: 0.87317 mf1: 0.92836 iou_0: 0.98660 iou_1: 0.75973 F1_0: 0.99326 F1_1: 0.86346 precision_0: 0.99200 precision_1: 0.88610 recall_0: 0.99451 recall_1: 0.84195 
+
+Begin evaluation...
+Is_training: False. [112,199][1,16], imps: 66.65, est: 0.66h, G_loss: 0.00119, running_mf1: 0.87728
+Is_training: False. Epoch 112 / 199, epoch_mF1= 0.87155
+acc: 0.98265 miou: 0.79242 mf1: 0.87155 iou_0: 0.98218 iou_1: 0.60267 F1_0: 0.99101 F1_1: 0.75208 precision_0: 0.98752 precision_1: 0.83341 recall_0: 0.99453 recall_1: 0.68521 
+
+Lastest model updated. Epoch_acc=0.8715, Historical_best_acc=0.8982 (at epoch 111)
+
+lr: 0.0004378
+Is_training: True. [113,199][1,112], imps: 67.20, est: 0.64h, G_loss: 0.07363, running_mf1: 0.94037
+Is_training: True. Epoch 113 / 199, epoch_mF1= 0.93078
+acc: 0.98891 miou: 0.87713 mf1: 0.93078 iou_0: 0.98849 iou_1: 0.76578 F1_0: 0.99421 F1_1: 0.86735 precision_0: 0.99312 precision_1: 0.88969 recall_0: 0.99530 recall_1: 0.84611 
+
+Begin evaluation...
+Is_training: False. [113,199][1,16], imps: 66.68, est: 0.65h, G_loss: 0.00012, running_mf1: 0.50000
+Is_training: False. Epoch 113 / 199, epoch_mF1= 0.88132
+acc: 0.98527 miou: 0.80563 mf1: 0.88132 iou_0: 0.98490 iou_1: 0.62635 F1_0: 0.99239 F1_1: 0.77026 precision_0: 0.99002 precision_1: 0.83022 recall_0: 0.99477 recall_1: 0.71837 
+
+Lastest model updated. Epoch_acc=0.8813, Historical_best_acc=0.8982 (at epoch 111)
+
+lr: 0.0004328
+Is_training: True. [114,199][1,112], imps: 67.23, est: 0.64h, G_loss: 0.02965, running_mf1: 0.95563
+Is_training: True. Epoch 114 / 199, epoch_mF1= 0.93235
+acc: 0.98765 miou: 0.87944 mf1: 0.93235 iou_0: 0.98711 iou_1: 0.77177 F1_0: 0.99352 F1_1: 0.87118 precision_0: 0.99236 precision_1: 0.89184 recall_0: 0.99467 recall_1: 0.85146 
+
+Begin evaluation...
+Is_training: False. [114,199][1,16], imps: 66.72, est: 0.64h, G_loss: 0.00041, running_mf1: 0.79277
+Is_training: False. Epoch 114 / 199, epoch_mF1= 0.89582
+acc: 0.98319 miou: 0.82493 mf1: 0.89582 iou_0: 0.98260 iou_1: 0.66725 F1_0: 0.99122 F1_1: 0.80042 precision_0: 0.98811 precision_1: 0.86227 recall_0: 0.99436 recall_1: 0.74685 
+
+Lastest model updated. Epoch_acc=0.8958, Historical_best_acc=0.8982 (at epoch 111)
+
+lr: 0.0004279
+Is_training: True. [115,199][1,112], imps: 67.26, est: 0.63h, G_loss: 0.06830, running_mf1: 0.93489
+Is_training: True. Epoch 115 / 199, epoch_mF1= 0.93148
+acc: 0.98940 miou: 0.87827 mf1: 0.93148 iou_0: 0.98901 iou_1: 0.76753 F1_0: 0.99448 F1_1: 0.86848 precision_0: 0.99365 precision_1: 0.88613 recall_0: 0.99531 recall_1: 0.85152 
+
+Begin evaluation...
+Is_training: False. [115,199][1,16], imps: 66.75, est: 0.63h, G_loss: 0.00011, running_mf1: 0.90504
+Is_training: False. Epoch 115 / 199, epoch_mF1= 0.88416
+acc: 0.98068 miou: 0.80861 mf1: 0.88416 iou_0: 0.98000 iou_1: 0.63722 F1_0: 0.98990 F1_1: 0.77841 precision_0: 0.98476 precision_1: 0.87891 recall_0: 0.99508 recall_1: 0.69854 
+
+Lastest model updated. Epoch_acc=0.8842, Historical_best_acc=0.8982 (at epoch 111)
+
+lr: 0.0004229
+Is_training: True. [116,199][1,112], imps: 67.29, est: 0.62h, G_loss: 0.03443, running_mf1: 0.91116
+Is_training: True. Epoch 116 / 199, epoch_mF1= 0.93628
+acc: 0.98963 miou: 0.88586 mf1: 0.93628 iou_0: 0.98923 iou_1: 0.78250 F1_0: 0.99458 F1_1: 0.87798 precision_0: 0.99356 precision_1: 0.89888 recall_0: 0.99561 recall_1: 0.85803 
+
+Begin evaluation...
+Is_training: False. [116,199][1,16], imps: 66.79, est: 0.63h, G_loss: 0.00018, running_mf1: 0.82915
+Is_training: False. Epoch 116 / 199, epoch_mF1= 0.88314
+acc: 0.97955 miou: 0.80705 mf1: 0.88314 iou_0: 0.97880 iou_1: 0.63531 F1_0: 0.98929 F1_1: 0.77699 precision_0: 0.98615 precision_1: 0.83203 recall_0: 0.99244 recall_1: 0.72878 
+
+Lastest model updated. Epoch_acc=0.8831, Historical_best_acc=0.8982 (at epoch 111)
+
+lr: 0.0004179
+Is_training: True. [117,199][1,112], imps: 67.32, est: 0.61h, G_loss: 0.02796, running_mf1: 0.95463
+Is_training: True. Epoch 117 / 199, epoch_mF1= 0.92832
+acc: 0.98741 miou: 0.87314 mf1: 0.92832 iou_0: 0.98689 iou_1: 0.75939 F1_0: 0.99340 F1_1: 0.86324 precision_0: 0.99216 precision_1: 0.88613 recall_0: 0.99464 recall_1: 0.84150 
+
+Begin evaluation...
+Is_training: False. [117,199][1,16], imps: 66.82, est: 0.62h, G_loss: 0.10430, running_mf1: 0.85005
+Is_training: False. Epoch 117 / 199, epoch_mF1= 0.88660
+acc: 0.98267 miou: 0.81223 mf1: 0.88660 iou_0: 0.98211 iou_1: 0.64235 F1_0: 0.99098 F1_1: 0.78223 precision_0: 0.98842 precision_1: 0.83427 recall_0: 0.99354 recall_1: 0.73631 
+
+Lastest model updated. Epoch_acc=0.8866, Historical_best_acc=0.8982 (at epoch 111)
+
+lr: 0.0004129
+Is_training: True. [118,199][1,112], imps: 67.35, est: 0.61h, G_loss: 0.00034, running_mf1: 0.50000
+Is_training: True. Epoch 118 / 199, epoch_mF1= 0.92799
+acc: 0.98788 miou: 0.87269 mf1: 0.92799 iou_0: 0.98740 iou_1: 0.75798 F1_0: 0.99366 F1_1: 0.86233 precision_0: 0.99256 precision_1: 0.88366 recall_0: 0.99477 recall_1: 0.84200 
+
+Begin evaluation...
+Is_training: False. [118,199][1,16], imps: 66.85, est: 0.61h, G_loss: 0.00007, running_mf1: 0.92995
+Is_training: False. Epoch 118 / 199, epoch_mF1= 0.88052
+acc: 0.98571 miou: 0.80464 mf1: 0.88052 iou_0: 0.98537 iou_1: 0.62391 F1_0: 0.99263 F1_1: 0.76840 precision_0: 0.99042 precision_1: 0.82629 recall_0: 0.99485 recall_1: 0.71810 
+
+Lastest model updated. Epoch_acc=0.8805, Historical_best_acc=0.8982 (at epoch 111)
+
+lr: 0.0004080
+Is_training: True. [119,199][1,112], imps: 67.38, est: 0.60h, G_loss: 0.01027, running_mf1: 0.92799
+Is_training: True. Epoch 119 / 199, epoch_mF1= 0.91915
+acc: 0.98611 miou: 0.85901 mf1: 0.91915 iou_0: 0.98556 iou_1: 0.73246 F1_0: 0.99273 F1_1: 0.84557 precision_0: 0.99147 precision_1: 0.86890 recall_0: 0.99398 recall_1: 0.82346 
+
+Begin evaluation...
+Is_training: False. [119,199][1,16], imps: 66.88, est: 0.60h, G_loss: 0.03989, running_mf1: 0.49999
+Is_training: False. Epoch 119 / 199, epoch_mF1= 0.88992
+acc: 0.98677 miou: 0.81740 mf1: 0.88992 iou_0: 0.98644 iou_1: 0.64836 F1_0: 0.99317 F1_1: 0.78668 precision_0: 0.99171 precision_1: 0.82460 recall_0: 0.99464 recall_1: 0.75209 
+
+Lastest model updated. Epoch_acc=0.8899, Historical_best_acc=0.8982 (at epoch 111)
+
+lr: 0.0004030
+Is_training: True. [120,199][1,112], imps: 67.40, est: 0.59h, G_loss: 0.00256, running_mf1: 0.67435
+Is_training: True. Epoch 120 / 199, epoch_mF1= 0.93220
+acc: 0.98886 miou: 0.87934 mf1: 0.93220 iou_0: 0.98842 iou_1: 0.77026 F1_0: 0.99418 F1_1: 0.87022 precision_0: 0.99306 precision_1: 0.89264 recall_0: 0.99530 recall_1: 0.84890 
+
+Begin evaluation...
+Is_training: False. [120,199][1,16], imps: 66.91, est: 0.60h, G_loss: 0.00030, running_mf1: 0.87792
+Is_training: False. Epoch 120 / 199, epoch_mF1= 0.87997
+acc: 0.98410 miou: 0.80363 mf1: 0.87997 iou_0: 0.98367 iou_1: 0.62360 F1_0: 0.99177 F1_1: 0.76817 precision_0: 0.98911 precision_1: 0.83094 recall_0: 0.99443 recall_1: 0.71422 
+
+Lastest model updated. Epoch_acc=0.8800, Historical_best_acc=0.8982 (at epoch 111)
+
+lr: 0.0003980
+Is_training: True. [121,199][1,112], imps: 67.42, est: 0.58h, G_loss: 0.00834, running_mf1: 0.49936
+Is_training: True. Epoch 121 / 199, epoch_mF1= 0.93204
+acc: 0.98839 miou: 0.87903 mf1: 0.93204 iou_0: 0.98792 iou_1: 0.77015 F1_0: 0.99392 F1_1: 0.87015 precision_0: 0.99293 precision_1: 0.88923 recall_0: 0.99492 recall_1: 0.85188 
+
+Begin evaluation...
+Is_training: False. [121,199][1,16], imps: 66.80, est: 0.59h, G_loss: 0.09067, running_mf1: 0.95892
+Is_training: False. Epoch 121 / 199, epoch_mF1= 0.88896
+acc: 0.98803 miou: 0.81631 mf1: 0.88896 iou_0: 0.98777 iou_1: 0.64485 F1_0: 0.99384 F1_1: 0.78408 precision_0: 0.99397 precision_1: 0.78052 recall_0: 0.99372 recall_1: 0.78767 
+
+Lastest model updated. Epoch_acc=0.8890, Historical_best_acc=0.8982 (at epoch 111)
+
+lr: 0.0003930
+Is_training: True. [122,199][1,112], imps: 67.29, est: 0.58h, G_loss: 0.05060, running_mf1: 0.94208
+Is_training: True. Epoch 122 / 199, epoch_mF1= 0.93587
+acc: 0.98985 miou: 0.88523 mf1: 0.93587 iou_0: 0.98947 iou_1: 0.78099 F1_0: 0.99471 F1_1: 0.87703 precision_0: 0.99374 precision_1: 0.89739 recall_0: 0.99568 recall_1: 0.85757 
+
+Begin evaluation...
+Is_training: False. [122,199][1,16], imps: 66.81, est: 0.58h, G_loss: 0.00014, running_mf1: 0.96235
+Is_training: False. Epoch 122 / 199, epoch_mF1= 0.87182
+acc: 0.98462 miou: 0.79314 mf1: 0.87182 iou_0: 0.98425 iou_1: 0.60203 F1_0: 0.99206 F1_1: 0.75159 precision_0: 0.98758 precision_1: 0.87590 recall_0: 0.99658 recall_1: 0.65818 
+
+Lastest model updated. Epoch_acc=0.8718, Historical_best_acc=0.8982 (at epoch 111)
+
+lr: 0.0003881
+Is_training: True. [123,199][1,112], imps: 67.32, est: 0.57h, G_loss: 0.03722, running_mf1: 0.93608
+Is_training: True. Epoch 123 / 199, epoch_mF1= 0.93464
+acc: 0.98965 miou: 0.88327 mf1: 0.93464 iou_0: 0.98926 iou_1: 0.77728 F1_0: 0.99460 F1_1: 0.87469 precision_0: 0.99366 precision_1: 0.89433 recall_0: 0.99554 recall_1: 0.85589 
+
+Begin evaluation...
+Is_training: False. [123,199][1,16], imps: 66.85, est: 0.57h, G_loss: 0.00127, running_mf1: 0.89561
+Is_training: False. Epoch 123 / 199, epoch_mF1= 0.87174
+acc: 0.98065 miou: 0.79231 mf1: 0.87174 iou_0: 0.98006 iou_1: 0.60456 F1_0: 0.98993 F1_1: 0.75355 precision_0: 0.98620 precision_1: 0.83050 recall_0: 0.99369 recall_1: 0.68966 
+
+Lastest model updated. Epoch_acc=0.8717, Historical_best_acc=0.8982 (at epoch 111)
+
+lr: 0.0003831
+Is_training: True. [124,199][1,112], imps: 67.35, est: 0.56h, G_loss: 0.00047, running_mf1: 0.50000
+Is_training: True. Epoch 124 / 199, epoch_mF1= 0.93276
+acc: 0.98844 miou: 0.88017 mf1: 0.93276 iou_0: 0.98797 iou_1: 0.77236 F1_0: 0.99395 F1_1: 0.87156 precision_0: 0.99310 precision_1: 0.88769 recall_0: 0.99480 recall_1: 0.85601 
+
+Begin evaluation...
+Is_training: False. [124,199][1,16], imps: 66.88, est: 0.57h, G_loss: 0.00033, running_mf1: 0.55272
+Is_training: False. Epoch 124 / 199, epoch_mF1= 0.87654
+acc: 0.98723 miou: 0.79970 mf1: 0.87654 iou_0: 0.98697 iou_1: 0.61244 F1_0: 0.99344 F1_1: 0.75964 precision_0: 0.99085 precision_1: 0.84008 recall_0: 0.99604 recall_1: 0.69326 
+
+Lastest model updated. Epoch_acc=0.8765, Historical_best_acc=0.8982 (at epoch 111)
+
+lr: 0.0003781
+Is_training: True. [125,199][1,112], imps: 67.38, est: 0.55h, G_loss: 0.02761, running_mf1: 0.90089
+Is_training: True. Epoch 125 / 199, epoch_mF1= 0.93583
+acc: 0.98849 miou: 0.88502 mf1: 0.93583 iou_0: 0.98799 iou_1: 0.78206 F1_0: 0.99396 F1_1: 0.87770 precision_0: 0.99281 precision_1: 0.89884 recall_0: 0.99512 recall_1: 0.85753 
+
+Begin evaluation...
+Is_training: False. [125,199][1,16], imps: 66.91, est: 0.56h, G_loss: 0.02601, running_mf1: 0.50000
+Is_training: False. Epoch 125 / 199, epoch_mF1= 0.88097
+acc: 0.98514 miou: 0.80514 mf1: 0.88097 iou_0: 0.98476 iou_1: 0.62551 F1_0: 0.99232 F1_1: 0.76962 precision_0: 0.98841 precision_1: 0.87325 recall_0: 0.99626 recall_1: 0.68797 
+
+Lastest model updated. Epoch_acc=0.8810, Historical_best_acc=0.8982 (at epoch 111)
+
+lr: 0.0003731
+Is_training: True. [126,199][1,112], imps: 67.41, est: 0.55h, G_loss: 0.02651, running_mf1: 0.90618
+Is_training: True. Epoch 126 / 199, epoch_mF1= 0.93171
+acc: 0.98945 miou: 0.87864 mf1: 0.93171 iou_0: 0.98906 iou_1: 0.76821 F1_0: 0.99450 F1_1: 0.86891 precision_0: 0.99352 precision_1: 0.88988 recall_0: 0.99549 recall_1: 0.84891 
+
+Begin evaluation...
+Is_training: False. [126,199][1,16], imps: 66.94, est: 0.55h, G_loss: 0.01276, running_mf1: 0.50000
+Is_training: False. Epoch 126 / 199, epoch_mF1= 0.88025
+acc: 0.98199 miou: 0.80364 mf1: 0.88025 iou_0: 0.98143 iou_1: 0.62585 F1_0: 0.99063 F1_1: 0.76988 precision_0: 0.98636 precision_1: 0.86121 recall_0: 0.99492 recall_1: 0.69605 
+
+Lastest model updated. Epoch_acc=0.8803, Historical_best_acc=0.8982 (at epoch 111)
+
+lr: 0.0003682
+Is_training: True. [127,199][1,112], imps: 67.43, est: 0.54h, G_loss: 0.00203, running_mf1: 0.86152
+Is_training: True. Epoch 127 / 199, epoch_mF1= 0.93635
+acc: 0.98899 miou: 0.88590 mf1: 0.93635 iou_0: 0.98854 iou_1: 0.78326 F1_0: 0.99424 F1_1: 0.87846 precision_0: 0.99325 precision_1: 0.89725 recall_0: 0.99523 recall_1: 0.86044 
+
+Begin evaluation...
+Is_training: False. [127,199][1,16], imps: 66.97, est: 0.54h, G_loss: 0.00006, running_mf1: 0.49999
+Is_training: False. Epoch 127 / 199, epoch_mF1= 0.87042
+acc: 0.98378 miou: 0.79119 mf1: 0.87042 iou_0: 0.98338 iou_1: 0.59900 F1_0: 0.99162 F1_1: 0.74922 precision_0: 0.98912 precision_1: 0.81055 recall_0: 0.99413 recall_1: 0.69651 
+
+Lastest model updated. Epoch_acc=0.8704, Historical_best_acc=0.8982 (at epoch 111)
+
+lr: 0.0003632
+Is_training: True. [128,199][1,112], imps: 67.46, est: 0.53h, G_loss: 0.04633, running_mf1: 0.94712
+Is_training: True. Epoch 128 / 199, epoch_mF1= 0.93525
+acc: 0.98966 miou: 0.88424 mf1: 0.93525 iou_0: 0.98927 iou_1: 0.77920 F1_0: 0.99461 F1_1: 0.87590 precision_0: 0.99364 precision_1: 0.89595 recall_0: 0.99557 recall_1: 0.85674 
+
+Begin evaluation...
+Is_training: False. [128,199][1,16], imps: 67.00, est: 0.53h, G_loss: 0.08791, running_mf1: 0.49989
+Is_training: False. Epoch 128 / 199, epoch_mF1= 0.88055
+acc: 0.98533 miou: 0.80461 mf1: 0.88055 iou_0: 0.98497 iou_1: 0.62426 F1_0: 0.99243 F1_1: 0.76867 precision_0: 0.98932 precision_1: 0.85014 recall_0: 0.99555 recall_1: 0.70145 
+
+Lastest model updated. Epoch_acc=0.8805, Historical_best_acc=0.8982 (at epoch 111)
+
+lr: 0.0003582
+Is_training: True. [129,199][1,112], imps: 67.49, est: 0.52h, G_loss: 0.04566, running_mf1: 0.92385
+Is_training: True. Epoch 129 / 199, epoch_mF1= 0.93979
+acc: 0.98920 miou: 0.89142 mf1: 0.93979 iou_0: 0.98873 iou_1: 0.79411 F1_0: 0.99433 F1_1: 0.88524 precision_0: 0.99360 precision_1: 0.89865 recall_0: 0.99507 recall_1: 0.87223 
+
+Begin evaluation...
+Is_training: False. [129,199][1,16], imps: 67.02, est: 0.53h, G_loss: 0.07655, running_mf1: 0.89546
+Is_training: False. Epoch 129 / 199, epoch_mF1= 0.89718
+acc: 0.98520 miou: 0.82712 mf1: 0.89718 iou_0: 0.98474 iou_1: 0.66951 F1_0: 0.99231 F1_1: 0.80204 precision_0: 0.98931 precision_1: 0.86995 recall_0: 0.99533 recall_1: 0.74397 
+
+Lastest model updated. Epoch_acc=0.8972, Historical_best_acc=0.8982 (at epoch 111)
+
+lr: 0.0003532
+Is_training: True. [130,199][1,112], imps: 67.50, est: 0.52h, G_loss: 0.00038, running_mf1: 0.50000
+Is_training: True. Epoch 130 / 199, epoch_mF1= 0.93698
+acc: 0.98936 miou: 0.88695 mf1: 0.93698 iou_0: 0.98893 iou_1: 0.78496 F1_0: 0.99443 F1_1: 0.87953 precision_0: 0.99347 precision_1: 0.89848 recall_0: 0.99540 recall_1: 0.86136 
+
+Begin evaluation...
+Is_training: False. [130,199][1,16], imps: 67.04, est: 0.52h, G_loss: 0.02209, running_mf1: 0.94612
+Is_training: False. Epoch 130 / 199, epoch_mF1= 0.88896
+acc: 0.98285 miou: 0.81545 mf1: 0.88896 iou_0: 0.98229 iou_1: 0.64861 F1_0: 0.99106 F1_1: 0.78686 precision_0: 0.98833 precision_1: 0.84239 recall_0: 0.99381 recall_1: 0.73820 
+
+Lastest model updated. Epoch_acc=0.8890, Historical_best_acc=0.8982 (at epoch 111)
+
+lr: 0.0003483
+Is_training: True. [131,199][1,112], imps: 67.52, est: 0.51h, G_loss: 0.03553, running_mf1: 0.94766
+Is_training: True. Epoch 131 / 199, epoch_mF1= 0.93457
+acc: 0.98908 miou: 0.88309 mf1: 0.93457 iou_0: 0.98864 iou_1: 0.77754 F1_0: 0.99429 F1_1: 0.87485 precision_0: 0.99322 precision_1: 0.89607 recall_0: 0.99537 recall_1: 0.85461 
+
+Begin evaluation...
+Is_training: False. [131,199][1,16], imps: 67.06, est: 0.51h, G_loss: 0.00062, running_mf1: 0.96087
+Is_training: False. Epoch 131 / 199, epoch_mF1= 0.87371
+acc: 0.98338 miou: 0.79534 mf1: 0.87371 iou_0: 0.98294 iou_1: 0.60774 F1_0: 0.99140 F1_1: 0.75602 precision_0: 0.98964 precision_1: 0.79623 recall_0: 0.99317 recall_1: 0.71967 
+
+Lastest model updated. Epoch_acc=0.8737, Historical_best_acc=0.8982 (at epoch 111)
+
+lr: 0.0003433
+Is_training: True. [132,199][1,112], imps: 67.54, est: 0.50h, G_loss: 0.02932, running_mf1: 0.95122
+Is_training: True. Epoch 132 / 199, epoch_mF1= 0.93875
+acc: 0.99026 miou: 0.88987 mf1: 0.93875 iou_0: 0.98989 iou_1: 0.78984 F1_0: 0.99492 F1_1: 0.88258 precision_0: 0.99414 precision_1: 0.89889 recall_0: 0.99570 recall_1: 0.86685 
+
+Begin evaluation...
+Is_training: False. [132,199][1,16], imps: 67.09, est: 0.50h, G_loss: 0.00099, running_mf1: 0.50000
+Is_training: False. Epoch 132 / 199, epoch_mF1= 0.89752
+acc: 0.98542 miou: 0.82764 mf1: 0.89752 iou_0: 0.98498 iou_1: 0.67029 F1_0: 0.99243 F1_1: 0.80261 precision_0: 0.98827 precision_1: 0.90164 recall_0: 0.99663 recall_1: 0.72318 
+
+Lastest model updated. Epoch_acc=0.8975, Historical_best_acc=0.8982 (at epoch 111)
+
+lr: 0.0003383
+Is_training: True. [133,199][1,112], imps: 67.56, est: 0.49h, G_loss: 0.04765, running_mf1: 0.94601
+Is_training: True. Epoch 133 / 199, epoch_mF1= 0.93752
+acc: 0.98942 miou: 0.88781 mf1: 0.93752 iou_0: 0.98900 iou_1: 0.78663 F1_0: 0.99447 F1_1: 0.88057 precision_0: 0.99367 precision_1: 0.89610 recall_0: 0.99527 recall_1: 0.86558 
+
+Begin evaluation...
+Is_training: False. [133,199][1,16], imps: 67.11, est: 0.50h, G_loss: 0.00060, running_mf1: 0.65424
+Is_training: False. Epoch 133 / 199, epoch_mF1= 0.88161
+acc: 0.98787 miou: 0.80646 mf1: 0.88161 iou_0: 0.98762 iou_1: 0.62529 F1_0: 0.99377 F1_1: 0.76945 precision_0: 0.99064 precision_1: 0.87145 recall_0: 0.99692 recall_1: 0.68883 
+
+Lastest model updated. Epoch_acc=0.8816, Historical_best_acc=0.8982 (at epoch 111)
+
+lr: 0.0003333
+Is_training: True. [134,199][1,112], imps: 67.58, est: 0.49h, G_loss: 0.02695, running_mf1: 0.95299
+Is_training: True. Epoch 134 / 199, epoch_mF1= 0.93603
+acc: 0.98849 miou: 0.88534 mf1: 0.93603 iou_0: 0.98799 iou_1: 0.78270 F1_0: 0.99396 F1_1: 0.87811 precision_0: 0.99299 precision_1: 0.89569 recall_0: 0.99493 recall_1: 0.86120 
+
+Begin evaluation...
+Is_training: False. [134,199][1,16], imps: 67.14, est: 0.49h, G_loss: 0.02137, running_mf1: 0.93527
+Is_training: False. Epoch 134 / 199, epoch_mF1= 0.87984
+acc: 0.98674 miou: 0.80392 mf1: 0.87984 iou_0: 0.98644 iou_1: 0.62141 F1_0: 0.99317 F1_1: 0.76650 precision_0: 0.99182 precision_1: 0.80394 recall_0: 0.99453 recall_1: 0.73239 
+
+Lastest model updated. Epoch_acc=0.8798, Historical_best_acc=0.8982 (at epoch 111)
+
+lr: 0.0003284
+Is_training: True. [135,199][1,112], imps: 67.61, est: 0.48h, G_loss: 0.00490, running_mf1: 0.93923
+Is_training: True. Epoch 135 / 199, epoch_mF1= 0.93981
+acc: 0.98995 miou: 0.89153 mf1: 0.93981 iou_0: 0.98955 iou_1: 0.79351 F1_0: 0.99475 F1_1: 0.88487 precision_0: 0.99387 precision_1: 0.90240 recall_0: 0.99563 recall_1: 0.86800 
+
+Begin evaluation...
+Is_training: False. [135,199][1,16], imps: 67.17, est: 0.48h, G_loss: 0.00188, running_mf1: 0.90280
+Is_training: False. Epoch 135 / 199, epoch_mF1= 0.89720
+acc: 0.98645 miou: 0.82735 mf1: 0.89720 iou_0: 0.98607 iou_1: 0.66863 F1_0: 0.99298 F1_1: 0.80142 precision_0: 0.99109 precision_1: 0.84727 recall_0: 0.99489 recall_1: 0.76027 
+
+Lastest model updated. Epoch_acc=0.8972, Historical_best_acc=0.8982 (at epoch 111)
+
+lr: 0.0003234
+Is_training: True. [136,199][1,112], imps: 67.63, est: 0.47h, G_loss: 0.03503, running_mf1: 0.95465
+Is_training: True. Epoch 136 / 199, epoch_mF1= 0.94069
+acc: 0.98955 miou: 0.89290 mf1: 0.94069 iou_0: 0.98910 iou_1: 0.79671 F1_0: 0.99452 F1_1: 0.88685 precision_0: 0.99372 precision_1: 0.90189 recall_0: 0.99532 recall_1: 0.87231 
+
+Begin evaluation...
+Is_training: False. [136,199][1,16], imps: 67.19, est: 0.47h, G_loss: 0.14178, running_mf1: 0.89537
+Is_training: False. Epoch 136 / 199, epoch_mF1= 0.89386
+acc: 0.98300 miou: 0.82218 mf1: 0.89386 iou_0: 0.98242 iou_1: 0.66195 F1_0: 0.99113 F1_1: 0.79659 precision_0: 0.98979 precision_1: 0.82216 recall_0: 0.99248 recall_1: 0.77257 
+
+Lastest model updated. Epoch_acc=0.8939, Historical_best_acc=0.8982 (at epoch 111)
+
+lr: 0.0003184
+Is_training: True. [137,199][1,112], imps: 67.65, est: 0.46h, G_loss: 0.04246, running_mf1: 0.93397
+Is_training: True. Epoch 137 / 199, epoch_mF1= 0.93887
+acc: 0.98998 miou: 0.89003 mf1: 0.93887 iou_0: 0.98959 iou_1: 0.79048 F1_0: 0.99477 F1_1: 0.88298 precision_0: 0.99404 precision_1: 0.89757 recall_0: 0.99549 recall_1: 0.86886 
+
+Begin evaluation...
+Is_training: False. [137,199][1,16], imps: 67.22, est: 0.47h, G_loss: 0.08323, running_mf1: 0.96135
+Is_training: False. Epoch 137 / 199, epoch_mF1= 0.88948
+acc: 0.98427 miou: 0.81639 mf1: 0.88948 iou_0: 0.98380 iou_1: 0.64897 F1_0: 0.99183 F1_1: 0.78712 precision_0: 0.98860 precision_1: 0.86055 recall_0: 0.99509 recall_1: 0.72524 
+
+Lastest model updated. Epoch_acc=0.8895, Historical_best_acc=0.8982 (at epoch 111)
+
+lr: 0.0003134
+Is_training: True. [138,199][1,112], imps: 67.67, est: 0.46h, G_loss: 0.01810, running_mf1: 0.93722
+Is_training: True. Epoch 138 / 199, epoch_mF1= 0.93958
+acc: 0.99011 miou: 0.89118 mf1: 0.93958 iou_0: 0.98972 iou_1: 0.79263 F1_0: 0.99484 F1_1: 0.88432 precision_0: 0.99398 precision_1: 0.90181 recall_0: 0.99570 recall_1: 0.86750 
+
+Begin evaluation...
+Is_training: False. [138,199][1,16], imps: 67.24, est: 0.46h, G_loss: 0.00047, running_mf1: 0.85993
+Is_training: False. Epoch 138 / 199, epoch_mF1= 0.86986
+acc: 0.97918 miou: 0.78963 mf1: 0.86986 iou_0: 0.97850 iou_1: 0.60076 F1_0: 0.98913 F1_1: 0.75059 precision_0: 0.98504 precision_1: 0.82970 recall_0: 0.99326 recall_1: 0.68526 
+
+Lastest model updated. Epoch_acc=0.8699, Historical_best_acc=0.8982 (at epoch 111)
+
+lr: 0.0003085
+Is_training: True. [139,199][1,112], imps: 67.70, est: 0.45h, G_loss: 0.02279, running_mf1: 0.90565
+Is_training: True. Epoch 139 / 199, epoch_mF1= 0.93866
+acc: 0.98980 miou: 0.88967 mf1: 0.93866 iou_0: 0.98939 iou_1: 0.78996 F1_0: 0.99467 F1_1: 0.88265 precision_0: 0.99394 precision_1: 0.89698 recall_0: 0.99539 recall_1: 0.86878 
+
+Begin evaluation...
+Is_training: False. [139,199][1,16], imps: 67.27, est: 0.45h, G_loss: 0.00019, running_mf1: 0.63040
+Is_training: False. Epoch 139 / 199, epoch_mF1= 0.90164
+acc: 0.98912 miou: 0.83398 mf1: 0.90164 iou_0: 0.98886 iou_1: 0.67910 F1_0: 0.99440 F1_1: 0.80889 precision_0: 0.99250 precision_1: 0.86531 recall_0: 0.99630 recall_1: 0.75937 
+
+Lastest model updated. Epoch_acc=0.9016, Historical_best_acc=0.8982 (at epoch 111)
+
+**********Best model updated!
+
+lr: 0.0003035
+Is_training: True. [140,199][1,112], imps: 67.62, est: 0.44h, G_loss: 0.01241, running_mf1: 0.95322
+Is_training: True. Epoch 140 / 199, epoch_mF1= 0.94070
+acc: 0.99028 miou: 0.89300 mf1: 0.94070 iou_0: 0.98989 iou_1: 0.79611 F1_0: 0.99492 F1_1: 0.88648 precision_0: 0.99417 precision_1: 0.90173 recall_0: 0.99567 recall_1: 0.87174 
+
+Begin evaluation...
+Is_training: False. [140,199][1,16], imps: 67.20, est: 0.44h, G_loss: 0.00004, running_mf1: 0.49858
+Is_training: False. Epoch 140 / 199, epoch_mF1= 0.88758
+acc: 0.98331 miou: 0.81365 mf1: 0.88758 iou_0: 0.98279 iou_1: 0.64451 F1_0: 0.99132 F1_1: 0.78383 precision_0: 0.98620 precision_1: 0.90041 recall_0: 0.99650 recall_1: 0.69398 
+
+Lastest model updated. Epoch_acc=0.8876, Historical_best_acc=0.9016 (at epoch 139)
+
+lr: 0.0002985
+Is_training: True. [141,199][1,112], imps: 67.64, est: 0.43h, G_loss: 0.03438, running_mf1: 0.95274
+Is_training: True. Epoch 141 / 199, epoch_mF1= 0.94114
+acc: 0.99021 miou: 0.89370 mf1: 0.94114 iou_0: 0.98982 iou_1: 0.79759 F1_0: 0.99488 F1_1: 0.88740 precision_0: 0.99398 precision_1: 0.90546 recall_0: 0.99579 recall_1: 0.87004 
+
+Begin evaluation...
+Is_training: False. [141,199][1,16], imps: 67.11, est: 0.44h, G_loss: 0.01777, running_mf1: 0.79847
+Is_training: False. Epoch 141 / 199, epoch_mF1= 0.88592
+acc: 0.98752 miou: 0.81212 mf1: 0.88592 iou_0: 0.98724 iou_1: 0.63700 F1_0: 0.99358 F1_1: 0.77826 precision_0: 0.99141 precision_1: 0.84178 recall_0: 0.99576 recall_1: 0.72364 
+
+Lastest model updated. Epoch_acc=0.8859, Historical_best_acc=0.9016 (at epoch 139)
+
+lr: 0.0002935
+Is_training: True. [142,199][1,112], imps: 67.52, est: 0.43h, G_loss: 0.05437, running_mf1: 0.94163
+Is_training: True. Epoch 142 / 199, epoch_mF1= 0.94017
+acc: 0.98976 miou: 0.89209 mf1: 0.94017 iou_0: 0.98934 iou_1: 0.79483 F1_0: 0.99464 F1_1: 0.88569 precision_0: 0.99388 precision_1: 0.90030 recall_0: 0.99540 recall_1: 0.87155 
+
+Begin evaluation...
+Is_training: False. [142,199][1,16], imps: 67.11, est: 0.43h, G_loss: 0.00070, running_mf1: 0.91716
+Is_training: False. Epoch 142 / 199, epoch_mF1= 0.90044
+acc: 0.98777 miou: 0.83209 mf1: 0.90044 iou_0: 0.98745 iou_1: 0.67672 F1_0: 0.99369 F1_1: 0.80720 precision_0: 0.99153 precision_1: 0.86464 recall_0: 0.99585 recall_1: 0.75691 
+
+Lastest model updated. Epoch_acc=0.9004, Historical_best_acc=0.9016 (at epoch 139)
+
+lr: 0.0002886
+Is_training: True. [143,199][1,112], imps: 67.54, est: 0.42h, G_loss: 0.00483, running_mf1: 0.89003
+Is_training: True. Epoch 143 / 199, epoch_mF1= 0.94347
+acc: 0.98996 miou: 0.89745 mf1: 0.94347 iou_0: 0.98952 iou_1: 0.80539 F1_0: 0.99473 F1_1: 0.89220 precision_0: 0.99393 precision_1: 0.90720 recall_0: 0.99554 recall_1: 0.87770 
+
+Begin evaluation...
+Is_training: False. [143,199][1,16], imps: 67.13, est: 0.42h, G_loss: 0.00052, running_mf1: 0.69775
+Is_training: False. Epoch 143 / 199, epoch_mF1= 0.90101
+acc: 0.98618 miou: 0.83265 mf1: 0.90101 iou_0: 0.98576 iou_1: 0.67954 F1_0: 0.99283 F1_1: 0.80919 precision_0: 0.99141 precision_1: 0.84117 recall_0: 0.99425 recall_1: 0.77956 
+
+Lastest model updated. Epoch_acc=0.9010, Historical_best_acc=0.9016 (at epoch 139)
+
+lr: 0.0002836
+Is_training: True. [144,199][1,112], imps: 67.57, est: 0.41h, G_loss: 0.06224, running_mf1: 0.94580
+Is_training: True. Epoch 144 / 199, epoch_mF1= 0.94292
+acc: 0.99050 miou: 0.89662 mf1: 0.94292 iou_0: 0.99012 iou_1: 0.80312 F1_0: 0.99503 F1_1: 0.89081 precision_0: 0.99436 precision_1: 0.90417 recall_0: 0.99570 recall_1: 0.87783 
+
+Begin evaluation...
+Is_training: False. [144,199][1,16], imps: 67.15, est: 0.41h, G_loss: 0.00335, running_mf1: 0.85290
+Is_training: False. Epoch 144 / 199, epoch_mF1= 0.89888
+acc: 0.98741 miou: 0.82984 mf1: 0.89888 iou_0: 0.98707 iou_1: 0.67261 F1_0: 0.99350 F1_1: 0.80426 precision_0: 0.99099 precision_1: 0.87059 recall_0: 0.99602 recall_1: 0.74732 
+
+Lastest model updated. Epoch_acc=0.8989, Historical_best_acc=0.9016 (at epoch 139)
+
+lr: 0.0002786
+Is_training: True. [145,199][1,112], imps: 67.59, est: 0.40h, G_loss: 0.03988, running_mf1: 0.95145
+Is_training: True. Epoch 145 / 199, epoch_mF1= 0.94183
+acc: 0.99034 miou: 0.89483 mf1: 0.94183 iou_0: 0.98996 iou_1: 0.79971 F1_0: 0.99495 F1_1: 0.88871 precision_0: 0.99421 precision_1: 0.90370 recall_0: 0.99570 recall_1: 0.87420 
+
+Begin evaluation...
+Is_training: False. [145,199][1,16], imps: 67.18, est: 0.41h, G_loss: 0.03784, running_mf1: 0.92291
+Is_training: False. Epoch 145 / 199, epoch_mF1= 0.90539
+acc: 0.98795 miou: 0.83912 mf1: 0.90539 iou_0: 0.98762 iou_1: 0.69063 F1_0: 0.99377 F1_1: 0.81701 precision_0: 0.99184 precision_1: 0.86662 recall_0: 0.99571 recall_1: 0.77276 
+
+Lastest model updated. Epoch_acc=0.9054, Historical_best_acc=0.9016 (at epoch 139)
+
+**********Best model updated!
+
+lr: 0.0002736
+Is_training: True. [146,199][1,112], imps: 67.54, est: 0.40h, G_loss: 0.01604, running_mf1: 0.95674
+Is_training: True. Epoch 146 / 199, epoch_mF1= 0.94479
+acc: 0.99068 miou: 0.89967 mf1: 0.94479 iou_0: 0.99029 iou_1: 0.80905 F1_0: 0.99512 F1_1: 0.89445 precision_0: 0.99445 precision_1: 0.90776 recall_0: 0.99580 recall_1: 0.88152 
+
+Begin evaluation...
+Is_training: False. [146,199][1,16], imps: 67.13, est: 0.40h, G_loss: 0.00253, running_mf1: 0.95865
+Is_training: False. Epoch 146 / 199, epoch_mF1= 0.90038
+acc: 0.98763 miou: 0.83198 mf1: 0.90038 iou_0: 0.98730 iou_1: 0.67667 F1_0: 0.99361 F1_1: 0.80716 precision_0: 0.99167 precision_1: 0.85769 recall_0: 0.99555 recall_1: 0.76225 
+
+Lastest model updated. Epoch_acc=0.9004, Historical_best_acc=0.9054 (at epoch 145)
+
+lr: 0.0002687
+Is_training: True. [147,199][1,112], imps: 67.56, est: 0.39h, G_loss: 0.03462, running_mf1: 0.93272
+Is_training: True. Epoch 147 / 199, epoch_mF1= 0.94170
+acc: 0.99142 miou: 0.89472 mf1: 0.94170 iou_0: 0.99112 iou_1: 0.79833 F1_0: 0.99554 F1_1: 0.88785 precision_0: 0.99481 precision_1: 0.90456 recall_0: 0.99627 recall_1: 0.87176 
+
+Begin evaluation...
+Is_training: False. [147,199][1,16], imps: 67.16, est: 0.39h, G_loss: 0.00005, running_mf1: 0.50000
+Is_training: False. Epoch 147 / 199, epoch_mF1= 0.89537
+acc: 0.98556 miou: 0.82468 mf1: 0.89537 iou_0: 0.98514 iou_1: 0.66422 F1_0: 0.99251 F1_1: 0.79824 precision_0: 0.98935 precision_1: 0.87350 recall_0: 0.99570 recall_1: 0.73491 
+
+Lastest model updated. Epoch_acc=0.8954, Historical_best_acc=0.9054 (at epoch 145)
+
+lr: 0.0002637
+Is_training: True. [148,199][1,112], imps: 67.58, est: 0.38h, G_loss: 0.00506, running_mf1: 0.49982
+Is_training: True. Epoch 148 / 199, epoch_mF1= 0.94273
+acc: 0.98955 miou: 0.89621 mf1: 0.94273 iou_0: 0.98908 iou_1: 0.80334 F1_0: 0.99451 F1_1: 0.89095 precision_0: 0.99369 precision_1: 0.90580 recall_0: 0.99533 recall_1: 0.87658 
+
+Begin evaluation...
+Is_training: False. [148,199][1,16], imps: 67.18, est: 0.39h, G_loss: 0.00010, running_mf1: 0.90871
+Is_training: False. Epoch 148 / 199, epoch_mF1= 0.89609
+acc: 0.98553 miou: 0.82567 mf1: 0.89609 iou_0: 0.98510 iou_1: 0.66624 F1_0: 0.99249 F1_1: 0.79969 precision_0: 0.98989 precision_1: 0.86021 recall_0: 0.99512 recall_1: 0.74714 
+
+Lastest model updated. Epoch_acc=0.8961, Historical_best_acc=0.9054 (at epoch 145)
+
+lr: 0.0002587
+Is_training: True. [149,199][1,112], imps: 67.60, est: 0.38h, G_loss: 0.03006, running_mf1: 0.93148
+Is_training: True. Epoch 149 / 199, epoch_mF1= 0.94105
+acc: 0.98978 miou: 0.89351 mf1: 0.94105 iou_0: 0.98935 iou_1: 0.79767 F1_0: 0.99464 F1_1: 0.88745 precision_0: 0.99383 precision_1: 0.90301 recall_0: 0.99546 recall_1: 0.87241 
+
+Begin evaluation...
+Is_training: False. [149,199][1,16], imps: 67.20, est: 0.38h, G_loss: 0.00005, running_mf1: 0.49738
+Is_training: False. Epoch 149 / 199, epoch_mF1= 0.87406
+acc: 0.98444 miou: 0.79598 mf1: 0.87406 iou_0: 0.98405 iou_1: 0.60791 F1_0: 0.99196 F1_1: 0.75615 precision_0: 0.98968 precision_1: 0.81295 recall_0: 0.99425 recall_1: 0.70677 
+
+Lastest model updated. Epoch_acc=0.8741, Historical_best_acc=0.9054 (at epoch 145)
+
+lr: 0.0002537
+Is_training: True. [150,199][1,112], imps: 67.62, est: 0.37h, G_loss: 0.00417, running_mf1: 0.92181
+Is_training: True. Epoch 150 / 199, epoch_mF1= 0.94056
+acc: 0.99056 miou: 0.89280 mf1: 0.94056 iou_0: 0.99020 iou_1: 0.79541 F1_0: 0.99508 F1_1: 0.88605 precision_0: 0.99419 precision_1: 0.90476 recall_0: 0.99597 recall_1: 0.86809 
+
+Begin evaluation...
+Is_training: False. [150,199][1,16], imps: 67.23, est: 0.37h, G_loss: 0.00003, running_mf1: 0.83505
+Is_training: False. Epoch 150 / 199, epoch_mF1= 0.89616
+acc: 0.98509 miou: 0.82569 mf1: 0.89616 iou_0: 0.98464 iou_1: 0.66674 F1_0: 0.99226 F1_1: 0.80005 precision_0: 0.98956 precision_1: 0.86076 recall_0: 0.99498 recall_1: 0.74735 
+
+Lastest model updated. Epoch_acc=0.8962, Historical_best_acc=0.9054 (at epoch 145)
+
+lr: 0.0002488
+Is_training: True. [151,199][1,112], imps: 67.65, est: 0.36h, G_loss: 0.02354, running_mf1: 0.91138
+Is_training: True. Epoch 151 / 199, epoch_mF1= 0.93995
+acc: 0.99076 miou: 0.89185 mf1: 0.93995 iou_0: 0.99042 iou_1: 0.79328 F1_0: 0.99518 F1_1: 0.88472 precision_0: 0.99445 precision_1: 0.90056 recall_0: 0.99592 recall_1: 0.86943 
+
+Begin evaluation...
+Is_training: False. [151,199][1,16], imps: 67.25, est: 0.36h, G_loss: 0.00008, running_mf1: 0.89586
+Is_training: False. Epoch 151 / 199, epoch_mF1= 0.85088
+acc: 0.98170 miou: 0.76655 mf1: 0.85088 iou_0: 0.98127 iou_1: 0.55183 F1_0: 0.99055 F1_1: 0.71120 precision_0: 0.98948 precision_1: 0.73539 recall_0: 0.99162 recall_1: 0.68855 
+
+Lastest model updated. Epoch_acc=0.8509, Historical_best_acc=0.9054 (at epoch 145)
+
+lr: 0.0002438
+Is_training: True. [152,199][1,112], imps: 67.66, est: 0.35h, G_loss: 0.04139, running_mf1: 0.94807
+Is_training: True. Epoch 152 / 199, epoch_mF1= 0.94337
+acc: 0.99052 miou: 0.89734 mf1: 0.94337 iou_0: 0.99014 iou_1: 0.80455 F1_0: 0.99504 F1_1: 0.89169 precision_0: 0.99426 precision_1: 0.90740 recall_0: 0.99583 recall_1: 0.87651 
+
+Begin evaluation...
+Is_training: False. [152,199][1,16], imps: 67.27, est: 0.36h, G_loss: 0.02794, running_mf1: 0.93268
+Is_training: False. Epoch 152 / 199, epoch_mF1= 0.86189
+acc: 0.98505 miou: 0.78068 mf1: 0.86189 iou_0: 0.98474 iou_1: 0.57662 F1_0: 0.99231 F1_1: 0.73146 precision_0: 0.98706 precision_1: 0.89845 recall_0: 0.99762 recall_1: 0.61682 
+
+Lastest model updated. Epoch_acc=0.8619, Historical_best_acc=0.9054 (at epoch 145)
+
+lr: 0.0002388
+Is_training: True. [153,199][1,112], imps: 67.68, est: 0.35h, G_loss: 0.01404, running_mf1: 0.93325
+Is_training: True. Epoch 153 / 199, epoch_mF1= 0.94242
+acc: 0.99033 miou: 0.89578 mf1: 0.94242 iou_0: 0.98993 iou_1: 0.80163 F1_0: 0.99494 F1_1: 0.88989 precision_0: 0.99425 precision_1: 0.90355 recall_0: 0.99563 recall_1: 0.87665 
+
+Begin evaluation...
+Is_training: False. [153,199][1,16], imps: 67.29, est: 0.35h, G_loss: 0.00264, running_mf1: 0.85842
+Is_training: False. Epoch 153 / 199, epoch_mF1= 0.89780
+acc: 0.98343 miou: 0.82772 mf1: 0.89780 iou_0: 0.98284 iou_1: 0.67259 F1_0: 0.99135 F1_1: 0.80425 precision_0: 0.98818 precision_1: 0.86714 recall_0: 0.99454 recall_1: 0.74987 
+
+Lastest model updated. Epoch_acc=0.8978, Historical_best_acc=0.9054 (at epoch 145)
+
+lr: 0.0002338
+Is_training: True. [154,199][1,112], imps: 67.70, est: 0.34h, G_loss: 0.01386, running_mf1: 0.92183
+Is_training: True. Epoch 154 / 199, epoch_mF1= 0.94233
+acc: 0.99122 miou: 0.89573 mf1: 0.94233 iou_0: 0.99090 iou_1: 0.80056 F1_0: 0.99543 F1_1: 0.88924 precision_0: 0.99469 precision_1: 0.90563 recall_0: 0.99617 recall_1: 0.87342 
+
+Begin evaluation...
+Is_training: False. [154,199][1,16], imps: 67.32, est: 0.34h, G_loss: 0.00018, running_mf1: 0.88472
+Is_training: False. Epoch 154 / 199, epoch_mF1= 0.89230
+acc: 0.98324 miou: 0.82007 mf1: 0.89230 iou_0: 0.98268 iou_1: 0.65745 F1_0: 0.99127 F1_1: 0.79333 precision_0: 0.98785 precision_1: 0.86396 recall_0: 0.99470 recall_1: 0.73337 
+
+Lastest model updated. Epoch_acc=0.8923, Historical_best_acc=0.9054 (at epoch 145)
+
+lr: 0.0002289
+Is_training: True. [155,199][1,112], imps: 67.72, est: 0.33h, G_loss: 0.06155, running_mf1: 0.93632
+Is_training: True. Epoch 155 / 199, epoch_mF1= 0.94409
+acc: 0.99079 miou: 0.89854 mf1: 0.94409 iou_0: 0.99042 iou_1: 0.80666 F1_0: 0.99519 F1_1: 0.89298 precision_0: 0.99449 precision_1: 0.90714 recall_0: 0.99589 recall_1: 0.87927 
+
+Begin evaluation...
+Is_training: False. [155,199][1,16], imps: 67.34, est: 0.33h, G_loss: 0.00004, running_mf1: 0.87224
+Is_training: False. Epoch 155 / 199, epoch_mF1= 0.87190
+acc: 0.98661 miou: 0.79361 mf1: 0.87190 iou_0: 0.98633 iou_1: 0.60088 F1_0: 0.99312 F1_1: 0.75069 precision_0: 0.98913 precision_1: 0.87934 recall_0: 0.99715 recall_1: 0.65488 
+
+Lastest model updated. Epoch_acc=0.8719, Historical_best_acc=0.9054 (at epoch 145)
+
+lr: 0.0002239
+Is_training: True. [156,199][1,112], imps: 67.74, est: 0.32h, G_loss: 0.03358, running_mf1: 0.95622
+Is_training: True. Epoch 156 / 199, epoch_mF1= 0.94362
+acc: 0.99107 miou: 0.89781 mf1: 0.94362 iou_0: 0.99073 iou_1: 0.80489 F1_0: 0.99534 F1_1: 0.89190 precision_0: 0.99473 precision_1: 0.90480 recall_0: 0.99595 recall_1: 0.87936 
+
+Begin evaluation...
+Is_training: False. [156,199][1,16], imps: 67.36, est: 0.33h, G_loss: 0.10234, running_mf1: 0.88002
+Is_training: False. Epoch 156 / 199, epoch_mF1= 0.89227
+acc: 0.98284 miou: 0.81997 mf1: 0.89227 iou_0: 0.98226 iou_1: 0.65768 F1_0: 0.99105 F1_1: 0.79350 precision_0: 0.98685 precision_1: 0.87990 recall_0: 0.99529 recall_1: 0.72254 
+
+Lastest model updated. Epoch_acc=0.8923, Historical_best_acc=0.9054 (at epoch 145)
+
+lr: 0.0002189
+Is_training: True. [157,199][1,112], imps: 67.76, est: 0.32h, G_loss: 0.00044, running_mf1: 0.50000
+Is_training: True. Epoch 157 / 199, epoch_mF1= 0.94606
+acc: 0.99108 miou: 0.90179 mf1: 0.94606 iou_0: 0.99072 iou_1: 0.81286 F1_0: 0.99534 F1_1: 0.89677 precision_0: 0.99463 precision_1: 0.91123 recall_0: 0.99605 recall_1: 0.88276 
+
+Begin evaluation...
+Is_training: False. [157,199][1,16], imps: 67.38, est: 0.32h, G_loss: 0.00012, running_mf1: 0.50070
+Is_training: False. Epoch 157 / 199, epoch_mF1= 0.90393
+acc: 0.98774 miou: 0.83701 mf1: 0.90393 iou_0: 0.98741 iou_1: 0.68661 F1_0: 0.99366 F1_1: 0.81419 precision_0: 0.99254 precision_1: 0.84207 recall_0: 0.99479 recall_1: 0.78809 
+
+Lastest model updated. Epoch_acc=0.9039, Historical_best_acc=0.9054 (at epoch 145)
+
+lr: 0.0002139
+Is_training: True. [158,199][1,112], imps: 67.78, est: 0.31h, G_loss: 0.05774, running_mf1: 0.93656
+Is_training: True. Epoch 158 / 199, epoch_mF1= 0.94508
+acc: 0.99086 miou: 0.90016 mf1: 0.94508 iou_0: 0.99049 iou_1: 0.80984 F1_0: 0.99522 F1_1: 0.89493 precision_0: 0.99455 precision_1: 0.90833 recall_0: 0.99589 recall_1: 0.88192 
+
+Begin evaluation...
+Is_training: False. [158,199][1,16], imps: 67.40, est: 0.31h, G_loss: 0.00011, running_mf1: 0.93397
+Is_training: False. Epoch 158 / 199, epoch_mF1= 0.90202
+acc: 0.98666 miou: 0.83414 mf1: 0.90202 iou_0: 0.98626 iou_1: 0.68202 F1_0: 0.99308 F1_1: 0.81095 precision_0: 0.98954 precision_1: 0.89905 recall_0: 0.99666 recall_1: 0.73858 
+
+Lastest model updated. Epoch_acc=0.9020, Historical_best_acc=0.9054 (at epoch 145)
+
+lr: 0.0002090
+Is_training: True. [159,199][1,112], imps: 67.80, est: 0.30h, G_loss: 0.00013, running_mf1: 0.50000
+Is_training: True. Epoch 159 / 199, epoch_mF1= 0.94433
+acc: 0.99056 miou: 0.89892 mf1: 0.94433 iou_0: 0.99017 iou_1: 0.80768 F1_0: 0.99506 F1_1: 0.89361 precision_0: 0.99422 precision_1: 0.91008 recall_0: 0.99590 recall_1: 0.87772 
+
+Begin evaluation...
+Is_training: False. [159,199][1,16], imps: 67.42, est: 0.30h, G_loss: 0.00002, running_mf1: 0.49904
+Is_training: False. Epoch 159 / 199, epoch_mF1= 0.90932
+acc: 0.98408 miou: 0.84423 mf1: 0.90932 iou_0: 0.98345 iou_1: 0.70501 F1_0: 0.99166 F1_1: 0.82699 precision_0: 0.98896 precision_1: 0.87661 recall_0: 0.99437 recall_1: 0.78268 
+
+Lastest model updated. Epoch_acc=0.9093, Historical_best_acc=0.9054 (at epoch 145)
+
+**********Best model updated!
+
+lr: 0.0002040
+Is_training: True. [160,199][1,112], imps: 67.75, est: 0.29h, G_loss: 0.03098, running_mf1: 0.95187
+Is_training: True. Epoch 160 / 199, epoch_mF1= 0.94633
+acc: 0.99090 miou: 0.90223 mf1: 0.94633 iou_0: 0.99052 iou_1: 0.81394 F1_0: 0.99524 F1_1: 0.89743 precision_0: 0.99454 precision_1: 0.91117 recall_0: 0.99594 recall_1: 0.88409 
+
+Begin evaluation...
+Is_training: False. [160,199][1,16], imps: 67.38, est: 0.30h, G_loss: 0.00001, running_mf1: 0.50412
+Is_training: False. Epoch 160 / 199, epoch_mF1= 0.90515
+acc: 0.98361 miou: 0.83815 mf1: 0.90515 iou_0: 0.98298 iou_1: 0.69331 F1_0: 0.99142 F1_1: 0.81888 precision_0: 0.98940 precision_1: 0.85564 recall_0: 0.99344 recall_1: 0.78516 
+
+Lastest model updated. Epoch_acc=0.9052, Historical_best_acc=0.9093 (at epoch 159)
+
+lr: 0.0001990
+Is_training: True. [161,199][1,112], imps: 67.77, est: 0.29h, G_loss: 0.00013, running_mf1: 0.50000
+Is_training: True. Epoch 161 / 199, epoch_mF1= 0.94195
+acc: 0.99089 miou: 0.89508 mf1: 0.94195 iou_0: 0.99055 iou_1: 0.79962 F1_0: 0.99525 F1_1: 0.88865 precision_0: 0.99457 precision_1: 0.90311 recall_0: 0.99593 recall_1: 0.87465 
+
+Begin evaluation...
+Is_training: False. [161,199][1,16], imps: 67.31, est: 0.29h, G_loss: 0.00483, running_mf1: 0.80333
+Is_training: False. Epoch 161 / 199, epoch_mF1= 0.90847
+acc: 0.98650 miou: 0.84334 mf1: 0.90847 iou_0: 0.98606 iou_1: 0.70061 F1_0: 0.99298 F1_1: 0.82395 precision_0: 0.99092 precision_1: 0.86939 recall_0: 0.99506 recall_1: 0.78303 
+
+Lastest model updated. Epoch_acc=0.9085, Historical_best_acc=0.9093 (at epoch 159)
+
+lr: 0.0001940
+Is_training: True. [162,199][1,112], imps: 67.67, est: 0.28h, G_loss: 0.04576, running_mf1: 0.94223
+Is_training: True. Epoch 162 / 199, epoch_mF1= 0.94491
+acc: 0.99065 miou: 0.89988 mf1: 0.94491 iou_0: 0.99027 iou_1: 0.80949 F1_0: 0.99511 F1_1: 0.89472 precision_0: 0.99438 precision_1: 0.90917 recall_0: 0.99585 recall_1: 0.88072 
+
+Begin evaluation...
+Is_training: False. [162,199][1,16], imps: 67.31, est: 0.28h, G_loss: 0.00022, running_mf1: 0.50000
+Is_training: False. Epoch 162 / 199, epoch_mF1= 0.89380
+acc: 0.98209 miou: 0.82195 mf1: 0.89380 iou_0: 0.98143 iou_1: 0.66247 F1_0: 0.99063 F1_1: 0.79697 precision_0: 0.98621 precision_1: 0.88260 recall_0: 0.99509 recall_1: 0.72649 
+
+Lastest model updated. Epoch_acc=0.8938, Historical_best_acc=0.9093 (at epoch 159)
+
+lr: 0.0001891
+Is_training: True. [163,199][1,112], imps: 67.69, est: 0.27h, G_loss: 0.03029, running_mf1: 0.95947
+Is_training: True. Epoch 163 / 199, epoch_mF1= 0.94630
+acc: 0.99145 miou: 0.90222 mf1: 0.94630 iou_0: 0.99111 iou_1: 0.81333 F1_0: 0.99554 F1_1: 0.89706 precision_0: 0.99495 precision_1: 0.90948 recall_0: 0.99613 recall_1: 0.88497 
+
+Begin evaluation...
+Is_training: False. [163,199][1,16], imps: 67.33, est: 0.27h, G_loss: 0.06433, running_mf1: 0.96228
+Is_training: False. Epoch 163 / 199, epoch_mF1= 0.89417
+acc: 0.98603 miou: 0.82309 mf1: 0.89417 iou_0: 0.98564 iou_1: 0.66054 F1_0: 0.99277 F1_1: 0.79558 precision_0: 0.98991 precision_1: 0.86639 recall_0: 0.99565 recall_1: 0.73546 
+
+Lastest model updated. Epoch_acc=0.8942, Historical_best_acc=0.9093 (at epoch 159)
+
+lr: 0.0001841
+Is_training: True. [164,199][1,112], imps: 67.71, est: 0.26h, G_loss: 0.01769, running_mf1: 0.93218
+Is_training: True. Epoch 164 / 199, epoch_mF1= 0.94627
+acc: 0.99085 miou: 0.90212 mf1: 0.94627 iou_0: 0.99047 iou_1: 0.81377 F1_0: 0.99521 F1_1: 0.89733 precision_0: 0.99459 precision_1: 0.90952 recall_0: 0.99583 recall_1: 0.88545 
+
+Begin evaluation...
+Is_training: False. [164,199][1,16], imps: 67.35, est: 0.27h, G_loss: 0.07431, running_mf1: 0.60012
+Is_training: False. Epoch 164 / 199, epoch_mF1= 0.88171
+acc: 0.98097 miou: 0.80539 mf1: 0.88171 iou_0: 0.98033 iou_1: 0.63045 F1_0: 0.99007 F1_1: 0.77335 precision_0: 0.98483 precision_1: 0.88002 recall_0: 0.99535 recall_1: 0.68974 
+
+Lastest model updated. Epoch_acc=0.8817, Historical_best_acc=0.9093 (at epoch 159)
+
+lr: 0.0001791
+Is_training: True. [165,199][1,112], imps: 67.73, est: 0.26h, G_loss: 0.03977, running_mf1: 0.93686
+Is_training: True. Epoch 165 / 199, epoch_mF1= 0.94770
+acc: 0.99155 miou: 0.90454 mf1: 0.94770 iou_0: 0.99121 iou_1: 0.81787 F1_0: 0.99559 F1_1: 0.89981 precision_0: 0.99500 precision_1: 0.91213 recall_0: 0.99618 recall_1: 0.88782 
+
+Begin evaluation...
+Is_training: False. [165,199][1,16], imps: 67.37, est: 0.26h, G_loss: 0.00001, running_mf1: 0.87257
+Is_training: False. Epoch 165 / 199, epoch_mF1= 0.89490
+acc: 0.98551 miou: 0.82401 mf1: 0.89490 iou_0: 0.98509 iou_1: 0.66294 F1_0: 0.99249 F1_1: 0.79731 precision_0: 0.98886 precision_1: 0.88490 recall_0: 0.99614 recall_1: 0.72550 
+
+Lastest model updated. Epoch_acc=0.8949, Historical_best_acc=0.9093 (at epoch 159)
+
+lr: 0.0001741
+Is_training: True. [166,199][1,112], imps: 67.75, est: 0.25h, G_loss: 0.03385, running_mf1: 0.96187
+Is_training: True. Epoch 166 / 199, epoch_mF1= 0.94684
+acc: 0.99075 miou: 0.90305 mf1: 0.94684 iou_0: 0.99036 iou_1: 0.81574 F1_0: 0.99515 F1_1: 0.89852 precision_0: 0.99457 precision_1: 0.90975 recall_0: 0.99574 recall_1: 0.88757 
+
+Begin evaluation...
+Is_training: False. [166,199][1,16], imps: 67.39, est: 0.25h, G_loss: 0.02372, running_mf1: 0.94821
+Is_training: False. Epoch 166 / 199, epoch_mF1= 0.89608
+acc: 0.98845 miou: 0.82611 mf1: 0.89608 iou_0: 0.98818 iou_1: 0.66405 F1_0: 0.99405 F1_1: 0.79811 precision_0: 0.99095 precision_1: 0.89295 recall_0: 0.99717 recall_1: 0.72149 
+
+Lastest model updated. Epoch_acc=0.8961, Historical_best_acc=0.9093 (at epoch 159)
+
+lr: 0.0001692
+Is_training: True. [167,199][1,112], imps: 67.77, est: 0.24h, G_loss: 0.04611, running_mf1: 0.93584
+Is_training: True. Epoch 167 / 199, epoch_mF1= 0.94822
+acc: 0.99177 miou: 0.90543 mf1: 0.94822 iou_0: 0.99145 iou_1: 0.81940 F1_0: 0.99571 F1_1: 0.90074 precision_0: 0.99509 precision_1: 0.91386 recall_0: 0.99633 recall_1: 0.88799 
+
+Begin evaluation...
+Is_training: False. [167,199][1,16], imps: 67.41, est: 0.24h, G_loss: 0.00001, running_mf1: 0.94590
+Is_training: False. Epoch 167 / 199, epoch_mF1= 0.90685
+acc: 0.98479 miou: 0.84076 mf1: 0.90685 iou_0: 0.98423 iou_1: 0.69729 F1_0: 0.99205 F1_1: 0.82165 precision_0: 0.98942 precision_1: 0.87390 recall_0: 0.99470 recall_1: 0.77530 
+
+Lastest model updated. Epoch_acc=0.9069, Historical_best_acc=0.9093 (at epoch 159)
+
+lr: 0.0001642
+Is_training: True. [168,199][1,112], imps: 67.79, est: 0.23h, G_loss: 0.05586, running_mf1: 0.93589
+Is_training: True. Epoch 168 / 199, epoch_mF1= 0.94541
+acc: 0.98996 miou: 0.90062 mf1: 0.94541 iou_0: 0.98950 iou_1: 0.81174 F1_0: 0.99472 F1_1: 0.89609 precision_0: 0.99412 precision_1: 0.90696 recall_0: 0.99533 recall_1: 0.88547 
+
+Begin evaluation...
+Is_training: False. [168,199][1,16], imps: 67.43, est: 0.24h, G_loss: 0.00005, running_mf1: 0.94422
+Is_training: False. Epoch 168 / 199, epoch_mF1= 0.88943
+acc: 0.98647 miou: 0.81669 mf1: 0.88943 iou_0: 0.98613 iou_1: 0.64725 F1_0: 0.99301 F1_1: 0.78585 precision_0: 0.98994 precision_1: 0.86864 recall_0: 0.99611 recall_1: 0.71748 
+
+Lastest model updated. Epoch_acc=0.8894, Historical_best_acc=0.9093 (at epoch 159)
+
+lr: 0.0001592
+Is_training: True. [169,199][1,112], imps: 67.80, est: 0.23h, G_loss: 0.01959, running_mf1: 0.94664
+Is_training: True. Epoch 169 / 199, epoch_mF1= 0.94613
+acc: 0.99092 miou: 0.90190 mf1: 0.94613 iou_0: 0.99055 iou_1: 0.81326 F1_0: 0.99525 F1_1: 0.89701 precision_0: 0.99456 precision_1: 0.91084 recall_0: 0.99595 recall_1: 0.88360 
+
+Begin evaluation...
+Is_training: False. [169,199][1,16], imps: 67.45, est: 0.23h, G_loss: 0.08759, running_mf1: 0.49988
+Is_training: False. Epoch 169 / 199, epoch_mF1= 0.91722
+acc: 0.98950 miou: 0.85657 mf1: 0.91722 iou_0: 0.98920 iou_1: 0.72394 F1_0: 0.99457 F1_1: 0.83987 precision_0: 0.99358 precision_1: 0.86529 recall_0: 0.99556 recall_1: 0.81589 
+
+Lastest model updated. Epoch_acc=0.9172, Historical_best_acc=0.9093 (at epoch 159)
+
+**********Best model updated!
+
+lr: 0.0001542
+Is_training: True. [170,199][1,112], imps: 67.75, est: 0.22h, G_loss: 0.00384, running_mf1: 0.83575
+Is_training: True. Epoch 170 / 199, epoch_mF1= 0.94666
+acc: 0.99072 miou: 0.90275 mf1: 0.94666 iou_0: 0.99032 iou_1: 0.81518 F1_0: 0.99514 F1_1: 0.89818 precision_0: 0.99442 precision_1: 0.91205 recall_0: 0.99586 recall_1: 0.88473 
+
+Begin evaluation...
+Is_training: False. [170,199][1,16], imps: 67.39, est: 0.22h, G_loss: 0.40398, running_mf1: 0.94227
+Is_training: False. Epoch 170 / 199, epoch_mF1= 0.90115
+acc: 0.98459 miou: 0.83260 mf1: 0.90115 iou_0: 0.98407 iou_1: 0.68112 F1_0: 0.99197 F1_1: 0.81032 precision_0: 0.98882 precision_1: 0.87624 recall_0: 0.99514 recall_1: 0.75362 
+
+Lastest model updated. Epoch_acc=0.9011, Historical_best_acc=0.9172 (at epoch 169)
+
+lr: 0.0001493
+Is_training: True. [171,199][1,112], imps: 67.76, est: 0.21h, G_loss: 0.02675, running_mf1: 0.94931
+Is_training: True. Epoch 171 / 199, epoch_mF1= 0.94200
+acc: 0.99041 miou: 0.89512 mf1: 0.94200 iou_0: 0.99003 iou_1: 0.80021 F1_0: 0.99499 F1_1: 0.88902 precision_0: 0.99440 precision_1: 0.90084 recall_0: 0.99558 recall_1: 0.87750 
+
+Begin evaluation...
+Is_training: False. [171,199][1,16], imps: 67.41, est: 0.21h, G_loss: 0.01042, running_mf1: 0.75588
+Is_training: False. Epoch 171 / 199, epoch_mF1= 0.89902
+acc: 0.98390 miou: 0.82950 mf1: 0.89902 iou_0: 0.98334 iou_1: 0.67566 F1_0: 0.99160 F1_1: 0.80644 precision_0: 0.98709 precision_1: 0.90143 recall_0: 0.99616 recall_1: 0.72955 
+
+Lastest model updated. Epoch_acc=0.8990, Historical_best_acc=0.9172 (at epoch 169)
+
+lr: 0.0001443
+Is_training: True. [172,199][1,112], imps: 67.78, est: 0.21h, G_loss: 0.01651, running_mf1: 0.95025
+Is_training: True. Epoch 172 / 199, epoch_mF1= 0.94728
+acc: 0.99116 miou: 0.90382 mf1: 0.94728 iou_0: 0.99080 iou_1: 0.81684 F1_0: 0.99538 F1_1: 0.89919 precision_0: 0.99464 precision_1: 0.91386 recall_0: 0.99611 recall_1: 0.88497 
+
+Begin evaluation...
+Is_training: False. [172,199][1,16], imps: 67.43, est: 0.21h, G_loss: 0.00237, running_mf1: 0.49975
+Is_training: False. Epoch 172 / 199, epoch_mF1= 0.88661
+acc: 0.98425 miou: 0.81250 mf1: 0.88661 iou_0: 0.98380 iou_1: 0.64121 F1_0: 0.99183 F1_1: 0.78139 precision_0: 0.98872 precision_1: 0.85317 recall_0: 0.99496 recall_1: 0.72075 
+
+Lastest model updated. Epoch_acc=0.8866, Historical_best_acc=0.9172 (at epoch 169)
+
+lr: 0.0001393
+Is_training: True. [173,199][1,112], imps: 67.80, est: 0.20h, G_loss: 0.04711, running_mf1: 0.93213
+Is_training: True. Epoch 173 / 199, epoch_mF1= 0.94682
+acc: 0.99086 miou: 0.90302 mf1: 0.94682 iou_0: 0.99047 iou_1: 0.81557 F1_0: 0.99521 F1_1: 0.89842 precision_0: 0.99450 precision_1: 0.91231 recall_0: 0.99593 recall_1: 0.88495 
+
+Begin evaluation...
+Is_training: False. [173,199][1,16], imps: 67.45, est: 0.20h, G_loss: 0.03357, running_mf1: 0.88423
+Is_training: False. Epoch 173 / 199, epoch_mF1= 0.88910
+acc: 0.98700 miou: 0.81632 mf1: 0.88910 iou_0: 0.98668 iou_1: 0.64596 F1_0: 0.99330 F1_1: 0.78490 precision_0: 0.99050 precision_1: 0.86309 recall_0: 0.99611 recall_1: 0.71971 
+
+Lastest model updated. Epoch_acc=0.8891, Historical_best_acc=0.9172 (at epoch 169)
+
+lr: 0.0001343
+Is_training: True. [174,199][1,112], imps: 67.81, est: 0.19h, G_loss: 0.05595, running_mf1: 0.93383
+Is_training: True. Epoch 174 / 199, epoch_mF1= 0.94751
+acc: 0.99232 miou: 0.90430 mf1: 0.94751 iou_0: 0.99205 iou_1: 0.81656 F1_0: 0.99601 F1_1: 0.89902 precision_0: 0.99549 precision_1: 0.91107 recall_0: 0.99653 recall_1: 0.88727 
+
+Begin evaluation...
+Is_training: False. [174,199][1,16], imps: 67.47, est: 0.19h, G_loss: 0.07149, running_mf1: 0.85123
+Is_training: False. Epoch 174 / 199, epoch_mF1= 0.89863
+acc: 0.98042 miou: 0.82841 mf1: 0.89863 iou_0: 0.97958 iou_1: 0.67725 F1_0: 0.98968 F1_1: 0.80757 precision_0: 0.98618 precision_1: 0.86484 recall_0: 0.99321 recall_1: 0.75742 
+
+Lastest model updated. Epoch_acc=0.8986, Historical_best_acc=0.9172 (at epoch 169)
+
+lr: 0.0001294
+Is_training: True. [175,199][1,112], imps: 67.83, est: 0.18h, G_loss: 0.01006, running_mf1: 0.72798
+Is_training: True. Epoch 175 / 199, epoch_mF1= 0.95008
+acc: 0.99097 miou: 0.90844 mf1: 0.95008 iou_0: 0.99057 iou_1: 0.82632 F1_0: 0.99526 F1_1: 0.90490 precision_0: 0.99463 precision_1: 0.91662 recall_0: 0.99590 recall_1: 0.89348 
+
+Begin evaluation...
+Is_training: False. [175,199][1,16], imps: 67.49, est: 0.18h, G_loss: 0.00008, running_mf1: 0.92841
+Is_training: False. Epoch 175 / 199, epoch_mF1= 0.89702
+acc: 0.98471 miou: 0.82683 mf1: 0.89702 iou_0: 0.98422 iou_1: 0.66945 F1_0: 0.99205 F1_1: 0.80200 precision_0: 0.98831 precision_1: 0.88540 recall_0: 0.99581 recall_1: 0.73295 
+
+Lastest model updated. Epoch_acc=0.8970, Historical_best_acc=0.9172 (at epoch 169)
+
+lr: 0.0001244
+Is_training: True. [176,199][1,112], imps: 67.85, est: 0.18h, G_loss: 0.03229, running_mf1: 0.96002
+Is_training: True. Epoch 176 / 199, epoch_mF1= 0.94877
+acc: 0.99070 miou: 0.90624 mf1: 0.94877 iou_0: 0.99029 iou_1: 0.82218 F1_0: 0.99512 F1_1: 0.90242 precision_0: 0.99457 precision_1: 0.91256 recall_0: 0.99567 recall_1: 0.89250 
+
+Begin evaluation...
+Is_training: False. [176,199][1,16], imps: 67.51, est: 0.18h, G_loss: 0.01722, running_mf1: 0.50000
+Is_training: False. Epoch 176 / 199, epoch_mF1= 0.89762
+acc: 0.98731 miou: 0.82807 mf1: 0.89762 iou_0: 0.98697 iou_1: 0.66916 F1_0: 0.99344 F1_1: 0.80179 precision_0: 0.99059 precision_1: 0.87819 recall_0: 0.99631 recall_1: 0.73762 
+
+Lastest model updated. Epoch_acc=0.8976, Historical_best_acc=0.9172 (at epoch 169)
+
+lr: 0.0001194
+Is_training: True. [177,199][1,112], imps: 67.86, est: 0.17h, G_loss: 0.01468, running_mf1: 0.93624
+Is_training: True. Epoch 177 / 199, epoch_mF1= 0.94690
+acc: 0.99053 miou: 0.90314 mf1: 0.94690 iou_0: 0.99012 iou_1: 0.81615 F1_0: 0.99503 F1_1: 0.89877 precision_0: 0.99443 precision_1: 0.91002 recall_0: 0.99564 recall_1: 0.88780 
+
+Begin evaluation...
+Is_training: False. [177,199][1,16], imps: 67.52, est: 0.17h, G_loss: 0.02706, running_mf1: 0.93711
+Is_training: False. Epoch 177 / 199, epoch_mF1= 0.88645
+acc: 0.98317 miou: 0.81211 mf1: 0.88645 iou_0: 0.98265 iou_1: 0.64157 F1_0: 0.99125 F1_1: 0.78165 precision_0: 0.98641 precision_1: 0.89063 recall_0: 0.99613 recall_1: 0.69644 
+
+Lastest model updated. Epoch_acc=0.8864, Historical_best_acc=0.9172 (at epoch 169)
+
+lr: 0.0001144
+Is_training: True. [178,199][1,112], imps: 67.88, est: 0.16h, G_loss: 0.02171, running_mf1: 0.94366
+Is_training: True. Epoch 178 / 199, epoch_mF1= 0.94912
+acc: 0.99190 miou: 0.90693 mf1: 0.94912 iou_0: 0.99159 iou_1: 0.82228 F1_0: 0.99578 F1_1: 0.90247 precision_0: 0.99516 precision_1: 0.91549 recall_0: 0.99639 recall_1: 0.88982 
+
+Begin evaluation...
+Is_training: False. [178,199][1,16], imps: 67.54, est: 0.16h, G_loss: 0.03054, running_mf1: 0.71898
+Is_training: False. Epoch 178 / 199, epoch_mF1= 0.88941
+acc: 0.98062 miou: 0.81569 mf1: 0.88941 iou_0: 0.97989 iou_1: 0.65148 F1_0: 0.98984 F1_1: 0.78897 precision_0: 0.98598 precision_1: 0.85898 recall_0: 0.99374 recall_1: 0.72951 
+
+Lastest model updated. Epoch_acc=0.8894, Historical_best_acc=0.9172 (at epoch 169)
+
+lr: 0.0001095
+Is_training: True. [179,199][1,112], imps: 67.90, est: 0.15h, G_loss: 0.02537, running_mf1: 0.94765
+Is_training: True. Epoch 179 / 199, epoch_mF1= 0.94971
+acc: 0.99225 miou: 0.90794 mf1: 0.94971 iou_0: 0.99196 iou_1: 0.82392 F1_0: 0.99597 F1_1: 0.90346 precision_0: 0.99542 precision_1: 0.91540 recall_0: 0.99651 recall_1: 0.89183 
+
+Begin evaluation...
+Is_training: False. [179,199][1,16], imps: 67.56, est: 0.15h, G_loss: 0.07652, running_mf1: 0.94806
+Is_training: False. Epoch 179 / 199, epoch_mF1= 0.90023
+acc: 0.98593 miou: 0.83151 mf1: 0.90023 iou_0: 0.98550 iou_1: 0.67752 F1_0: 0.99270 F1_1: 0.80776 precision_0: 0.98929 precision_1: 0.88835 recall_0: 0.99613 recall_1: 0.74058 
+
+Lastest model updated. Epoch_acc=0.9002, Historical_best_acc=0.9172 (at epoch 169)
+
+lr: 0.0001045
+Is_training: True. [180,199][1,112], imps: 67.91, est: 0.15h, G_loss: 0.00870, running_mf1: 0.95160
+Is_training: True. Epoch 180 / 199, epoch_mF1= 0.95031
+acc: 0.99156 miou: 0.90887 mf1: 0.95031 iou_0: 0.99121 iou_1: 0.82654 F1_0: 0.99558 F1_1: 0.90503 precision_0: 0.99515 precision_1: 0.91367 recall_0: 0.99602 recall_1: 0.89656 
+
+Begin evaluation...
+Is_training: False. [180,199][1,16], imps: 67.58, est: 0.15h, G_loss: 0.00010, running_mf1: 0.84766
+Is_training: False. Epoch 180 / 199, epoch_mF1= 0.90373
+acc: 0.98475 miou: 0.83628 mf1: 0.90373 iou_0: 0.98422 iou_1: 0.68835 F1_0: 0.99205 F1_1: 0.81541 precision_0: 0.98936 precision_1: 0.87027 recall_0: 0.99475 recall_1: 0.76706 
+
+Lastest model updated. Epoch_acc=0.9037, Historical_best_acc=0.9172 (at epoch 169)
+
+lr: 0.0000995
+Is_training: True. [181,199][1,112], imps: 67.92, est: 0.14h, G_loss: 0.02799, running_mf1: 0.94612
+Is_training: True. Epoch 181 / 199, epoch_mF1= 0.95032
+acc: 0.99159 miou: 0.90889 mf1: 0.95032 iou_0: 0.99124 iou_1: 0.82654 F1_0: 0.99560 F1_1: 0.90503 precision_0: 0.99499 precision_1: 0.91712 recall_0: 0.99621 recall_1: 0.89325 
+
+Begin evaluation...
+Is_training: False. [181,199][1,16], imps: 67.50, est: 0.14h, G_loss: 0.00004, running_mf1: 0.95642
+Is_training: False. Epoch 181 / 199, epoch_mF1= 0.90871
+acc: 0.98532 miou: 0.84352 mf1: 0.90871 iou_0: 0.98479 iou_1: 0.70225 F1_0: 0.99234 F1_1: 0.82508 precision_0: 0.98983 precision_1: 0.87568 recall_0: 0.99486 recall_1: 0.78001 
+
+Lastest model updated. Epoch_acc=0.9087, Historical_best_acc=0.9172 (at epoch 169)
+
+lr: 0.0000945
+Is_training: True. [182,199][1,112], imps: 67.83, est: 0.13h, G_loss: 0.01899, running_mf1: 0.96747
+Is_training: True. Epoch 182 / 199, epoch_mF1= 0.95044
+acc: 0.99095 miou: 0.90905 mf1: 0.95044 iou_0: 0.99054 iou_1: 0.82755 F1_0: 0.99525 F1_1: 0.90564 precision_0: 0.99467 precision_1: 0.91619 recall_0: 0.99582 recall_1: 0.89534 
+
+Begin evaluation...
+Is_training: False. [182,199][1,16], imps: 67.51, est: 0.13h, G_loss: 0.02422, running_mf1: 0.50000
+Is_training: False. Epoch 182 / 199, epoch_mF1= 0.89215
+acc: 0.98790 miou: 0.82061 mf1: 0.89215 iou_0: 0.98762 iou_1: 0.65361 F1_0: 0.99377 F1_1: 0.79052 precision_0: 0.99095 precision_1: 0.87406 recall_0: 0.99660 recall_1: 0.72156 
+
+Lastest model updated. Epoch_acc=0.8921, Historical_best_acc=0.9172 (at epoch 169)
+
+lr: 0.0000896
+Is_training: True. [183,199][1,112], imps: 67.85, est: 0.12h, G_loss: 0.02092, running_mf1: 0.96030
+Is_training: True. Epoch 183 / 199, epoch_mF1= 0.95023
+acc: 0.99140 miou: 0.90874 mf1: 0.95023 iou_0: 0.99103 iou_1: 0.82644 F1_0: 0.99549 F1_1: 0.90498 precision_0: 0.99488 precision_1: 0.91694 recall_0: 0.99611 recall_1: 0.89332 
+
+Begin evaluation...
+Is_training: False. [183,199][1,16], imps: 67.52, est: 0.13h, G_loss: 0.01713, running_mf1: 0.50000
+Is_training: False. Epoch 183 / 199, epoch_mF1= 0.89962
+acc: 0.98574 miou: 0.83062 mf1: 0.89962 iou_0: 0.98530 iou_1: 0.67595 F1_0: 0.99260 F1_1: 0.80665 precision_0: 0.98936 precision_1: 0.88187 recall_0: 0.99585 recall_1: 0.74324 
+
+Lastest model updated. Epoch_acc=0.8996, Historical_best_acc=0.9172 (at epoch 169)
+
+lr: 0.0000846
+Is_training: True. [184,199][1,112], imps: 67.87, est: 0.12h, G_loss: 0.04154, running_mf1: 0.94380
+Is_training: True. Epoch 184 / 199, epoch_mF1= 0.95019
+acc: 0.99100 miou: 0.90862 mf1: 0.95019 iou_0: 0.99059 iou_1: 0.82665 F1_0: 0.99527 F1_1: 0.90510 precision_0: 0.99473 precision_1: 0.91522 recall_0: 0.99582 recall_1: 0.89521 
+
+Begin evaluation...
+Is_training: False. [184,199][1,16], imps: 67.54, est: 0.12h, G_loss: 0.00012, running_mf1: 0.93088
+Is_training: False. Epoch 184 / 199, epoch_mF1= 0.90106
+acc: 0.98616 miou: 0.83271 mf1: 0.90106 iou_0: 0.98574 iou_1: 0.67968 F1_0: 0.99282 F1_1: 0.80930 precision_0: 0.99053 precision_1: 0.86208 recall_0: 0.99511 recall_1: 0.76260 
+
+Lastest model updated. Epoch_acc=0.9011, Historical_best_acc=0.9172 (at epoch 169)
+
+lr: 0.0000796
+Is_training: True. [185,199][1,112], imps: 67.88, est: 0.11h, G_loss: 0.01510, running_mf1: 0.76085
+Is_training: True. Epoch 185 / 199, epoch_mF1= 0.94880
+acc: 0.99134 miou: 0.90635 mf1: 0.94880 iou_0: 0.99098 iou_1: 0.82172 F1_0: 0.99547 F1_1: 0.90214 precision_0: 0.99474 precision_1: 0.91653 recall_0: 0.99619 recall_1: 0.88819 
+
+Begin evaluation...
+Is_training: False. [185,199][1,16], imps: 67.56, est: 0.11h, G_loss: 0.08815, running_mf1: 0.82053
+Is_training: False. Epoch 185 / 199, epoch_mF1= 0.90778
+acc: 0.98822 miou: 0.84259 mf1: 0.90778 iou_0: 0.98789 iou_1: 0.69730 F1_0: 0.99391 F1_1: 0.82166 precision_0: 0.99268 precision_1: 0.85258 recall_0: 0.99514 recall_1: 0.79289 
+
+Lastest model updated. Epoch_acc=0.9078, Historical_best_acc=0.9172 (at epoch 169)
+
+lr: 0.0000746
+Is_training: True. [186,199][1,112], imps: 67.90, est: 0.10h, G_loss: 0.02010, running_mf1: 0.96306
+Is_training: True. Epoch 186 / 199, epoch_mF1= 0.94920
+acc: 0.99165 miou: 0.90703 mf1: 0.94920 iou_0: 0.99131 iou_1: 0.82276 F1_0: 0.99564 F1_1: 0.90276 precision_0: 0.99516 precision_1: 0.91255 recall_0: 0.99612 recall_1: 0.89318 
+
+Begin evaluation...
+Is_training: False. [186,199][1,16], imps: 67.58, est: 0.10h, G_loss: 0.01585, running_mf1: 0.86746
+Is_training: False. Epoch 186 / 199, epoch_mF1= 0.90135
+acc: 0.98626 miou: 0.83314 mf1: 0.90135 iou_0: 0.98584 iou_1: 0.68044 F1_0: 0.99287 F1_1: 0.80983 precision_0: 0.99026 precision_1: 0.87104 recall_0: 0.99549 recall_1: 0.75666 
+
+Lastest model updated. Epoch_acc=0.9014, Historical_best_acc=0.9172 (at epoch 169)
+
+lr: 0.0000697
+Is_training: True. [187,199][1,112], imps: 67.91, est: 0.10h, G_loss: 0.01040, running_mf1: 0.96292
+Is_training: True. Epoch 187 / 199, epoch_mF1= 0.95057
+acc: 0.99225 miou: 0.90937 mf1: 0.95057 iou_0: 0.99195 iou_1: 0.82679 F1_0: 0.99596 F1_1: 0.90518 precision_0: 0.99554 precision_1: 0.91429 recall_0: 0.99638 recall_1: 0.89626 
+
+Begin evaluation...
+Is_training: False. [187,199][1,16], imps: 67.59, est: 0.10h, G_loss: 0.00596, running_mf1: 0.74265
+Is_training: False. Epoch 187 / 199, epoch_mF1= 0.89223
+acc: 0.98606 miou: 0.82043 mf1: 0.89223 iou_0: 0.98568 iou_1: 0.65518 F1_0: 0.99279 F1_1: 0.79167 precision_0: 0.98990 precision_1: 0.86467 recall_0: 0.99570 recall_1: 0.73004 
+
+Lastest model updated. Epoch_acc=0.8922, Historical_best_acc=0.9172 (at epoch 169)
+
+lr: 0.0000647
+Is_training: True. [188,199][1,112], imps: 67.93, est: 0.09h, G_loss: 0.02279, running_mf1: 0.95890
+Is_training: True. Epoch 188 / 199, epoch_mF1= 0.95082
+acc: 0.99202 miou: 0.90976 mf1: 0.95082 iou_0: 0.99171 iou_1: 0.82781 F1_0: 0.99584 F1_1: 0.90580 precision_0: 0.99525 precision_1: 0.91806 recall_0: 0.99642 recall_1: 0.89386 
+
+Begin evaluation...
+Is_training: False. [188,199][1,16], imps: 67.61, est: 0.09h, G_loss: 0.09614, running_mf1: 0.93059
+Is_training: False. Epoch 188 / 199, epoch_mF1= 0.89206
+acc: 0.98687 miou: 0.82033 mf1: 0.89206 iou_0: 0.98653 iou_1: 0.65413 F1_0: 0.99322 F1_1: 0.79091 precision_0: 0.98984 precision_1: 0.88400 recall_0: 0.99662 recall_1: 0.71556 
+
+Lastest model updated. Epoch_acc=0.8921, Historical_best_acc=0.9172 (at epoch 169)
+
+lr: 0.0000597
+Is_training: True. [189,199][1,112], imps: 67.95, est: 0.08h, G_loss: 0.04152, running_mf1: 0.95442
+Is_training: True. Epoch 189 / 199, epoch_mF1= 0.94975
+acc: 0.99198 miou: 0.90797 mf1: 0.94975 iou_0: 0.99167 iou_1: 0.82427 F1_0: 0.99582 F1_1: 0.90367 precision_0: 0.99527 precision_1: 0.91528 recall_0: 0.99637 recall_1: 0.89235 
+
+Begin evaluation...
+Is_training: False. [189,199][1,16], imps: 67.63, est: 0.08h, G_loss: 0.00001, running_mf1: 0.83760
+Is_training: False. Epoch 189 / 199, epoch_mF1= 0.89362
+acc: 0.98774 miou: 0.82260 mf1: 0.89362 iou_0: 0.98744 iou_1: 0.65776 F1_0: 0.99368 F1_1: 0.79355 precision_0: 0.99150 precision_1: 0.85503 recall_0: 0.99587 recall_1: 0.74032 
+
+Lastest model updated. Epoch_acc=0.8936, Historical_best_acc=0.9172 (at epoch 169)
+
+lr: 0.0000547
+Is_training: True. [190,199][1,112], imps: 67.96, est: 0.07h, G_loss: 0.01214, running_mf1: 0.95796
+Is_training: True. Epoch 190 / 199, epoch_mF1= 0.95056
+acc: 0.99167 miou: 0.90930 mf1: 0.95056 iou_0: 0.99133 iou_1: 0.82728 F1_0: 0.99565 F1_1: 0.90548 precision_0: 0.99503 precision_1: 0.91790 recall_0: 0.99627 recall_1: 0.89339 
+
+Begin evaluation...
+Is_training: False. [190,199][1,16], imps: 67.64, est: 0.07h, G_loss: 0.11330, running_mf1: 0.82562
+Is_training: False. Epoch 190 / 199, epoch_mF1= 0.88181
+acc: 0.98574 miou: 0.80635 mf1: 0.88181 iou_0: 0.98539 iou_1: 0.62732 F1_0: 0.99264 F1_1: 0.77099 precision_0: 0.98958 precision_1: 0.85292 recall_0: 0.99571 recall_1: 0.70342 
+
+Lastest model updated. Epoch_acc=0.8818, Historical_best_acc=0.9172 (at epoch 169)
+
+lr: 0.0000498
+Is_training: True. [191,199][1,112], imps: 67.97, est: 0.07h, G_loss: 0.04996, running_mf1: 0.94629
+Is_training: True. Epoch 191 / 199, epoch_mF1= 0.95052
+acc: 0.99054 miou: 0.90914 mf1: 0.95052 iou_0: 0.99009 iou_1: 0.82819 F1_0: 0.99502 F1_1: 0.90602 precision_0: 0.99437 precision_1: 0.91725 recall_0: 0.99567 recall_1: 0.89506 
+
+Begin evaluation...
+Is_training: False. [191,199][1,16], imps: 67.66, est: 0.07h, G_loss: 0.00069, running_mf1: 0.88303
+Is_training: False. Epoch 191 / 199, epoch_mF1= 0.90735
+acc: 0.98544 miou: 0.84157 mf1: 0.90735 iou_0: 0.98494 iou_1: 0.69821 F1_0: 0.99241 F1_1: 0.82229 precision_0: 0.98927 precision_1: 0.88845 recall_0: 0.99558 recall_1: 0.76530 
+
+Lastest model updated. Epoch_acc=0.9074, Historical_best_acc=0.9172 (at epoch 169)
+
+lr: 0.0000448
+Is_training: True. [192,199][1,112], imps: 67.99, est: 0.06h, G_loss: 0.02503, running_mf1: 0.95586
+Is_training: True. Epoch 192 / 199, epoch_mF1= 0.94912
+acc: 0.99162 miou: 0.90691 mf1: 0.94912 iou_0: 0.99128 iou_1: 0.82254 F1_0: 0.99562 F1_1: 0.90263 precision_0: 0.99506 precision_1: 0.91396 recall_0: 0.99617 recall_1: 0.89158 
+
+Begin evaluation...
+Is_training: False. [192,199][1,16], imps: 67.67, est: 0.06h, G_loss: 0.00042, running_mf1: 0.96526
+Is_training: False. Epoch 192 / 199, epoch_mF1= 0.90860
+acc: 0.98604 miou: 0.84347 mf1: 0.90860 iou_0: 0.98557 iou_1: 0.70137 F1_0: 0.99273 F1_1: 0.82447 precision_0: 0.99045 precision_1: 0.87310 recall_0: 0.99503 recall_1: 0.78098 
+
+Lastest model updated. Epoch_acc=0.9086, Historical_best_acc=0.9172 (at epoch 169)
+
+lr: 0.0000398
+Is_training: True. [193,199][1,112], imps: 68.00, est: 0.05h, G_loss: 0.00857, running_mf1: 0.92807
+Is_training: True. Epoch 193 / 199, epoch_mF1= 0.95097
+acc: 0.99105 miou: 0.90993 mf1: 0.95097 iou_0: 0.99064 iou_1: 0.82921 F1_0: 0.99530 F1_1: 0.90663 precision_0: 0.99480 precision_1: 0.91573 recall_0: 0.99580 recall_1: 0.89772 
+
+Begin evaluation...
+Is_training: False. [193,199][1,16], imps: 67.69, est: 0.05h, G_loss: 0.00266, running_mf1: 0.91523
+Is_training: False. Epoch 193 / 199, epoch_mF1= 0.89950
+acc: 0.98351 miou: 0.83012 mf1: 0.89950 iou_0: 0.98292 iou_1: 0.67732 F1_0: 0.99139 F1_1: 0.80762 precision_0: 0.98745 precision_1: 0.88657 recall_0: 0.99535 recall_1: 0.74159 
+
+Lastest model updated. Epoch_acc=0.8995, Historical_best_acc=0.9172 (at epoch 169)
+
+lr: 0.0000348
+Is_training: True. [194,199][1,112], imps: 68.02, est: 0.04h, G_loss: 0.01890, running_mf1: 0.95313
+Is_training: True. Epoch 194 / 199, epoch_mF1= 0.95203
+acc: 0.99100 miou: 0.91170 mf1: 0.95203 iou_0: 0.99058 iou_1: 0.83282 F1_0: 0.99527 F1_1: 0.90879 precision_0: 0.99467 precision_1: 0.91941 recall_0: 0.99587 recall_1: 0.89840 
+
+Begin evaluation...
+Is_training: False. [194,199][1,16], imps: 67.71, est: 0.04h, G_loss: 0.06385, running_mf1: 0.52489
+Is_training: False. Epoch 194 / 199, epoch_mF1= 0.89125
+acc: 0.98338 miou: 0.81866 mf1: 0.89125 iou_0: 0.98284 iou_1: 0.65447 F1_0: 0.99135 F1_1: 0.79115 precision_0: 0.98771 precision_1: 0.86835 recall_0: 0.99501 recall_1: 0.72656 
+
+Lastest model updated. Epoch_acc=0.8912, Historical_best_acc=0.9172 (at epoch 169)
+
+lr: 0.0000299
+Is_training: True. [195,199][1,112], imps: 68.03, est: 0.04h, G_loss: 0.03995, running_mf1: 0.92477
+Is_training: True. Epoch 195 / 199, epoch_mF1= 0.95030
+acc: 0.99130 miou: 0.90884 mf1: 0.95030 iou_0: 0.99093 iou_1: 0.82676 F1_0: 0.99544 F1_1: 0.90516 precision_0: 0.99489 precision_1: 0.91573 recall_0: 0.99599 recall_1: 0.89484 
+
+Begin evaluation...
+Is_training: False. [195,199][1,16], imps: 67.72, est: 0.04h, G_loss: 0.00009, running_mf1: 0.80990
+Is_training: False. Epoch 195 / 199, epoch_mF1= 0.91396
+acc: 0.98700 miou: 0.85142 mf1: 0.91396 iou_0: 0.98656 iou_1: 0.71628 F1_0: 0.99323 F1_1: 0.83469 precision_0: 0.99048 precision_1: 0.89554 recall_0: 0.99600 recall_1: 0.78158 
+
+Lastest model updated. Epoch_acc=0.9140, Historical_best_acc=0.9172 (at epoch 169)
+
+lr: 0.0000249
+Is_training: True. [196,199][1,112], imps: 68.05, est: 0.03h, G_loss: 0.00014, running_mf1: 0.50000
+Is_training: True. Epoch 196 / 199, epoch_mF1= 0.95210
+acc: 0.99182 miou: 0.91189 mf1: 0.95210 iou_0: 0.99148 iou_1: 0.83230 F1_0: 0.99572 F1_1: 0.90848 precision_0: 0.99514 precision_1: 0.91999 recall_0: 0.99630 recall_1: 0.89724 
+
+Begin evaluation...
+Is_training: False. [196,199][1,16], imps: 67.74, est: 0.03h, G_loss: 0.09857, running_mf1: 0.88203
+Is_training: False. Epoch 196 / 199, epoch_mF1= 0.89136
+acc: 0.98619 miou: 0.81926 mf1: 0.89136 iou_0: 0.98582 iou_1: 0.65270 F1_0: 0.99286 F1_1: 0.78986 precision_0: 0.99084 precision_1: 0.84012 recall_0: 0.99488 recall_1: 0.74527 
+
+Lastest model updated. Epoch_acc=0.8914, Historical_best_acc=0.9172 (at epoch 169)
+
+lr: 0.0000199
+Is_training: True. [197,199][1,112], imps: 68.06, est: 0.02h, G_loss: 0.03380, running_mf1: 0.94563
+Is_training: True. Epoch 197 / 199, epoch_mF1= 0.95262
+acc: 0.99140 miou: 0.91274 mf1: 0.95262 iou_0: 0.99101 iou_1: 0.83447 F1_0: 0.99548 F1_1: 0.90976 precision_0: 0.99488 precision_1: 0.92098 recall_0: 0.99609 recall_1: 0.89882 
+
+Begin evaluation...
+Is_training: False. [197,199][1,16], imps: 67.76, est: 0.02h, G_loss: 0.00001, running_mf1: 0.92997
+Is_training: False. Epoch 197 / 199, epoch_mF1= 0.87538
+acc: 0.98593 miou: 0.79796 mf1: 0.87538 iou_0: 0.98561 iou_1: 0.61031 F1_0: 0.99275 F1_1: 0.75800 precision_0: 0.99030 precision_1: 0.82647 recall_0: 0.99522 recall_1: 0.70001 
+
+Lastest model updated. Epoch_acc=0.8754, Historical_best_acc=0.9172 (at epoch 169)
+
+lr: 0.0000149
+Is_training: True. [198,199][1,112], imps: 68.08, est: 0.01h, G_loss: 0.02398, running_mf1: 0.95085
+Is_training: True. Epoch 198 / 199, epoch_mF1= 0.95239
+acc: 0.99195 miou: 0.91238 mf1: 0.95239 iou_0: 0.99162 iou_1: 0.83315 F1_0: 0.99579 F1_1: 0.90898 precision_0: 0.99518 precision_1: 0.92111 recall_0: 0.99640 recall_1: 0.89717 
+
+Begin evaluation...
+Is_training: False. [198,199][1,16], imps: 67.77, est: 0.01h, G_loss: 0.06967, running_mf1: 0.86984
+Is_training: False. Epoch 198 / 199, epoch_mF1= 0.89347
+acc: 0.98355 miou: 0.82174 mf1: 0.89347 iou_0: 0.98300 iou_1: 0.66047 F1_0: 0.99143 F1_1: 0.79552 precision_0: 0.98733 precision_1: 0.88286 recall_0: 0.99556 recall_1: 0.72390 
+
+Lastest model updated. Epoch_acc=0.8935, Historical_best_acc=0.9172 (at epoch 169)
+
+lr: 0.0000100
+Is_training: True. [199,199][1,112], imps: 68.09, est: 0.01h, G_loss: 0.01609, running_mf1: 0.95576
+Is_training: True. Epoch 199 / 199, epoch_mF1= 0.95223
+acc: 0.99170 miou: 0.91210 mf1: 0.95223 iou_0: 0.99134 iou_1: 0.83286 F1_0: 0.99565 F1_1: 0.90881 precision_0: 0.99533 precision_1: 0.91492 recall_0: 0.99597 recall_1: 0.90277 
+
+Begin evaluation...
+Is_training: False. [199,199][1,16], imps: 67.79, est: 0.01h, G_loss: 0.04606, running_mf1: 0.87117
+Is_training: False. Epoch 199 / 199, epoch_mF1= 0.91444
+acc: 0.98743 miou: 0.85218 mf1: 0.91444 iou_0: 0.98702 iou_1: 0.71734 F1_0: 0.99347 F1_1: 0.83541 precision_0: 0.99078 precision_1: 0.89680 recall_0: 0.99617 recall_1: 0.78189 
+
+Lastest model updated. Epoch_acc=0.9144, Historical_best_acc=0.9172 (at epoch 169)
+
