@@ -298,12 +298,10 @@ class BASE_Transformer_UNet(ResNet_UNet):
         self.conv_decode_layers = nn.ModuleList([self.conv_decode_2, self.conv_decode_3, self.conv_decode_4, self.conv_decode_5])
 
 
-        if with_pos is 'learned':
+        if with_pos == 'learned':
             self.pos_embedding_5 = nn.Parameter(torch.randn(1, self.token_len*2, dim_5))
             self.pos_embedding_4 = nn.Parameter(torch.randn(1, self.token_len*2, dim_4))
             self.pos_embedding_3 = nn.Parameter(torch.randn(1, self.token_len*2, dim_3))
-            #self.pos_embedding_2 = nn.Parameter(torch.randn(1, self.token_len*2, dim_2))
-            #self.pos_embedding_layers = nn.ParameterList([self.pos_embedding_2, self.pos_embedding_3, self.pos_embedding_4, self.pos_embedding_5])
         
         decoder_pos_size = 256//2
         self.with_decoder_pos = with_decoder_pos
@@ -311,8 +309,7 @@ class BASE_Transformer_UNet(ResNet_UNet):
             self.pos_embedding_decoder_5 =nn.Parameter(torch.randn(1, dim_5, 16, 16))
             self.pos_embedding_decoder_4 =nn.Parameter(torch.randn(1, dim_4, 32, 32))
             self.pos_embedding_decoder_3 =nn.Parameter(torch.randn(1, dim_3, 64, 64))
-            #self.pos_embedding_decoder_2 =nn.Parameter(torch.randn(1, dim_2, decoder_pos_size, decoder_pos_size))
-            #self.pos_embedding_decoder_layers = nn.ParameterList([self.pos_embedding_decoder_2, self.pos_embedding_decoder_3, self.pos_embedding_decoder_4, self.pos_embedding_decoder_5])
+
         self.enc_depth = enc_depth
         self.dec_depth = dec_depth
         self.dim_head = dim_head
@@ -337,19 +334,14 @@ class BASE_Transformer_UNet(ResNet_UNet):
         self.transformer_decoder_layers = nn.ModuleList([self.transformer_decoder_2, self.transformer_decoder_3, self.transformer_decoder_4, self.transformer_decoder_5])
 
         self.conv_layer2_0 = TwoLayerConv2d(in_channels=128, out_channels=32, kernel_size=3)
-        # self.conv_layer2 = nn.Conv2d(in_channels=48, out_channels=16, kernel_size=3, padding=1)
-        # self.conv_layer3 = nn.Conv2d(in_channels=48, out_channels=16, kernel_size=3, padding=1)
-        # self.conv_layer4 = nn.Conv2d(in_channels=64, out_channels=16, kernel_size=3, padding=1)
-        # self.classifier = nn.Conv2d(in_channels=16, out_channels=output_nc, kernel_size=3, padding=1)
         self.conv_layer2 = nn.Sequential(nn.Conv2d(in_channels=32, out_channels=32, kernel_size=3, padding=1),
                                         nn.ReLU())
         self.conv_layer3 = nn.Sequential(nn.Conv2d(in_channels=32, out_channels=32, kernel_size=3, padding=1),
                                         nn.ReLU())
         self.conv_layer4 = nn.Sequential(nn.Conv2d(in_channels=32, out_channels=32, kernel_size=3, padding=1),
                                         nn.ReLU())
-        self.classifier = nn.Conv2d(in_channels=32, out_channels=5, kernel_size=3, padding=1)
+        self.classifier = nn.Conv2d(in_channels=32, out_channels=output_nc, kernel_size=3, padding=1)
 
-        #self.classifier = nn.Conv2d(in_channels=32, out_channels=output_nc, kernel_size=3, padding=1)
         #self.seg_head = nn.Conv2d(in_channels=32, out_channels=1, kernel_size=3, padding=1)
         #self.cls_head = nn.Conv2d(in_channels=32, out_channels=4, kernel_size=3, padding=1)
 

@@ -5,8 +5,6 @@ from torch import nn
 import torch.nn.functional as F
 from torchvision.models import resnet34
 from .senet import se_resnext50_32x4d, senet154
-from .dpn import dpn92
-#import segmentation_models_pytorch as smp
 from einops import rearrange
 
 from importlib.machinery import SourceFileLoader
@@ -1482,7 +1480,7 @@ class BASE_Transformer(ResNet):
         mlp_dim = 2*dim
 
         self.with_pos = with_pos
-        if with_pos is 'learned':
+        if with_pos == 'learned':
             self.pos_embedding = nn.Parameter(torch.randn(1, self.token_len*2, 32))
         decoder_pos_size = 256//4
         self.with_decoder_pos = with_decoder_pos
@@ -1513,9 +1511,9 @@ class BASE_Transformer(ResNet):
 
     def _forward_reshape_tokens(self, x):
         # b,c,h,w = x.shape
-        if self.pool_mode is 'max':
+        if self.pool_mode == 'max':
             x = F.adaptive_max_pool2d(x, [self.pooling_size, self.pooling_size])
-        elif self.pool_mode is 'ave':
+        elif self.pool_mode == 'ave':
             x = F.adaptive_avg_pool2d(x, [self.pooling_size, self.pooling_size])
         else:
             x = x
@@ -2042,7 +2040,7 @@ class BASE_UNet_Transformer(ResNet):
         mlp_dim = 2*dim
 
         self.with_pos = with_pos
-        if with_pos is 'learned':
+        if with_pos == 'learned':
             self.pos_embedding = nn.Parameter(torch.randn(1, self.token_len*2, 32))
         decoder_pos_size = 256//4
         self.with_decoder_pos = with_decoder_pos
@@ -2073,9 +2071,9 @@ class BASE_UNet_Transformer(ResNet):
 
     def _forward_reshape_tokens(self, x):
         # b,c,h,w = x.shape
-        if self.pool_mode is 'max':
+        if self.pool_mode == 'max':
             x = F.adaptive_max_pool2d(x, [self.pooling_size, self.pooling_size])
-        elif self.pool_mode is 'ave':
+        elif self.pool_mode == 'ave':
             x = F.adaptive_avg_pool2d(x, [self.pooling_size, self.pooling_size])
         else:
             x = x

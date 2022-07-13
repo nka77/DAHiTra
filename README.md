@@ -20,7 +20,10 @@ cd DamageAssessment
 
 ## Train
 Please refer the training script `run_cd.sh` and the evaluation script `eval.sh` in the folder `scripts`. 
-
+Training goal specific files:
+1. Classification: xBD_code/train.py
+2. Localization: xBD_code/train_loc.py
+3. Domain adaptation: xBD_code/train_adapt.py
 
 ## Dataset Preparation
 

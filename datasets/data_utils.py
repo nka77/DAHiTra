@@ -73,37 +73,12 @@ class CDDataAugmentation:
                 
         imgs = [TF.to_pil_image(img) for img in imgs]
 
-        imgs = [Image.fromarray(np.array(img)[y0:y0+self.img_size, x0:x0+self.img_size, :]) for img in imgs]
-        labels = [Image.fromarray(np.array(img)[y0:y0+self.img_size, x0:x0+self.img_size]) for img in labels]
-        
-        # if self.with_random_resize:
-        #     if random.random()>0.75:
-        #         tmp_size = self.img_size*2
-        #         x0 = random.randint(0, (imgs[0].shape[1] - tmp_size))
-        #         y0 = random.randint(0, (imgs[0].shape[0] - tmp_size))
-        #         imgs = [(np.array(img)[y0:y0+tmp_size, x0:x0+tmp_size, :]) for img in imgs]
-        #         labels = [(np.array(img)[y0:y0+tmp_size, x0:x0+tmp_size]) for img in labels]
-        #     elif random.random()>0.75:
-        #         tmp_size = self.img_size*3
-        #         x0 = random.randint(0, (imgs[0].shape[1] - tmp_size))
-        #         y0 = random.randint(0, (imgs[0].shape[0] - tmp_size))
-        #         imgs = [np.array(img)[y0:y0+tmp_size, x0:x0+tmp_size, :] for img in imgs]
-        #         labels = [np.array(img)[y0:y0+tmp_size, x0:x0+tmp_size] for img in labels]
+        if self.img_size < imgs[0].size[0]//2:
+            imgs = [Image.fromarray(np.array(img)[y0:y0+self.img_size, x0:x0+self.img_size, :]) for img in imgs]
+            labels = [Image.fromarray(np.array(img)[y0:y0+self.img_size, x0:x0+self.img_size]) for img in labels]
+        else:
+            labels = [Image.fromarray(np.array(img)) for img in labels]
 
-
-        # # resize image and covert to tensor
-        # if not self.img_size_dynamic:
-        #     if imgs[0].size != (self.img_size, self.img_size):
-        #         imgs = [img.resize((self.img_size, self.img_size))
-        #                 for img in imgs]
-        # else:
-        #     self.img_size = imgs[0].size[0]
-
-        # labels = [TF.to_pil_image(img) for img in labels]
-        # if len(labels) != 0:
-        #     if labels[0].size != (self.img_size, self.img_size):
-        #         labels = [img.resize((self.img_size, self.img_size))
-        #                 for img in labels]
     
         random_base = 0.5
         if self.with_random_hflip and random.random() > 0.5:
@@ -120,35 +95,6 @@ class CDDataAugmentation:
             angle = angles[index]
             imgs = [TF.rotate(img, angle) for img in imgs]
             labels = [TF.rotate(img, angle) for img in labels]
-
-        # if self.with_random_crop and random.random() > 0:
-        #     i, j, h, w = transforms.RandomResizedCrop(size=self.img_size). \
-        #         get_params(img=imgs[0], scale=(0.8, 1.0), ratio=(1, 1))
-
-        #     imgs = [TF.resized_crop(img, i, j, h, w,
-        #                             size=(self.img_size, self.img_size),
-        #                             interpolation=Image.CUBIC)
-        #             for img in imgs]
-
-        #     labels = [TF.resized_crop(img, i, j, h, w,
-        #                               size=(self.img_size, self.img_size),
-        #                               interpolation=Image.NEAREST)
-        #               for img in labels]
-
-        # if self.with_scale_random_crop:
-        #     # rescale
-        #     scale_range = [1, 1.2]
-        #     target_scale = scale_range[0] + random.random() * (scale_range[1] - scale_range[0])
-
-        #     imgs = [pil_rescale(img, target_scale, order=3) for img in imgs]
-        #     labels = [pil_rescale(img, target_scale, order=0) for img in labels]
-        #     # crop
-        #     imgsize = imgs[0].size  # h, w
-        #     box = get_random_crop_box(imgsize=imgsize, cropsize=self.img_size)
-        #     imgs = [pil_crop(img, box, cropsize=self.img_size, default_value=0)
-        #             for img in imgs]
-        #     labels = [pil_crop(img, box, cropsize=self.img_size, default_value=255)
-        #             for img in labels]
 
         if self.with_random_blur and random.random() > 0:
             radius = random.random()
@@ -209,20 +155,6 @@ class CDDataAugmentation_xBD:
 
         imgs = [Image.fromarray(np.array(img)[y0:y0+self.img_size, x0:x0+self.img_size, :]) for img in imgs]
         labels = [Image.fromarray(np.array(img)[y0:y0+self.img_size, x0:x0+self.img_size]) for img in labels]
-
-        # if not self.img_size_dynamic:
-        #     if imgs[0].size != (self.img_size, self.img_size):
-        #         imgs = [TF.resize(img, [self.img_size, self.img_size], interpolation=3)
-        #                 for img in imgs]
-        # else:
-        #     self.img_size = imgs[0].size[0]
-
-        # labels = [TF.to_pil_image(img) for img in labels]
-        # if len(labels) != 0:
-        #     if labels[0].size != (self.img_size, self.img_size):
-        #         labels = [TF.resize(img, [self.img_size, self.img_size], interpolation=0)
-        #                 for img in labels]
-
 
         random_base = 0.5
         if self.with_random_hflip and random.random() > 0.5:
