@@ -1,13 +1,15 @@
-# Remote Sensing Damage Classification and Change Detection with Transformers
+# DAHiTra: UNET Architecture with Hierarchical Transformers for Automated Building Damage Assessment Using Satellite Imagery
 
-We propose a novel transformer based network for building damage assessment which uses attention on the features difference and hierarchically builds the damage prediction mask with high accuracy. The model is tested on a large scale disaster damage dataset (xBD) and a change detection dataset (LEVIR-CD) where it achieves state of the art performance for both the damage classification and change detection tasks.
+A novel transformer-based network model is presented for building damage assessment which leverages hierarchical spatial features of multiple resolutions and captures temporal difference in feature domain after applying transformer encoder
+on the spatial features. The proposed network achieves state of the art performance while tested on a large-scale disaster damage dataset (xBD) for building localization and damage classification, as well as on LEVIR-CD dataset for change detection
+tasks.
 
 ## Results
 
-### Average Quantitative Results for Damage Classification: xBD dataset
+#### Average Quantitative Results for Damage Classification: xBD dataset
 ![alt text](report/xBD_results.png)
 
-### Average Quantitative Results for Change Detection: LEVIR-CD dataset
+#### Average Quantitative Results for Change Detection: LEVIR-CD dataset
 ![alt text](report/LEVIR_results.png)
 
 
@@ -29,7 +31,7 @@ git clone https://github.com/nka77/DamageAssessment.git
 cd DamageAssessment
 ```
 
-### Train
+#### Training the model
 Please refer the training script `run_cd.sh` and the evaluation script `eval.sh` in the folder `scripts`. 
 
 Training goal specific files:
@@ -39,7 +41,12 @@ Training goal specific files:
 
 ### Dataset Preparation
 
-#### Data structure
+#### Data Download 
+
+1. xBD: https://xview2.org/dataset
+2. LEVIR-CD: https://justchenhao.github.io/LEVIR/
+
+#### Required data format
 ```
 """
 xBD damage classification data set with pixel-level binary labels；
@@ -69,10 +76,6 @@ LEVIR Change detection data set with pixel-level binary labels；
 `label`: label maps;
 `list`: contains `train.txt, val.txt and test.txt`, each file records the image names (XXX.png) in the change detection dataset.
 
-#### Data Download 
-
-1. xBD: https://xview2.org/dataset
-2. LEVIR-CD: https://justchenhao.github.io/LEVIR/
 
 ## Acknowledgements
 
