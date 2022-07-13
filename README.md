@@ -26,6 +26,14 @@ Training goal specific files:
 2. Localization: xBD_code/train_loc.py
 3. Domain adaptation: xBD_code/train_adapt.py
 
+# Results
+
+### Average Quantitative Results for Damage Classification: xBD dataset
+![alt text](report/xBD_results.png)
+
+### Average Quantitative Results for Change Detection: LEVIR-CD dataset
+![alt text](report/LEVIR_results.png)
+
 ## Dataset Preparation
 
 ### Data structure
