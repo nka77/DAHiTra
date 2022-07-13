@@ -20,6 +20,7 @@ cd DamageAssessment
 
 ## Train
 Please refer the training script `run_cd.sh` and the evaluation script `eval.sh` in the folder `scripts`. 
+
 Training goal specific files:
 1. Classification: xBD_code/train.py
 2. Localization: xBD_code/train_loc.py
@@ -62,8 +63,8 @@ LEVIR Change detection data set with pixel-level binary labels；
 
 ### Data Download 
 
-xBD: https://xview2.org/dataset
-LEVIR-CD: https://justchenhao.github.io/LEVIR/
+1. xBD: https://xview2.org/dataset
+2. LEVIR-CD: https://justchenhao.github.io/LEVIR/
 
 ## Acknowledgements
 
