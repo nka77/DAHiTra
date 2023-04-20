@@ -4,6 +4,8 @@ A novel transformer-based network model is presented for building damage assessm
 on the spatial features. The proposed network achieves state of the art performance while tested on a large-scale disaster damage dataset (xBD) for building localization and damage classification, as well as on LEVIR-CD dataset for change detection
 tasks.
 
+Publication accepted in CACAIE (peer-reviewed journal): [https://onlinelibrary.wiley.com/doi/10.1111/mice.12981](https://onlinelibrary.wiley.com/doi/10.1111/mice.12981)
+
 ## Results
 
 #### Average Quantitative Results for Damage Classification: xBD dataset
