@@ -5,7 +5,7 @@ on the spatial features. The proposed network achieves state of the art performa
 tasks.
 
 Publication accepted in CACAIE (peer-reviewed journal): [https://onlinelibrary.wiley.com/doi/10.1111/mice.12981](https://onlinelibrary.wiley.com/doi/10.1111/mice.12981)
-
+Arxiv link: https://arxiv.org/abs/2208.02205
 ## Results
 
 #### Average Quantitative Results for Damage Classification: xBD dataset
